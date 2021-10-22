@@ -1,0 +1,127 @@
+@import "media";
+@import "mixins";
+@import "root";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Базовые стили body
+body {
+    background-color: $mainBack;
+    font-family: $mainFont;
+    color: $mainColor;
+    cursor: default;
+    @extend %scrollbar;
+}
+section {
+    position: relative;
+}
+//Создание базовых стилей для основных тегов
+h1 {
+    font-weight: 400;
+    font-size: 3.875rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2.8125rem;
+    line-height: 1.1;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.29;
+
+    @media (max-width: 768px) {
+        font-size: 1.75rem;
+        line-height: 1.29;
+    }
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: $mainColor;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+svg {
+    min-height: 1rem;
+}
+
+img {
+    width: 100%;
+}
+blockquote {
+}
+// убирает цвет автокомплита у инпута
+input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        font-size: 1rem;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+textarea,
+button,
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+
+    &[disabled] {
+        cursor: default;
+        opacity: 0.7;
+    }
+}
+button {
+    font-family: $mainFont;
+    cursor: pointer;
+}
+
+//Стандартный враппер
+.wrapper {
+    margin: 0 auto;
+    max-width: 83.75rem;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+}
