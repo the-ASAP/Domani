@@ -1,6 +1,34 @@
 import * as $ from "jquery";
 import "../scss/style.scss";
 
+const menuSvgMain = `
+    <svg class="menu__icon"
+        width="1.8125rem"
+        height="0.875rem"
+        viewBox="0 0 29 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M1 13H28.1049" stroke="white" stroke-linecap="square" />
+        <path d="M1 7H28.1049" stroke="white" stroke-linecap="square" />
+        <path d="M1 1H28.1049" stroke="white" stroke-linecap="square" />
+    </svg>
+`;
+
+const menuSvgClose = `
+    <svg 
+        class="menu__icon" 
+        width="1.1875rem" 
+        height="1.1875rem" 
+        viewBox="0 0 19 19" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M1.12109 1L17.6728 17.5518" stroke="white" stroke-linecap="square"/>
+        <path d="M1 17.5518L17.5518 1.00001" stroke="white" stroke-linecap="square"/>
+    </svg>
+`;
+
 const createYouTubeEmbedLink = (btn, container) => {
     $(btn).each((i, el) => {
         let link = $(el).attr("data-src"),
@@ -18,13 +46,13 @@ const createYouTubeEmbedLink = (btn, container) => {
     });
 };
 
-const toggleModal = () => {
-    $(".map__point").on("click", () => {
-        $(".modal").addClass("modal__active");
+const toggleModal = (triggerClass, modalClass, classActive, closeClass) => {
+    $(triggerClass).on("click", () => {
+        $(modalClass).addClass(classActive);
         $("body").css({ overflow: "hidden" });
     });
-    $(".modal__close").on("click", () => {
-        $(".modal").removeClass("modal__active");
+    $(closeClass).on("click", () => {
+        $(modalClass).removeClass(classActive);
         $("body").css({ overflow: "auto" });
     });
 };
@@ -80,8 +108,29 @@ function select(btn, content, activeClass, closeButton) {
 $().ready(() => {
     createYouTubeEmbedLink($(".production__button"), $(".production__video"));
 
-    toggleModal();
-    OutsideClick(".modal", "modal__active");
+    toggleModal(".map__point", ".modal", "modal__active", ".modal__close");
+    // OutsideClick(".modal", "modal__active");
+
+    $(".menu__openCatalog").on("click", function () {
+        $(this).toggleClass(".menu__openCatalog_active");
+        $(".menuCatalog").slideToggle();
+        if ($(this).hasClass(".menu__openCatalog_active")) {
+            $(".menu__catalog").text("Закрыть");
+            $(".menu").addClass("menu_active");
+
+            $(".menu__icon").replaceWith(menuSvgClose);
+
+            $("body").css({ overflow: "hidden" });
+        } else {
+            $(".menu__catalog").text("Каталог");
+            $(".menu").removeClass("menu_active");
+
+            $(".menu__icon").replaceWith(menuSvgMain);
+
+            $("body").css({ overflow: "auto" });
+        }
+    });
+
     accordion(".menuCatalog__accordion", ".menuCatalog__information", "activeAccordion");
     accordion(".menuCatalog__mainAccordion", ".menuCatalog__information", "activeAccordion");
 });
