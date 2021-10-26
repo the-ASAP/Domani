@@ -40,10 +40,110 @@
         font-size: 16px;
         line-height: 1.45;
         color: #ffffff;
+        transition: background-color 0.3s ease-in;
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
+
+.choiceCity {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &__content {
+        width: 58.75rem;
+        height: 35rem;
+        background-color: #fff;
+        padding: 2.1875rem 2.5rem 3.125rem;
+        position: relative;
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__close {
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: #e3e3e3;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 1px);
+            left: calc(50% - 0.5625rem);
+            width: 1.125rem;
+            height: 2px;
+            background-color: $grayMain;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__form {
+        margin-top: 1.25rem;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        padding: 0.9375rem;
+        font-size: 0.875rem;
+        line-height: 1.45;
+        color: $grayMid;
+
+        &::placeholder {
+            font-size: 0.875rem;
+            line-height: 1.45;
+            color: $grayMid;
+        }
+    }
+
+    &__blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__block {
+        margin-top: 3.125rem;
+    }
+
+    &__country {
+        font-size: 1.3125rem;
+    }
+
+    &__city {
+        display: block;
+        color: $grayMain;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 0.9375rem;
+
+        & + & {
+            margin-top: 0.625rem;
+        }
     }
 }
 
 .menuCatalog {
+    @extend %scrollbar;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,6 +153,8 @@
     z-index: 2;
     padding-top: 9.375rem;
     overflow-y: scroll;
+    transition: top 0.3s ease-in;
+    display: none;
 
     &__doors {
         display: flex;
@@ -166,6 +268,7 @@
     justify-content: space-between;
     height: 6.25rem;
     z-index: 3;
+    transition: background-color 0.3s ease-in;
 
     &__block {
         display: flex;
@@ -241,6 +344,9 @@
     &__openCatalog {
         display: flex;
         align-items: center;
+
+        &_active {
+        }
     }
 
     &__catalog {
@@ -252,6 +358,10 @@
 
     &__point {
         margin-left: 0.375rem;
+    }
+
+    &_active {
+        background-color: $grayMain;
     }
 }
 
@@ -312,6 +422,19 @@
         position: absolute;
         top: -1.5rem;
         left: 5%;
+
+        svg {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &__icon__second {
+        width: 3.5rem;
+        height: 2.9375rem;
+        position: absolute;
+        bottom: -1.2rem;
+        left: 91%;
 
         svg {
             height: auto;
@@ -394,6 +517,7 @@ section {
     }
 
     &__item {
+        cursor: pointer;
         width: calc((100% - 10px) / 2);
         margin-bottom: 0.625rem;
         position: relative;
@@ -461,6 +585,13 @@ section {
         line-height: 1.45;
         color: $grayMain;
         padding: 1.125rem 3rem;
+        display: block;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+        &:hover {
+            background-color: $grayMain;
+            color: #fff;
+        }
     }
 }
 
@@ -497,9 +628,10 @@ section {
 
     &__info {
         margin-right: 5.9375rem;
+        position: relative;
     }
     &__title {
-        margin: 0.625rem 0 1.25rem 0;
+        margin-bottom: 1.25rem;
     }
 
     &__image {
@@ -513,12 +645,14 @@ section {
     }
 
     &__more {
-        margin-top: 1.875rem;
         font-size: 1rem;
         line-height: 145%;
         text-decoration-line: underline;
         text-transform: capitalize;
         color: $grayMain;
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
 
@@ -646,7 +780,7 @@ section {
     }
     &__position {
         display: block;
-        margin: 4.6875rem 0 0.625rem;
+        margin: 1.25rem 0 0.625rem;
         color: $grayMid;
         opacity: 0.7;
     }
@@ -672,6 +806,13 @@ section {
         text-align: center;
         text-decoration-line: underline;
         color: $grayMain;
+    }
+
+    &__image {
+        margin: 3.75rem auto 0;
+        height: 7.5rem;
+        width: 7.5rem;
+        position: relative;
     }
 }
 
@@ -979,6 +1120,7 @@ footer {
                 height: 100%;
             }
         }
+
         &__border {
             margin-top: 3.125rem;
         }
