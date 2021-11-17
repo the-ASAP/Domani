@@ -1,0 +1,22 @@
+.news {
+  &__sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .select {
+    margin: 0;
+    width: 300px;
+  }
+
+  &__count {
+    font-weight: 500;
+  }
+
+  .post {
+    &:first-child {
+      border-top: 1px solid #cccccc;
+    }
+  }
+}

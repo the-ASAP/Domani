@@ -1,0 +1,136 @@
+@import "./rootStyles/main.scss";
+
+.menu {
+  &__box {
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.25rem;
+    z-index: 3;
+    transition: background-color 0.3s ease-in;
+    color: white;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    width: 33%;
+
+    &:nth-child(2) {
+      justify-content: center;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  &__logo {
+    margin-right: 3.25rem;
+  }
+
+  &__where {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__text {
+    @extend %discription2;
+  }
+
+  &__city {
+    margin-left: 0.3125rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #fff;
+    text-decoration-line: underline;
+  }
+
+  &__phone {
+    font-size: 1.125rem;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0 1.25rem 0 1.875rem;
+  }
+
+  &__inst {
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1.25rem;
+  }
+
+  &__slash {
+    @extend %discription2;
+    opacity: 51%;
+  }
+
+  &__language {
+  }
+
+  &__changeLang {
+    @extend %discription2;
+
+    &:last-child {
+      opacity: 51%;
+    }
+  }
+
+  &__openCatalog {
+    display: flex;
+    align-items: center;
+
+    &_active {
+    }
+  }
+
+  &__catalog {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #ffffff;
+    margin-left: 1.125rem;
+  }
+
+  &__point {
+    margin-left: 0.375rem;
+  }
+
+  &_active {
+    background-color: $grayMain;
+  }
+}
+
+.menu_black {
+  .menu {
+    color: $grayMain;
+
+    &__logo > svg > path,
+    &__openCatalog > svg > path,
+    &__where > svg > path,
+    &__inst > svg > path {
+      fill: $grayMain;
+    }
+
+    &__openCatalog > svg > path {
+      stroke: $grayMain;
+    }
+
+    &__phone,
+    &__city,
+    &__text,
+    &__slash,
+    &__changeLang,
+    &__catalog {
+      color: $grayMain;
+    }
+  }
+
+}

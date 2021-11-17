@@ -1,0 +1,205 @@
+@import "./rootStyles/main.scss";
+
+body#designers {
+  section {
+    margin-bottom: 120px;
+  }
+
+  .intro {
+    padding: 0;
+    background-color: $grayMain;
+    text-align: center;
+    margin-bottom: 60px;
+
+    // &::after{
+    //     content: url(../img/designers/intro.png);
+    // }
+
+    &__info {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+      width: 30%;
+    }
+
+    &__download-btn {
+      @extend %buttonOutlined;
+      color: white;
+
+      & > svg {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .menu {
+    background-color: $grayMain;
+    margin-bottom: 0;
+    padding: 0 1.875rem;
+  }
+
+  .ideas {
+    &__cards {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      margin-bottom: 140px;
+    }
+
+    &__column {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 180px;
+      &:first-child {
+        & > .idea:first-child {
+          margin-bottom: 150px;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+
+        & > .idea > .idea__img {
+          width: 458px;
+          height: 656px;
+          box-shadow: 125px -108px 0px -20px $grayBack;
+        }
+      }
+    }
+  }
+
+  .idea {
+    &__img {
+      max-width: 618px;
+      max-height: 650px;
+      box-shadow: -100px -80px 0px -7px $grayBack;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      width: 57%;
+    }
+
+    &__text {
+      width: 75%;
+    }
+  }
+
+  .variants {
+    &__box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "title items"
+        "selects items";
+      column-gap: 180px;
+    }
+
+    &__title {
+      grid-area: title;
+      margin-bottom: 50px;
+      font-weight: 500;
+      width: 50%;
+    }
+
+    &__selects {
+      grid-area: selects;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: none;
+      flex-direction: column;
+
+      &.active {
+        display: flex;
+      }
+
+      &-img {
+        max-width: 580px;
+        max-height: 360px;
+        margin-bottom: 20px;
+        object-fit: cover;
+      }
+
+      &-title {
+        margin-bottom: 10px;
+      }
+
+      &-text {
+        width: 83%;
+      }
+    }
+
+    .horTab {
+      padding: 25px 0;
+      border-bottom: 1px solid #c4c4c4;
+      color: rgba(33, 34, 35, 0.2);
+      font-size: 21px;
+      max-height: 75px;
+      font-weight: 500;
+      text-align: start;
+      transition: color 0.5s ease;
+
+      &::before {
+        width: 0;
+        transition: width 0.5s ease;
+      }
+
+      &.active {
+        color: $grayMain;
+
+        &::before {
+          content: "— ";
+          color: rgba(33, 34, 35, 0.2);
+          width: auto;
+        }
+      }
+
+      &:first-child {
+        border-top: 1px solid #c4c4c4;
+      }
+    }
+
+    &__items {
+      grid-area: items;
+    }
+  }
+
+  .projects {
+    &__header {
+      width: 100%;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__img {
+      margin-bottom: 20px;
+    }
+
+    &__count {
+      margin-right: 20px;
+    }
+
+    &__name{
+      font-weight: 500;
+    }
+  }
+}

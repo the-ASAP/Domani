@@ -1,0 +1,22 @@
+.catalog {
+  &__selects {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__tabs {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__filters {
+    margin-bottom: 60px;
+  }
+  
+  .select {
+    width: 24%;
+  }
+}

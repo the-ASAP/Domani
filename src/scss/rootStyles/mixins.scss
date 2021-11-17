@@ -2,46 +2,54 @@
 @import "./root.scss";
 
 %flexbox {
-    display: flex;
-    align-items: center;
-    align-self: center;
+  display: flex;
+  align-items: center;
+  align-self: center;
 }
 
 %buttonFont {
-    font-size: 1rem;
-    line-height: 1.45;
-    color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #ffffff;
+}
+
+%buttonOutlined {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: 17px 30px;
+  font-size: 18px;
+  text-align: center;
 }
 
 %discription {
-    font-family: Inter;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    letter-spacing: 0.035em;
-    color: $graySmall;
+  font-family: Inter;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+  color: $graySmall;
 }
 
 %discription2 {
-    font-family: Inter;
-    font-style: 400;
-    font-weight: 500;
-    font-size: 0.75rem;
-    line-height: 1.25;
-    letter-spacing: 0.035em;
-    color: #ffffff;
+  font-family: Inter;
+  font-style: 400;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.035em;
+  color: #ffffff;
 }
 
 // Стилизация скролбра
 %scrollbar::-webkit-scrollbar {
-    width: 0.5%;
-    min-width: 8px;
+  width: 0.5%;
+  min-width: 8px;
 }
 
 %scrollbar::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 %scrollbar::-webkit-scrollbar-thumb {
-    border-left: 1px solid $mainBack;
-    background: $mainColor;
+  border-left: 1px solid $mainBack;
+  background: $mainColor;
 }
