@@ -1,100 +1,124 @@
-const path = require("path");
-const glob = require("glob");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const webpack = require("webpack");
+const webpack = require('webpack');
+const path = require('path');
+const glob = require('glob');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  target: "web",
-  context: path.resolve(__dirname, "src"),
+  target: 'web',
+  //Использование правильного пути
+  context: path.resolve(__dirname, 'src'),
+  //Точки входа в приложение (все js файлы, лежащие в папке src/js)
+  //Пример объекта:
+  // { index, projects, ... }
   entry: Object.assign(
     {},
-    ...glob.sync("./src/js/*.js").map((jsFile) => ({
-      [jsFile.replace("./src/", "")]: `${jsFile}`.replace("./src", "."),
+    ...glob.sync('./src/js/*.js').map((jsFile) => ({
+      [jsFile.replace('./src/js/', '').replace('.js', '')]: `${jsFile}`.replace('./src', '.')
     }))
   ),
+  //Точки выхода в папке build
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name]",
+    path: path.resolve(__dirname, 'build'),
+    filename: 'js/[name].js'
   },
   module: {
     rules: [
+      //Обработка файлов js
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: 'babel-loader'
       },
+      //Обработка файлов scss | css
       {
         test: /\.(scss|css)$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader'
           },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader'
           },
           {
-            loader: "sass-loader",
-          },
-        ],
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sassOptions: { outputStyle: 'expanded' }
+            }
+          }
+        ]
       },
+      //Обработка файлов html
       {
         test: /\.(html)$/,
-        use: "html-loader",
+        use: 'html-loader'
       },
+      //Обработка файлов шрифтов
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset",
+        type: 'asset',
         generator: {
-          filename: "[path][name]-[hash][ext]",
-        },
+          filename: 'fonts/[name][ext]'
+        }
       },
+      //Обработка файлов изображений
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        type: "asset",
+        type: 'asset',
         generator: {
-          filename: "[path][name]-[hash][ext]",
-        },
-      },
-    ],
+          filename: 'img/[name][ext]'
+        }
+      }
+    ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    // Все импорты scss файлов в каждой входной точке объединяются в один css файл с таким же именем как и у входной точки и добавляются в папку build
     new MiniCssExtractPlugin({
-      filename: "css/style.css",
-      chunkFilename: "css/style.css",
+      filename: 'css/[name].css'
     }),
+    // Копирование css каталога в директорию src
+    new MiniCssExtractPlugin({
+      filename: '../src/css/[name].css'
+    }),
+    // Копирование всех шрифтов и страниц в билд (в проде минифицируется)
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/img"),
-          to: path.resolve(__dirname, "dist/img"),
+          from: path.resolve('./src/fonts'),
+          to: path.resolve('./build/fonts'),
+          noErrorOnMissing: true
         },
         {
-          from: path.resolve(__dirname, "src/fonts"),
-          to: path.resolve(__dirname, "dist/fonts"),
-        },
-      ],
+          from: path.resolve('./src/img'),
+          to: path.resolve('./build/img'),
+          filter: async (resourcePath) => {
+            let ext = resourcePath.substr(resourcePath.length - 3);
+            return ext === 'svg' ? true : false;
+          }
+        }
+      ]
     }),
-
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
-    }),
-
-    ...glob.sync("./src/*.html").map(
+    // Создание html шаблонов к которому подключаются одноименные файл стилей и файл скриптов (даже если их не существует)
+    ...glob.sync('./src/*.html').map(
       (htmlFile) =>
         new HtmlWebpackPlugin({
-          inject: "body",
+          chunks: [htmlFile.replace('./src/', '').replace('.html', '')],
+          inject: 'body',
           filename: path.basename(htmlFile),
           template: path.basename(htmlFile),
+          xhtml: true
         })
     ),
-  ],
+    // Настройка Jquery
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
+  ]
 };
