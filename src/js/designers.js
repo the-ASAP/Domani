@@ -3,6 +3,8 @@ import { owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, acco
 import '../scss/designers.scss';
 import '../scss/header.scss';
 import "../scss/rootStyles/main.scss";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel";
 
 const plusSlide = () => {
     $(".owl-next").on("click", function () {
@@ -110,14 +112,14 @@ $().ready(() => {
         margin: 11,
         responsive: {
             0: {
-                items: 1.6,
+                items: 1,
             },
             500: {
-                items: 1.6,
+                items: 1,
                 nav: false,
             },
             700: {
-                items: 2,
+                items: 1,
                 nav: false,
             },
             800: {
