@@ -101,3 +101,25 @@ export function accordion(btn, content, activeClass) {
     $(this).find(content).slideToggle();
   });
 }
+
+export const fillCatalogContent = () => {
+  if (localStorage.getItem("content").length) {
+      const tabButtons = $(".tab__links");
+      const tabs = $(".tab__content");
+
+      tabButtons.removeClass("active");
+      tabs.removeClass("active");
+
+      tabs.each(function (i, tab) {
+          if (localStorage.getItem("content") === $(tab).attr("id")) {
+              $(tab).addClass("active");
+          }
+      });
+
+      tabButtons.each((i, button) => {
+          if (localStorage.getItem("content") === $(button).attr("data-category")) {
+              $(button).addClass("active");
+          }
+      });
+  }
+};

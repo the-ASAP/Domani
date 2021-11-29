@@ -1,53 +1,10 @@
 import * as $ from 'jquery';
-import { owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion } from "../vendors/js/general"
+import { owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/company.scss';
 import '../scss/header.scss';
 import "../scss/rootStyles/main.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
-
-const plusSlide = () => {
-    $(".owl-next").on("click", function () {
-        numberSlide('right');
-    });
-};
-const minusSlide = () => {
-    $(".owl-prev").on("click", function () {
-        numberSlide('left');
-    });
-};
-
-function numberSlide(direction) {
-    const items = document.querySelectorAll(".owl-item:not(.cloned)");
-    const number = document.querySelector(".projects__number-slide");
-    let num = items.length;
-    let numActive = 1;
-    for (var key in Object.keys(items)) {
-
-        if ((items[key].className === "owl-item active") && (direction === 'right')) {
-
-            numActive = Number(key) + 1;
-            break;
-        }
-        if ((items[key].className === "owl-item active") && (direction === 'left')) {
-            if (Number(key) === 0) {
-                numActive = items.length;
-            } else {
-                numActive = Number(key);
-            }
-        }
-    }
-    let formattedNumActive = numActive.toLocaleString('en-US', {
-        minimumIntegerDigits: 2,
-        useGrouping: false
-    });
-    let formattedNum = num.toLocaleString('en-US', {
-        minimumIntegerDigits: 2,
-        useGrouping: false
-    })
-
-    number.innerHTML = `${formattedNumActive}/${formattedNum}`;
-};
 
 const fillCatalogContent = () => {
     if (localStorage.getItem("content").length) {

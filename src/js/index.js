@@ -1,5 +1,5 @@
 import * as $ from "jquery";
-import {owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion } from "../vendors/js/general"
+import {owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import "../scss/style.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
@@ -106,28 +106,6 @@ function rememberCatalogContent(items) {
     });
   }
 }
-
-const fillCatalogContent = () => {
-  if (localStorage.getItem("content").length) {
-    const tabButtons = $(".tab__links");
-    const tabs = $(".tab__content");
-
-    tabButtons.removeClass("active");
-    tabs.removeClass("active");
-
-    tabs.each(function (i, tab) {
-      if (localStorage.getItem("content") === $(tab).attr("id")) {
-        $(tab).addClass("active");
-      }
-    });
-
-    tabButtons.each((i, button) => {
-      if (localStorage.getItem("content") === $(button).attr("data-category")) {
-        $(button).addClass("active");
-      }
-    });
-  }
-};
 
 function declOfNum(n, text_forms) {
   if (n > 5 || n == 0) {
