@@ -354,7 +354,7 @@ body#company {
   }
 
   &__image {
-    box-shadow: 52px 39px 0px -20px #e3e3e3;
+    box-shadow: 3.25rem 2.4375rem 0px -1.25rem #e3e3e3;
     width: 38.9375rem;
     height: 22rem;
   }
@@ -421,6 +421,40 @@ body#company {
 
 .image {
   margin-top: 7.5rem;
+  
+  &__svg {
+
+    
+    &_1{
+      margin-right: 7.8125rem;
+      svg {
+        max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+      
+    }
+
+    &_2{
+      margin-right: 7.8125rem;
+      svg {
+       max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+    }
+      
+    &_3{
+      svg {
+        max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+    }
+ } 
+
+  &__logo{
+    display: flex;
+    margin-left: -5rem;
+    overflow: hidden;
+  }
 }
 
 .production-block {
@@ -859,28 +893,40 @@ footer {
 
   .intro {
 
+    max-height: 37.1875rem;
+
     &__image {
-      margin-top: 19.3125rem;
-      margin-left: -1.25rem;
-      width: 25rem;
+      margin-top: 12.375rem;
+      margin-left: -1.875rem;
       height: 21.3125rem;
+      width: 139%;
+    }
+
+    &__picture {
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+      object-position: -17.1875rem 0;
+      margin-left: -1.875rem;
     }
 
     &__info {
       margin-left: 0;
     }
 
-   &__title {
-    justify-content: center;
-    svg {
-      max-width: 12.6875rem;
+    &__title {
+      justify-content: center;
+
+      svg {
+        max-width: 12.6875rem;
+        max-height: 2.75rem;
+      }
     }
-  }
 
     &__text {
-      
       color: #E3E3E3;
-      margin-top: 0.9375rem;
+      margin-top: 1.5625rem;
+      max-width: 21.1875rem;
     }
   }
 
@@ -896,17 +942,9 @@ footer {
     }
 
     &__block {
-
-      &:nth-child(1) {
-        margin-left: 1.875rem;
-      }
       
       &:nth-child(2) {
         display: none;
-       
-      }
-      &:nth-child(3) {
-        justify-content: center !important;
        
       }
     }
@@ -933,8 +971,134 @@ footer {
     display: none;
   }
 
+  .quote {
+
+    margin-top: 10.625rem;
+    margin-bottom: 0;
+  
+    &__border {
+      margin-top: 3.125rem;
+      height: 1px;
+      width: 100%;
+      background-color: #a8a8a8;
+    }
+  
+    &__title {
+      max-width: 95%;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      font-size: 1.125rem;
+    }
+  
+    &__icon {
+      width: 1.75rem;
+      height: 1.5rem;
+      position: absolute;
+      top: -0.875rem;
+      left: -3%;
+  
+      svg {
+        height: auto;
+        width: 100%;
+      }
+    }
+  
+    &__icon__second {
+      width: 1.75rem;
+      height: 1.5rem;
+      position: absolute;
+      bottom: -0.3125rem;
+      left: 70%;
+  
+      svg {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .development {
+   
+
+    &__container {
+      margin-bottom: 3.125rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      margin-top: 0.9375rem;
+    }
+
+    &__image {
+      margin-top: 3.125rem;
+      max-height: 12rem;
+      max-width: 21.25rem;
+      box-shadow: 1.875rem 2.4375rem 0px -1.25rem #e3e3e3;
+    }
+  }
+
+  .production {
+    margin-top: 5.6875rem;
+    
+    &__video {
+      margin-top: 1.875rem;
+      height: 70vw;
+      width: 100%;
+      margin-left: 0;
+    }
+    &__button {
+      width: 3.75rem;
+      height: 3.75rem;
+
+      svg {
+        height: 1rem;
+      }
+    }
+  }
+
+  .image {
+    margin-top: 7.5rem;
+    
+    &__svg {
+  
+      
+      &_1{
+        margin-right: 1.6875rem;
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+        
+      }
+  
+      &_2{
+        margin-right: 1.6875rem;
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+      }
+        
+      &_3{
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+      }
+   } 
+  
+    &__logo{
+      display: flex;
+      margin-left: -11.875rem;
+      width: 35.5rem;
+      overflow: hidden;
+    }
+  }
+
   .production-block {
-    margin-top: 9.5625rem;
+    margin-top: 5.9375rem;
 
     &__title {
       font-size: 1.5rem;
@@ -959,14 +1123,24 @@ footer {
 
     &__list{
       display: block;
-      margin-top: 3.8125rem;
+      margin-top: 3.75rem;
+      position: absolute;
+      z-index: 3;
 
       &_left{
         margin: 0;
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 79.8125rem;
       }
 
       &_right{
-        margin-top: 4.9375rem;
+        margin-top: 27.0625rem;
+        position: relative;
+        z-index: 1;
       }
 
       &_row:first-child {
@@ -988,8 +1162,8 @@ footer {
   } 
  
   .cooperation {
-    margin-top: 4.9375rem;
-    margin-bottom: 25.5rem;
+    margin-top: 88.875rem;
+    margin-bottom: 15.3125rem;
 
     &__title {
       font-size: 1.5rem;
@@ -1007,7 +1181,9 @@ footer {
       flex-direction: column;
       margin-left: -1.25rem;
       width: 110%;
-      max-height: 42.875rem;
+      max-height: 31.5625rem;
+      display: flex;
+      justify-content: flex-start;
 
       &_text {
         margin-left: 2.375rem;
@@ -1015,7 +1191,7 @@ footer {
       }
 
       &_image {
-        margin-top: 6.25rem;
+        margin-top: 3.125rem;
         margin-left: 1.25rem; 
         margin-right: 1.25rem;
       }
@@ -1025,124 +1201,49 @@ footer {
     &__button {
       margin-top: 2.5rem;
     }
-
-   
-
   } 
 
-  .function {
-    margin-top: 4.375rem;
-    margin-bottom: 0;
-
-    &__container{
-      display: grid;
-      margin: 0;
-    
-    }
-
-    &__tabs {
-      margin: 0;
-    }
-
-    &__image{
-      margin-top: 1.875rem;
-      max-width: 19.9375rem;
-      height: 13.1875rem;
-      box-shadow: 2.0625rem -2.875rem 0px -1rem #e3e3e3;
-    }
-  }
-
-  .projects {
-
-    margin-top: 4.375rem;
-  
-    &__slider {
-      margin-top: 0;
-      margin-bottom: 0;
-      position: relative;
-      z-index: 1;
-      
-
-      &_wrapper {
-        margin-top: 5.75rem;
-        position: absolute;
-        z-index: 3;
-        width: 100%;
-        border-bottom: 1px solid #C4C4C4;
-        padding-bottom: 1.25rem;
-      }
-      &_item {
-        max-height: 15.8125rem;
-        padding: 0;
-      }
-    }
-
-    &__controls {
-      padding: 0;
-    }
-
+  .contacts {
     &__title {
-
-      max-width: 18.5625rem;
-
-      &_4 { 
-        margin-top: 20px;
-      }
+      margin-bottom: 1.875rem;
     }
-
-    &__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 26.625rem;
-      z-index: 2;
-      position: absolute;
-
-      &_slide{
-        justify-content: space-between;
-      
-      }
-    }
-  }
-
-  .project-site {
-
-    margin-top: 35.375rem;
-    margin-bottom: 20rem;
-
-    &__title {
-      margin-bottom: 0;
-      max-width: 300px;
-    }
-
     &__text {
-      max-width: 17.875rem;
-      margin-top: 0.625rem;
+      font-size: 0.875rem;
+      line-height: 1.43;
     }
-
-    &__info{
-      flex-direction: column;
-      margin-left: -1.25rem;
-      width: 110%;
-      max-height: 35.3125rem;
-      justify-content: space-between;
-
-      &_text {
-        margin-left: 2.375rem;
-       
-      }
-
-      &_image {
-        margin-top: 6.25rem;
-        margin-left: 1.25rem; 
-        margin-right: 1.25rem;
-      }
-
+    &__phone {
+      font-size: 1.125rem;
+      line-height: 1.4;
+      display: block;
+      margin: 1.25rem 0 0.625rem;
     }
-
-    &__button {
-      margin-top: 2.5rem;
+    &__other {
+      display: block;
     }
+  }
+
+  .contact {
+    width: 100%;
+    margin-bottom: 1.25rem;
+
+    &:nth-child(2) {
+      margin: 0 0 1.25rem;
+    }
+    &__position {
+      margin: 5.625rem 0 0.625rem;
+      font-size: 0.875rem;
+      line-height: 1.43;
+    }
+    &__person,
+    &__phone {
+      font-size: 0.875rem;
+      line-height: 1.43;
+      text-decoration: none;
+    }
+  }
+
+  .map {
+    display: none;
   }
 
   .outro {

@@ -888,18 +888,10 @@ footer {
 
     &__block {
 
-      &:nth-child(1) {
-        margin-left: 1.875rem;
-      }
-      
       &:nth-child(2) {
         display: none;
-       
       }
-      &:nth-child(3) {
-        justify-content: center !important;
-       
-      }
+      
     }
 
     &__catalog {
@@ -1062,6 +1054,7 @@ footer {
         border-bottom: 1px solid #C4C4C4;
         padding-bottom: 1.25rem;
       }
+      
       &_item {
         max-height: 15.8125rem;
         padding: 0;
