@@ -3,7 +3,7 @@
 
 
 
-body#designers {
+body#company {
 }
 
 .intro {
@@ -16,9 +16,9 @@ body#designers {
   
   &__image {
     position: absolute;
-    margin-top: 18.1875rem;
+    margin-top: 15.875rem;
     left: 0;
-    max-width: 78.375rem;
+    max-width: 100%;
     max-height: 37.5625rem;
     object-fit: cover;
   }
@@ -35,42 +35,16 @@ body#designers {
 
   &__title {
     justify-content: center;
-    color: #fff;
-    max-width: 27rem;
   }
 
   &__text {
-    max-width: 35.225rem;
+    max-width: 32.5rem;
     justify-content: center;
-    color: #fff;
+    color: #FFFFFF;
     text-align: center;
-    margin-top: 1.4375rem;
+    margin-top: 1.25rem;
   }
 
-  &__button {
-    max-width: 28.625rem;
-    margin-top: 1.875rem;
-    color: #ffffff;
-    transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
-
-    &_arrow {
-      margin-left: 0.75rem;
-    }
-
-    &:hover {
-      background-color: #ffffff;
-      color: #000;
-    }
-
-    &:hover svg path {
-      fill: #000;
-    }
-
-    &:hover svg line {
-      stroke: #000;
-    }
-  }
 }
 
 .choiceCity {
@@ -325,34 +299,161 @@ body#designers {
   }
 }
 
-.idea {
-  margin-top: 25.9375rem;
+.quote {
+  margin-top: 24.375rem;
+  // border-bottom: 1px solid #a8a8a8;
+
+  &__border {
+    margin-top: 7.75rem;
+    height: 1px;
+    width: 100%;
+    background-color: #a8a8a8;
+  }
 
   &__title {
+    max-width: 75%;
     text-align: center;
+    margin: 0 auto;
     position: relative;
-    
-    &_4 {
-      margin-top: 1.25rem;
-      text-align: left;
+  }
+
+  &__icon {
+    width: 3.5rem;
+    height: 2.9375rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 3%;
+
+    svg {
+      height: auto;
+      width: 100%;
     }
   }
 
-  &__text {
-    width: inherit;
+  &__icon__second {
+    width: 3.5rem;
+    height: 2.9375rem;
+    position: absolute;
+    bottom: -1.2rem;
+    left: 91%;
+
+    svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.development {
+
+  &__container {
+    display: flex;
+    margin-top: 4.125rem;
+   align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    box-shadow: 52px 39px 0px -20px #e3e3e3;
+    width: 38.9375rem;
+    height: 22rem;
+  }
+
+  &__text{
     margin-top: 1.25rem;
+    max-width: 30.3125rem;
+  }
+
+  &__title {
+    text-align: left;
+    position: relative;
+    max-width: 25rem;
+  }
+}
+
+.production {
+  margin-top: 9.8125rem;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__video {
+    background-color: #000;
+    margin-top: 3.75rem;
+    height: 40.9375rem;
+    max-width: 84.125rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7rem;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__button {
+    position: relative;
+    width: 8.75rem;
+    height: 8.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $grayMain;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image {
+  margin-top: 7.5rem;
+}
+
+.production-block {
+  margin-top: 10.5rem;
+
+  &__title {
+    position: relative;
+    margin-top: 1.25rem;
+    text-align: left;
+  }
+
+  &__text {
+    margin-top: 1.25rem;
+
+    &_left {
+      max-width: 28.5rem;
+    }
+
+    &_right {
+      max-width: 36rem;
+    }
   }
 
   &__list {
     display: flex;
     margin-top: 8.75rem;
+    justify-content: space-between;
     
     &_left {
-      margin-inline-end: 11.1875rem;
       display: grid;
       align-items: center;
       align-content: center;
-      max-width: 38.5625rem;
+      max-width: 34.8125rem;
     }
 
     &_right{
@@ -362,254 +463,60 @@ body#designers {
     }
 
     &_row:first-child {
-      margin-bottom: 10.5625rem;
+      margin-bottom: 11.0625rem;
     }
   }
 
   &__image {
     position: relative;
-    width: 100%;
-    height: 29.3125rem;
+    
 
     &_left {
       box-shadow: -5.875rem -3.125rem 0px 0px #e3e3e3;
-      max-width: 38.625rem;
+      max-width: 29rem;
+      max-height: 18.125rem;
     }
     &_right {
-      box-shadow: 13.0625rem -5rem 0px 0px #e3e3e3;
-      max-width: 32.125rem;
-      max-height: 41rem;
+      box-shadow: 4.5rem -4.9375rem 0px -1.125rem #e3e3e3;
+      max-width: 39.125rem;
+      max-height: 26.125rem;
     }
     
-    img {
-      height: 100%;
-      object-fit: contain;
-    }
   }
 }
 
 .cooperation {
-  margin: 0;
-  width: 100%;
-  max-height: 43.75rem;
-  position: relative;
-  margin-top: 7.125rem;
-  margin-bottom: 21.25rem;
-
-  &__info {
-    
-    max-height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    flex-direction: row;
-    background-color: #E3E3E3;
-
-    &_text {
-     
-      display: flex;
-      flex-direction: column;
-      margin-left: 3.75rem;
-      margin-top: 3.1875rem;
-    
-    }
-
-    &_image {
-      margin-top: 3.1875rem;
-      margin-left: 8.5rem;
-      max-height: 40.5625rem;
-      max-width: 28.75rem;
-    }
-
-  }
-
-  &__title {
-    color: #212223;
-    margin-bottom: 1.875rem;
-    max-width: 27.75rem;
-  }
-
-  &__text {
-    max-width: 27.75rem;
-    color: #797979;
-  }
-
-  &__button {
-    background-color: #212223;
-    max-width: 15.625rem;
-    margin-top: 3.125rem;
-    color: #ffffff;
-    transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
-
-    &:hover {
-      background-color: #000;
-    }
-  }
-}
-
-.function {
-
-  &__container {
-    display: flex;
-    margin-top: 7.5rem;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  &__tabs {
-    display: grid;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    margin-inline-end: 11.1875rem;
-  
-  }
-
-  &__info {
-    margin-top: 1.125rem;
-  }
-
-  &__content {
-    display: grid;
-  }
-
-  &__picture {
-    object-fit: cover;
-    height: inherit;
-    object-position: left bottom;
-  }
-
-  &__image {
-    box-shadow: 5.8125rem -3.125rem 0px 0px #e3e3e3;
-    margin: 3.125rem 0px 0px 0px;
-    width: 38.75rem;
-    height: 24.125rem;
-  }
-
-  &__text{
-    margin-top: 0.5rem;
-    max-width: 29.1875rem;
-  }
-
-  &__title {
-    text-align: left;
-    position: relative;
-    
-    h3 {
-      max-width: 21.6875rem;
-    }
-    h4 {
-      max-width: 10.75rem;
-    }
-  }
-  
-  .tab {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3.125rem;
-    
-    
-    &__links {
-      text-align: left;
-      max-width: 28.6875rem;
-      padding-right: 8.5625rem;
-      max-height: 4.5625rem;
-
-      &:hover,
-      &.active {
-        display: flex;
-        align-items: center;
-        &:before{
-          content: '\2014 ';
-          
-        }
-      }
-    }
-  }
-}
-
-.projects {
-
-  &__controls {
-    display: flex;
-    justify-content: flex-end;
-    padding-inline-end: 1.5625rem;
-  }
-
-  &__number{
-    margin-top: 0.75rem;
-    margin-right: 1.25rem;
-  }
-
-
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2.6875rem;
-
-    &_slide {
-      display: flex;
-    }
-  }
-
-  &__slider {
-    margin-top: 7.5rem;
-    margin-bottom: 7.5rem;
-  
-
-    &_wrapper {
-     overflow: hidden;
-    }
-
-    &_items {
-      display: flex;
-      align-items: center;
-      transition: transform 0.5s ease-in-out;
-     
-    }   
-    &_item {
-      display: block;
-      max-height: 15.625rem;
-      max-width: 38.625rem;
-      color: rgba(255,255,255, 0.8);
-      padding-bottom: 25rem; 
-    } 
-  }
-}
-
-.project-site {
 
   margin: 0;
   width: 100%;
   max-height: 27rem;
   position: relative;
+  margin-top: 9.5rem;
   
 
   &__info {
     
-    max-height: 23.375rem;
+    max-height: 23.3125rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     position: relative;
     flex-direction: row;
     background-color: #E3E3E3;
-    margin-bottom: 10.625rem;
+    margin-bottom: 6.25rem;
 
     &_text {
      
       display: flex;
       flex-direction: column;
-      margin-top: 3.125rem;
-    
+      margin-top: 2.9375rem;
+      margin-bottom: 3.125rem;
     }
 
     &_image {
-      margin-top: 3.125rem;
-      max-height: 23.875rem;
-      max-width: 38.625rem;
+      margin-top: -7.0625rem;
+      max-height: 24.125rem;
+      max-width: 38.9375rem;
     }
 
   }
@@ -640,9 +547,120 @@ body#designers {
   }
 }
 
+.contacts {
+  &__main {
+    width: 16.8125rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    font-family: Inter;
+    color: $grayMid;
+  }
+
+  &__phone {
+    margin: 1.375rem 0 0.8125rem;
+    font-size: 1.75rem;
+    line-height: 1.29;
+ 
+  }
+
+  &__other {
+    margin-top: 3.125rem;
+    display: flex;
+  }
+}
+
+.contact {
+  width: calc((100% - 1.25rem) / 3);
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  padding: 1.875rem 0;
+
+  &:nth-child(3n + 2) {
+    margin: 0 0.625rem;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+  &__position {
+    display: block;
+    margin: 1.25rem 0 0.625rem;
+    color: $grayMid;
+    opacity: 0.7;
+  }
+  &__person {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.62;
+    color: $grayMain;
+  }
+  &__text {
+    display: block;
+    margin: 1.25rem 0 0.625rem;
+    color: $grayMid;
+    opacity: 0.7;
+  }
+
+  &__phone {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.62;
+    text-align: center;
+    text-decoration-line: underline;
+    color: $grayMain;
+  }
+
+  &__image {
+    margin: 3.75rem auto 0;
+    height: 7.5rem;
+    width: 7.5rem;
+    position: relative;
+  }
+}
+
 footer {
   margin-top: 6.25rem;
   background: linear-gradient(180deg, #393a3a 0%, $grayMain 100%);
+}
+
+.map {
+  height: 65.625rem;
+  position: relative;
+  padding-top: 6.25rem;
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    position: relative;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__point {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: $grayMid;
+    border: 5px solid $grayLight;
+    position: absolute;
+    top: 51%;
+    left: 63%;
+  }
 }
 
 .modal {
@@ -844,7 +862,7 @@ footer {
     &__image {
       margin-top: 19.3125rem;
       margin-left: -1.25rem;
-      width: 22.4375rem;
+      width: 25rem;
       height: 21.3125rem;
     }
 
@@ -852,8 +870,7 @@ footer {
       height: inherit;
       width: inherit;
       object-fit: cover;
-      object-position: -18.125rem 0;
-      margin-left: -1.875rem;
+      object-position: -15.625rem 0;
       
     }
 
@@ -924,7 +941,7 @@ footer {
     display: none;
   }
 
-  .idea {
+  .production-block {
     margin-top: 9.5625rem;
 
     &__title {
