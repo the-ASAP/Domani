@@ -106,6 +106,16 @@
   &_active {
     background-color: $grayMain;
   }
+
+  @media (max-width: 768px) {
+    &__where {
+      display: none;
+    }
+
+    &__inst {
+      display: none;
+    }
+  }
 }
 
 .menu_black {

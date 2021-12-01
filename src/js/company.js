@@ -1,32 +1,10 @@
 import * as $ from 'jquery';
-import { owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
+import { initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/company.scss';
 import '../scss/header.scss';
 import "../scss/rootStyles/main.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
-
-const fillCatalogContent = () => {
-    if (localStorage.getItem("content").length) {
-        const tabButtons = $(".tab__links");
-        const tabs = $(".tab__content");
-
-        tabButtons.removeClass("active");
-        tabs.removeClass("active");
-
-        tabs.each(function (i, tab) {
-            if (localStorage.getItem("content") === $(tab).attr("id")) {
-                $(tab).addClass("active");
-            }
-        });
-
-        tabButtons.each((i, button) => {
-            if (localStorage.getItem("content") === $(button).attr("data-category")) {
-                $(button).addClass("active");
-            }
-        });
-    }
-};
 
 
 $().ready(() => {
@@ -39,11 +17,7 @@ $().ready(() => {
         ".choiceCity__close"
     );
     OutsideClick(".modal", "modal__active");
-    OutsideClick(".select", "", "data-state");
     
-    initTabs();
-    initTabs(".tab__links", ".tab__content");
-    initTabs(".horTab", ".variants__item");
 
     fillCatalogContent();
 
@@ -60,37 +34,4 @@ $().ready(() => {
         "activeAccordion"
       );
 
-    owlGallery(".projects__slider_items", {
-        nav: true,
-        navContainer: ".projects__controls",
-        loop: true,
-        dots: false,
-
-        margin: 11,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            500: {
-                items: 1,
-                nav: false,
-            },
-            700: {
-                items: 1,
-                nav: false,
-            },
-            800: {
-                items: 2,
-                nav: false,
-            },
-            1000: {
-                items: 2,
-                nav: true,
-                
-            },
-        },
-    });
-    numberSlide('right');
-    plusSlide();
-    minusSlide();
 });

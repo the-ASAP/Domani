@@ -41,6 +41,7 @@ body#company {
     max-width: 32.5rem;
     justify-content: center;
     color: #FFFFFF;
+    opacity: 0.8;
     text-align: center;
     margin-top: 1.25rem;
   }
@@ -310,7 +311,7 @@ body#company {
     background-color: #a8a8a8;
   }
 
-  &__title {
+  &__container {
     max-width: 75%;
     text-align: center;
     margin: 0 auto;
@@ -322,7 +323,7 @@ body#company {
     height: 2.9375rem;
     position: absolute;
     top: -1.5rem;
-    left: 3%;
+    left: 2%;
 
     svg {
       height: auto;
@@ -335,7 +336,7 @@ body#company {
     height: 2.9375rem;
     position: absolute;
     bottom: -1.2rem;
-    left: 91%;
+    left: 93%;
 
     svg {
       height: auto;
@@ -367,7 +368,6 @@ body#company {
   &__title {
     text-align: left;
     position: relative;
-    max-width: 25rem;
   }
 }
 
@@ -467,13 +467,14 @@ body#company {
   }
 
   &__text {
-    margin-top: 1.25rem;
 
     &_left {
+      margin-top: 1.25rem;
       max-width: 28.5rem;
     }
 
     &_right {
+      margin-top: 1.25rem;
       max-width: 36rem;
     }
   }
@@ -548,7 +549,7 @@ body#company {
     }
 
     &_image {
-      margin-top: -7.0625rem;
+      margin-top: -4.125rem;
       max-height: 24.125rem;
       max-width: 38.9375rem;
     }
@@ -934,11 +935,11 @@ footer {
     height: 5.0625rem;
 
     &__where {
-      display: none !important;
+      display: none;
     }
 
     &__inst {
-      display: none !important;
+      display: none;
     }
 
     &__block {

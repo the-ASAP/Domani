@@ -63,7 +63,7 @@ $().ready(() => {
     
     initTabs();
     initTabs(".tab__links", ".tab__content");
-    initTabs(".horTab", ".variants__item");
+    //initTabs(".horTab", ".variants__item");
 
     fillCatalogContent();
 
