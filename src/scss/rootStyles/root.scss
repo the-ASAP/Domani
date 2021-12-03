@@ -4,6 +4,7 @@
     --main-back: #fff;
 
     --gray-main: #212223;
+    --gray-mid-text: #797979;
     --gray-mid: #656565;
     --gray-light: #a8a8a8;
     --gray-small: #f2f2f2;
@@ -16,6 +17,7 @@
 //Создание переменных
 $mainColor: var(--main-color);
 $grayMain: var(--gray-main);
+$grayMidText: var(--gray-mid-text);
 $grayMid: var(--gray-mid);
 $grayLight: var(--gray-light);
 $graySmall: var(--gray-small);

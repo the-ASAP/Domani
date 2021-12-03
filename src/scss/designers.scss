@@ -11,7 +11,7 @@ body#designers {
   width: 100%;
   height: 43.75rem;
   position: relative;
-  background-color: #212223;
+  background-color: $grayMain;
   padding: 0 1.875rem;
   
   &__image {
@@ -35,14 +35,14 @@ body#designers {
 
   &__title {
     justify-content: center;
-    color: #fff;
+    color: $mainBack;
     max-width: 27rem;
   }
 
   &__text {
     max-width: 35.225rem;
     justify-content: center;
-    color: #fff;
+    color: $mainBack;
     opacity: 0.8;
     text-align: center;
     margin-top: 1.4375rem;
@@ -51,8 +51,11 @@ body#designers {
   &__button {
     max-width: 28.625rem;
     margin-top: 1.875rem;
-    color: #ffffff;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in, fill 0.3s ease-in, stroke 0.3s ease-in;
+    color: $mainBack;
+    transition: background-color 0.3s ease-in, 
+                color 0.3s ease-in, 
+                fill 0.3s ease-in, 
+                stroke 0.3s ease-in;
     @extend%buttonOutlined;
 
     &_arrow {
@@ -60,7 +63,7 @@ body#designers {
     }
 
     &:hover {
-      background-color: #ffffff;
+      background-color: $mainBack;
       color: #000;
     }
 
@@ -95,7 +98,7 @@ body#designers {
   &__content {
     width: 58.75rem;
     height: 35rem;
-    background-color: #fff;
+    background-color: $mainBack;
     padding: 2.1875rem 2.5rem 3.125rem;
     position: relative;
     animation-name: slide-in;
@@ -110,7 +113,7 @@ body#designers {
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -202,7 +205,7 @@ body#designers {
     span {
       font-size: 1.3125rem;
       line-height: 1.4;
-      color: #fff;
+      color: $mainBack;
       margin-right: 0.75rem;
     }
   }
@@ -223,7 +226,7 @@ body#designers {
 
   &__ref {
     display: block;
-    color: #fff;
+    color: $mainBack;
 
     & + & {
       margin-top: 0.9375rem;
@@ -259,7 +262,7 @@ body#designers {
 
   &__contacts {
     margin-top: 1.875rem;
-    color: #fff;
+    color: $mainBack;
     display: block;
     text-align: center;
   }
@@ -276,7 +279,7 @@ body#designers {
   &__horizontal {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $mainBack;
   }
   &__vertical {
     transform: rotate(90deg);
@@ -321,7 +324,7 @@ body#designers {
     transform: translateX(-50%);
     font-size: 0.75rem;
     line-height: 1.25;
-    color: #ffffff;
+    color: $mainBack;
     opacity: 0.3;
   }
 }
@@ -371,11 +374,11 @@ body#designers {
     height: 29.3125rem;
 
     &_left {
-      box-shadow: -5.875rem -3.125rem 0px 0px #e3e3e3;
+      box-shadow: -5.875rem -3.125rem 0px 0px $grayBack;
       max-width: 38.625rem;
     }
     &_right {
-      box-shadow: 6.1875rem -7.125rem 0px -3.375rem #e3e3e3;
+      box-shadow: 6.1875rem -7.125rem 0px -3.375rem $grayBack;
       max-width: 32.125rem;
       max-height: 41rem;
     }
@@ -403,7 +406,7 @@ body#designers {
     justify-content: flex-start;
     position: relative;
     flex-direction: row;
-    background-color: #E3E3E3;
+    background-color: $grayBack;
 
     &_text {
      
@@ -424,21 +427,21 @@ body#designers {
   }
 
   &__title {
-    color: #212223;
+    color: $grayMain;
     margin-bottom: 1.875rem;
     max-width: 27.75rem;
   }
 
   &__text {
     max-width: 27.75rem;
-    color: #797979;
+    color: $grayMidText;
   }
 
   &__button {
-    background-color: #212223;
+    background-color: $grayMain;
     max-width: 15.625rem;
     margin-top: 3.125rem;
-    color: #ffffff;
+    color: $mainBack;
     transition: background-color 0.3s ease-in;
     @extend%buttonOutlined;
 
@@ -481,7 +484,7 @@ body#designers {
   }
 
   &__image {
-    box-shadow: 5.8125rem -3.125rem 0px 0px #e3e3e3;
+    box-shadow: 5.8125rem -3.125rem 0px 0px $grayBack;
     margin: 3.125rem 0px 0px 0px;
     width: 38.75rem;
     height: 24.125rem;
@@ -521,10 +524,12 @@ body#designers {
       &:hover,
       &.active {
         display: flex;
-        align-items: center;
+        align-items: center; 
+       
         &:before{
           content: '\2014';
           padding-right: 1.25rem;
+          transition: content 1s ease-in;
         }
       }
     }
@@ -605,7 +610,7 @@ body#designers {
     justify-content: space-around;
     position: relative;
     flex-direction: row;
-    background-color: #E3E3E3;
+    background-color: $grayBack;
     margin-bottom: 10.625rem;
 
     &_text {
@@ -625,21 +630,21 @@ body#designers {
   }
 
   &__title {
-    color: #212223;
+    color: $grayMain;
     max-width: 19.375rem;
     margin-bottom: 1.0625rem;
   }
 
   &__text {
     max-width: 35.875rem;
-    color: #797979;
+    color: $grayMidText;
   }
 
   &__button {
-    background-color: #212223;
+    background-color: $grayMain;
     max-width: 15.625rem;
     margin-top: 3.125rem;
-    color: #ffffff;
+    color: $mainBack;
     font-size: 1rem;
     transition: background-color 0.3s ease-in;
     @extend%buttonOutlined;
@@ -666,7 +671,7 @@ footer {
   &__content {
     width: 23.3125rem;
     height: 57rem;
-    background-color: #fff;
+    background-color: $mainBack;
   }
 
   &__image {
@@ -731,7 +736,7 @@ footer {
     margin-left: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     border-radius: 50%;
 
     svg {
@@ -781,7 +786,7 @@ footer {
     font-size: 0.875rem;
     line-height: 1.2;
     letter-spacing: 0.035em;
-    color: #ffffff;
+    color: $mainBack;
     display: block;
     margin-bottom: 1.75rem;
   }
@@ -807,7 +812,7 @@ footer {
   &__phone {
     font-size: 1.125rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: $mainBack;
 
     &_mobile {
       display: none;
@@ -820,7 +825,7 @@ footer {
     line-height: 1.45;
     text-decoration-line: underline;
     text-transform: capitalize;
-    color: #ffffff;
+    color: $mainBack;
   }
   &__text {
     @extend %discription2;
@@ -877,7 +882,7 @@ footer {
 
     &__text {
       
-      color: #E3E3E3;
+      color: $grayBack;
       margin-top: 0.9375rem;
     }
     &__button {
@@ -941,7 +946,7 @@ footer {
 
     &__text {
       margin-top: 0.625rem;
-      color: #797979;
+      color: $grayMidText;
     }
 
     &__container{
@@ -970,10 +975,10 @@ footer {
     &__image {
   
       &_left {
-        box-shadow: -1.9375rem -2.875rem 0px -0.8125rem #e3e3e3;
+        box-shadow: -1.9375rem -2.875rem 0px -0.8125rem $grayBack;
       }
       &_right {
-        box-shadow: 2.9375rem -3.8125rem 0px -1.875rem #e3e3e3;
+        box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
       }
     
     }
@@ -1034,13 +1039,14 @@ footer {
 
     &__tabs {
       margin: 0;
+
     }
 
     &__image{
       margin-top: 1.875rem;
       max-width: 19.9375rem;
       height: 13.1875rem;
-      box-shadow: 2.0625rem -2.875rem 0px -1rem #e3e3e3;
+      box-shadow: 2.0625rem -2.875rem 0px -1rem $grayBack;
     }
   }
 
@@ -1182,7 +1188,7 @@ footer {
         display: block;
         font-size: 1.125rem;
         line-height: 1.4;
-        color: #ffffff;
+        color: $mainBack;
       }
     }
   }
