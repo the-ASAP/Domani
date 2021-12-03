@@ -11,65 +11,62 @@ body#designers {
   width: 100%;
   height: 43.75rem;
   position: relative;
-  background-color: #212223;
   padding: 0 1.875rem;
   
   &__image {
-    position: absolute;
-    margin-top: 18.1875rem;
     left: 0;
-    max-width: 78.375rem;
-    max-height: 37.5625rem;
+    max-width: 38.75rem;
+    max-height: 45rem;
     object-fit: cover;
   }
 
   &__info {
     max-height: 55.75rem;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: relative;
-    align-items: center;
-    margin-top: 3.625rem;
+    margin-top: 3.75rem;
   }
 
   &__title {
     justify-content: center;
-    color: #fff;
-    max-width: 27rem;
+    color: #212223;
+  }
+
+  h4 {
+    margin-top: 1.25rem;
+  }
+
+  h3 {
+    margin-top: 2.5rem;
   }
 
   &__text {
-    max-width: 35.225rem;
+    max-width: 30.875rem;
     justify-content: center;
-    color: #fff;
+    color: #212223;
     opacity: 0.8;
-    text-align: center;
-    margin-top: 1.4375rem;
-  }
+    text-align: left;
+    margin-top: 4.125rem;
+    margin-inline-end: 8.75rem;
 
-  &__button {
-    max-width: 28.625rem;
-    margin-top: 1.875rem;
-    color: #ffffff;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in, fill 0.3s ease-in, stroke 0.3s ease-in;
-    @extend%buttonOutlined;
-
-    &_arrow {
-      margin-left: 0.75rem;
+    &_content {
+      margin-top: 1.375rem;
+    }
+    &_date {
+      display: flex;
+      margin-top: 3.125rem;
+      justify-content: space-between;
+      align-items: center;
+      height: 4.625rem;
+      border-bottom: 1px solid #C4C4C4;
+      border-top: 1px solid #C4C4C4;
     }
 
-    &:hover {
-      background-color: #ffffff;
-      color: #000;
-    }
-
-    &:hover svg path {
-      fill: #000;
-    }
-
-    &:hover svg line {
-      stroke: #000;
+    &_discription {
+      color: #656565;
+      margin-top: 0.625rem;
+      @extend%discription
     }
   }
 }
@@ -326,152 +323,76 @@ body#designers {
   }
 }
 
-.idea {
-  margin-top: 25.9375rem;
-
-  h2 { 
-    text-align: center;
-    position: relative;
-  }
-  h4 {
-    margin-top: 1.25rem;
-    text-align: left;
-  }
-
-  &__text {
-    width: inherit;
-    margin-top: 1.25rem;
-  }
-
-  &__list {
-    display: flex;
-    margin-top: 8.75rem;
-    
-    &_left {
-      display: grid;
-      align-items: center;
-      align-content: center;
-      max-width: 49.75rem;
-    }
-
-    &_right{
-      display: grid;
-      align-items: center;
-      align-content: center;
-    }
-
-    &_row:first-child {
-      margin-bottom: 10.5625rem;
-    }
-  }
-
-  &__image {
-    position: relative;
-    width: 100%;
-    height: 29.3125rem;
-
-    &_left {
-      box-shadow: -5.875rem -3.125rem 0px 0px #e3e3e3;
-      max-width: 38.625rem;
-    }
-    &_right {
-      box-shadow: 6.1875rem -7.125rem 0px -3.375rem #e3e3e3;
-      max-width: 32.125rem;
-      max-height: 41rem;
-    }
-    
-    img {
-      height: 100%;
-      object-fit: contain;
-    }
+.configurator {
+  margin-top: 17.3125rem;
+  
+  &__list{
+    margin-top: 3.75rem;
   }
 }
 
-.cooperation {
-  margin: 0;
-  width: 100%;
-  max-height: 43.75rem;
-  position: relative;
-  margin-top: 7.125rem;
-  margin-bottom: 21.25rem;
+.variants {
+
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  &__number{
+    margin-top: 0.75rem;
+    margin-right: 1.25rem;
+  }
 
   &__info {
-    
-    max-height: 30rem;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    flex-direction: row;
-    background-color: #E3E3E3;
+    justify-content: space-between;
+    margin-bottom: 2.6875rem;
 
-    &_text {
-     
+    &_slide {
       display: flex;
-      flex-direction: column;
-      margin-left: 3.75rem;
-      margin-top: 3.1875rem;
-    
     }
-
-    &_image {
-      margin-top: 3.1875rem;
-      margin-left: 8.5rem;
-      max-height: 40.5625rem;
-      max-width: 28.75rem;
-    }
-
   }
 
-  &__title {
-    color: #212223;
-    margin-bottom: 1.875rem;
-    max-width: 27.75rem;
-  }
+  &__slider {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  
 
-  &__text {
-    max-width: 27.75rem;
-    color: #797979;
-  }
-
-  &__button {
-    background-color: #212223;
-    max-width: 15.625rem;
-    margin-top: 3.125rem;
-    color: #ffffff;
-    transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
-
-    &:hover {
-      background-color: #000;
+    &_wrapper {
+     overflow: hidden;
     }
+
+    &_items {
+      display: flex;
+      align-items: center;
+      transition: transform 0.5s ease-in-out;
+     
+    }   
+    &_item {
+      display: block;
+      max-height: 22.4375rem;
+      max-width: 41.3125rem;
+      color: rgba(255,255,255, 0.8);
+      padding-bottom: 26.5625rem; 
+    } 
   }
 }
 
-.function {
+.details {
+
+  margin-top: 7.5rem;
 
   &__container {
     display: flex;
-    margin-top: 7.5rem;
+    margin-top: 3.1875rem;
     align-items: flex-start;
     justify-content: space-between;
-  }
-
-  &__tabs {
-    display: grid;
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
-    margin-inline-end: 11.1875rem;
-  
   }
 
   &__info {
     margin-top: 1.125rem;
-  }
-
-  &__content {
-    display: grid;
   }
 
   &__picture {
@@ -487,51 +408,52 @@ body#designers {
     height: 24.125rem;
   }
 
-  &__text{
+  &__text {
     margin-top: 0.5rem;
     max-width: 29.1875rem;
   }
 
-  
+  &__Accordion {
+    width: 100%;
     
-    h3 {
-      max-width: 21.6875rem;
-      text-align: left;
-      position: relative;
-    }
-    h4 {
-      max-width: 10.75rem;
-      text-align: left;
-      position: relative;
-    }
-  
-  
-  .tab {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3.125rem;
-    
-    
-    &__links {
-      text-align: left;
-      max-width: 28.6875rem;
-      padding-right: 8.5625rem;
-      max-height: 4.5625rem;
-
-      &:hover,
-      &.active {
-        display: flex;
-        align-items: center;
-        &:before{
-          content: '\2014';
-          padding-right: 1.25rem;
-        }
-      }
+    &:nth-child(1) {
+      border-top: 1px solid #C4C4C4;
     }
   }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5.0625rem;
+    border-bottom: 1px solid #C4C4C4;
+    
+  }
+
+  &__information {
+    display: none;
+    margin-top: 3.125rem;
+  }
+
+  h3 {
+   text-align: center;
+  }
+  
+  
+    .plus {
+      
+    
+      &__vertical,
+      &__horizontal {
+        
+        background-color: black;
+      }
+     
+    }
 }
 
-.projects {
+.ideas{
 
   &__controls {
     display: flex;
@@ -541,11 +463,6 @@ body#designers {
 
   &__number{
     margin-right: 1.25rem;
-  }
-
-  &__all-project {
-    margin-right: 4.0625rem;
-    text-decoration: underline;
   }
 
   h4 {
@@ -563,7 +480,12 @@ body#designers {
       align-items: center;
     }
   }
-
+  
+  &__projects {
+    margin-right: 4.0625rem;
+    text-decoration: underline;
+  }
+  
   &__slider {
     margin-top: 7.5rem;
     margin-bottom: 7.5rem;
@@ -589,64 +511,62 @@ body#designers {
   }
 }
 
-.project-site {
+.panels{
 
-  margin: 0;
-  width: 100%;
-  max-height: 27rem;
-  position: relative;
-  
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    padding-inline-end: 1.5625rem;
+  }
+
+  h4 {
+      margin-top: 1.25rem;
+    }
+
 
   &__info {
-    
-    max-height: 23.375rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: relative;
-    flex-direction: row;
-    background-color: #E3E3E3;
-    margin-bottom: 10.625rem;
+    justify-content: space-between;
+    margin-bottom: 0.875rem;
 
-    &_text {
-     
+    &_slide {
       display: flex;
-      flex-direction: column;
-      margin-top: 3.125rem;
-    
+    }
+  }
+
+  &__slider {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  
+
+    &_wrapper {
+     overflow: hidden;
     }
 
-    &_image {
-      margin-top: 3.125rem;
-      max-height: 23.875rem;
+    &_items {
+      display: flex;
+      align-items: center;
+      transition: transform 0.5s ease-in-out;
+     
+    }   
+    &_item {
+      display: block;
+      max-height: 35.1875rem;
       max-width: 38.625rem;
+      color: rgba(255,255,255, 0.8);
+      
+    } 
+  }
+  .product{
+    width: 100%;
+    &__info {
+      display: flex;
     }
-
-  }
-
-  &__title {
-    color: #212223;
-    max-width: 19.375rem;
-    margin-bottom: 1.0625rem;
-  }
-
-  &__text {
-    max-width: 35.875rem;
-    color: #797979;
-  }
-
-  &__button {
-    background-color: #212223;
-    max-width: 15.625rem;
-    margin-top: 3.125rem;
-    color: #ffffff;
-    font-size: 1rem;
-    transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
-
-    &:hover {
-      background-color: #000;
+    &__text {
+      color: #656565;
+      position: relative;
     }
+      
   }
 }
 

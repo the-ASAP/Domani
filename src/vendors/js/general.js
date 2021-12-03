@@ -34,7 +34,6 @@ export function initTabs(buttons, content) {
   tab.each(function () {
     $(this).on("click", () => {
       const tabAttr = $(this).attr("data-category");
-      console.log(tabAttr);
       localStorage.setItem("content", "");
 
       tab.removeClass("active");
