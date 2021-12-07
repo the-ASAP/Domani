@@ -15,8 +15,8 @@ body#designers {
   padding: 0 1.875rem;
   
   &__image {
-    position: absolute;
-    margin-top: 18.1875rem;
+    position: relative;
+    margin-top: 2.25rem;
     left: 0;
     max-width: 78.375rem;
     max-height: 37.5625rem;
@@ -342,7 +342,7 @@ body#designers {
   }
 
   &__text {
-    width: inherit;
+    max-width: 38.625rem;
     margin-top: 1.25rem;
   }
 
@@ -355,6 +355,7 @@ body#designers {
       align-items: center;
       align-content: center;
       max-width: 49.75rem;
+      margin-inline-end: 11.25rem;
     }
 
     &_right{
@@ -464,8 +465,6 @@ body#designers {
     display: grid;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
-    margin-inline-end: 11.1875rem;
   
   }
 
@@ -520,6 +519,7 @@ body#designers {
       max-width: 28.6875rem;
       padding-right: 8.5625rem;
       max-height: 4.5625rem;
+      padding-left: 0;
 
       &:hover,
       &.active {
@@ -855,21 +855,27 @@ footer {
 @media (max-width: 768px) {
 
   .intro {
+    height: 70vh;
 
     &__image {
-      margin-top: 19.3125rem;
-      margin-left: -1.25rem;
-      width: 22.4375rem;
-      height: 21.3125rem;
+    height: 21.3125rem;
+    width: 150vw;
+    margin-left: -50vw;
+    }
+
+    &__image > div {
+      width: 100vw;
+      margin-left: -100%;
+    }
+    &__image &__picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
 
     &__picture {
-      height: inherit;
-      width: inherit;
-      object-fit: cover;
-      object-position: -18.125rem 0;
-      margin-left: -1.875rem;
-      
+      object-position: 3rem 0;
     }
 
     &__info {
@@ -932,7 +938,7 @@ footer {
   }
 
   .idea {
-    margin-top: 9.5625rem;
+    margin-top: 65%;
 
     &__title {
       font-size: 1.5rem;
@@ -987,7 +993,7 @@ footer {
  
   .cooperation {
     margin-top: 4.9375rem;
-    margin-bottom: 25.5rem;
+    margin-bottom: 100%;
 
     &__title {
       font-size: 1.5rem;
@@ -1023,7 +1029,9 @@ footer {
       margin-top: 2.5rem;
     }
 
-   
+    @media (min-width: 500px) {
+      margin-bottom: 32.125rem;
+    }
 
   } 
 
@@ -1039,6 +1047,7 @@ footer {
 
     &__tabs {
       margin: 0;
+      justify-items: center;
 
     }
 
@@ -1048,11 +1057,26 @@ footer {
       height: 13.1875rem;
       box-shadow: 2.0625rem -2.875rem 0px -1rem $grayBack;
     }
+
+    &__content {
+      justify-items: center;
+      justify-items: center;
+      margin-top: 5vh;
+    }
+
+    .tab {
+      width: 90vw;
+      align-items: center;
+    }
   }
 
   .projects {
 
     margin-top: 4.375rem;
+
+    &__all-project {
+      display: none;
+    }
   
     &__slider {
       margin-top: 0;
@@ -1062,7 +1086,7 @@ footer {
       
 
       &_wrapper {
-        margin-top: 5.75rem;
+        margin-top: 20vw;
         position: absolute;
         z-index: 3;
         width: 100%;
@@ -1071,7 +1095,7 @@ footer {
       }
       
       &_item {
-        max-height: 15.8125rem;
+        max-height: 100%;
         padding: 0;
       }
     }
@@ -1090,29 +1114,54 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 26.625rem;
       z-index: 2;
       position: absolute;
+      width: 100%;
 
       &_slide{
         justify-content: space-between;
-      
+        padding-top: 87vw;
+      }
+    }
+    @media (min-width: 668px) {
+      &__slider {
+        &_wrapper {
+          margin-top: 10vw;
+        }
+      }
+      &__info {
+        &_slide{
+          padding-top: 73vw;
+        }
+      }
+    }
+
+    @media (min-width: 347px)  and (max-width: 667px) {
+      &__slider {
+        &_wrapper {
+          margin-top: 10vw;
+        }
+      }
+      &__info {
+        &_slide{
+          padding-top: 78vw;
+        }
       }
     }
   }
 
   .project-site {
 
-    margin-top: 35.375rem;
-    margin-bottom: 20rem;
+    margin-top: 110vw;
+    margin-bottom: 70vw;
 
     &__title {
       margin-bottom: 0;
-      max-width: 300px;
+      max-width: 90%;
     }
 
     &__text {
-      max-width: 17.875rem;
+      max-width: 90%;
       margin-top: 0.625rem;
     }
 
@@ -1138,6 +1187,28 @@ footer {
 
     &__button {
       margin-top: 2.5rem;
+    }
+
+    @media (min-width: 700px) {
+      margin-bottom: 60%;
+    }
+    @media (min-width: 300px)  and (max-width: 346px) {
+      margin-top: 165vw;
+    }
+    @media (min-width: 347px)  and (max-width: 400px) {
+      margin-top: 150vw;
+    }
+    @media (min-width: 400px)  and (max-width: 450px) {
+      margin-top: 135vw;
+    }
+    @media (min-width: 450px)  and (max-width: 500px) {
+      margin-top: 125vw;
+    }
+    @media (min-width: 500px)  and (max-width: 600px) {
+      margin-top: 120vw;
+    }
+    @media (min-width: 600px)  and (max-width: 667px) {
+      margin-top: 115vw;
     }
   }
 

@@ -15,10 +15,10 @@ body#company {
   padding: 0 1.875rem;
   
   &__image {
-    position: absolute;
-    margin-top: 15.875rem;
+    position: relative;
+    margin-top: 3.5625rem;
     left: 0;
-    max-width: 100%;
+    max-width: 78.3125rem;
     max-height: 37.5625rem;
     object-fit: cover;
   }
@@ -301,7 +301,7 @@ body#company {
 }
 
 .quote {
-  margin-top: 24.375rem;
+  margin-top: 28.5rem;
   // border-bottom: 1px solid #a8a8a8;
 
   &__border {
@@ -897,18 +897,25 @@ footer {
     max-height: 37.1875rem;
 
     &__image {
-      margin-top: 12.375rem;
-      margin-left: -1.875rem;
+      margin-left: -60vw;
+      width: 160vw;
       height: 21.3125rem;
-      width: 139%;
+    }
+
+    &__image > div {
+      width: 100vw;
+      margin-left: -100%;
+    }
+
+    &__image &__picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
 
     &__picture {
-      height: inherit;
-      width: inherit;
-      object-fit: cover;
-      object-position: -17.1875rem 0;
-      margin-left: -1.875rem;
+      object-position: 5rem 0;
     }
 
     &__info {
@@ -974,7 +981,7 @@ footer {
 
   .quote {
 
-    margin-top: 10.625rem;
+    margin-top: 50%;
     margin-bottom: 0;
   
     &__border {
@@ -1010,7 +1017,7 @@ footer {
       height: 1.5rem;
       position: absolute;
       bottom: -0.3125rem;
-      left: 70%;
+      left: 97%;
   
       svg {
         height: auto;
@@ -1026,6 +1033,7 @@ footer {
       margin-bottom: 3.125rem;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
 
     &__text {
@@ -1034,14 +1042,16 @@ footer {
 
     &__image {
       margin-top: 3.125rem;
-      max-height: 12rem;
-      max-width: 21.25rem;
-      box-shadow: 1.875rem 2.4375rem 0px -1.25rem #e3e3e3;
+      width: inherit;
+      height: inherit;
+      box-shadow: 2.575rem 2.9375rem 0px -1.25rem #e3e3e3;
+      max-width: 39.125rem;
+      max-height: 22.075rem;
     }
   }
 
   .production {
-    margin-top: 5.6875rem;
+    margin-top: 9.6875rem;
     
     &__video {
       margin-top: 1.875rem;
@@ -1092,9 +1102,7 @@ footer {
   
     &__logo{
       display: flex;
-      margin-left: -11.875rem;
-      width: 35.5rem;
-      overflow: hidden;
+      justify-content: center;
     }
   }
 
@@ -1135,18 +1143,40 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 79.8125rem;
+       // height: 79.8125rem;
       }
 
       &_right{
-        margin-top: 27.0625rem;
+        //margin-top: 27.0625rem;
         position: relative;
         z-index: 1;
+        @media (min-width: 300px) and (max-width: 511px) {
+          margin-top: 54%;
+        }
+        @media (min-width: 511px) {
+          margin-top: 10%;
+        }
       }
 
       &_row:first-child {
-        margin-bottom: 5.0625rem;
+       margin-bottom: 0;
       }
+      &_row:nth-child(2) {
+        @media (min-width: 300px) and (max-width: 511px) {
+          margin-top: 51%;
+          .production-block__image_left {
+            margin-top: 391px;
+          }
+        }
+
+        @media (min-width: 511px) {
+          margin-top: 81%;
+          .production-block__image_left {
+            margin-top: 348px;
+          }
+        }
+      }
+      
     }
 
     &__image {
@@ -1155,6 +1185,12 @@ footer {
         box-shadow: -1.9375rem -2.875rem 0px -0.8125rem #e3e3e3;
       }
       &_right {
+        @media (min-width: 300px) and (max-width: 511px) {
+          margin-top: 14.625rem;
+        }
+        @media (min-width: 511px) {
+          margin-top: 26.375rem;
+        }
         box-shadow: 2.9375rem -3.8125rem 0px -1.875rem #e3e3e3;
       }
     
@@ -1163,8 +1199,23 @@ footer {
   } 
  
   .cooperation {
-    margin-top: 88.875rem;
+
+    @media (min-width: 300px) and (max-width: 510px) {
+      margin-top: 150%;
+    }
+    @media (min-width: 511px) {
+      margin-top: 150%;
+    }
     margin-bottom: 15.3125rem;
+
+    &__container {
+      @media (min-width: 300px) and (max-width: 510px) {
+        padding-top: 850px;
+      }
+      @media (min-width: 511px) {
+        margin-top: 1700px;
+      }
+    }
 
     &__title {
       font-size: 1.5rem;
@@ -1205,6 +1256,23 @@ footer {
   } 
 
   .contacts {
+    @media (min-width: 300px) and (max-width: 510px) {
+      margin-top: 170%;
+    }
+    @media (min-width: 511px) {
+      margin-top: 58%;
+    }
+    
+    &__main {
+      @media (min-width: 300px) and (max-width: 510px) {
+        padding-top: 507px;
+      }
+      @media (min-width: 511px) {
+        margin-top: 340px;
+      }
+    }
+
+
     &__title {
       margin-bottom: 1.875rem;
     }

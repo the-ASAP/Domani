@@ -15,10 +15,10 @@ body#collection {
   padding: 0 1.875rem;
   
   &__image {
-    position: absolute;
-    margin-top: 17.125rem;
+    position: relative;
+    margin-top: 3.125rem;
     left: 0;
-    max-width: 100%;
+    max-width: 78.4375rem;
     max-height: 37.5625rem;
     object-fit: cover;
   }
@@ -35,14 +35,14 @@ body#collection {
 
   &__title {
     justify-content: center;
-    color: #fff;
+    color: $mainBack;
     max-width: 27rem;
   }
 
   &__text {
     max-width: 32.5rem;
     justify-content: center;
-    color: #FFFFFF;
+    color: $mainBack;
     text-align: center;
     margin-top: 1.25rem;
   }
@@ -610,19 +610,30 @@ footer {
 
   .intro {
 
+   height: 70vh;
+
     &__image {
-      margin-top: 19.3125rem;
-      margin-left: -1.25rem;
-      width: 27.55rem;
-      height: 21.3125rem;
+      margin-left: -60vw;
+      width: 160vw;
+      height: 25.3125rem;
+    }
+
+    &__image > div {
+      width: 100vw;
+      margin-left: -100%;
+    }
+
+    &__image &__picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
 
     &__picture {
-      height: inherit;
-      width: inherit;
-      object-fit: cover;
-      object-position: -6.5rem 0;
-      margin-left: -1.875rem;
+     
+      object-position: 10rem 0;
+     
     }
 
     &__info {
@@ -688,7 +699,7 @@ footer {
 
   .catalog {
 
-    margin-top: 7.4375rem;
+    margin-top: 65%;
 
     .tab {
       display: none;
