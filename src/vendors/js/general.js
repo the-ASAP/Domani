@@ -1,5 +1,34 @@
+import * as $ from "jquery";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
+
+const menuSvgMain = `
+    <svg class="menu__icon"
+        width="1.8125rem"
+        height="0.875rem"
+        viewBox="0 0 29 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M1 13H28.1049" stroke="white" stroke-linecap="square" />
+        <path d="M1 7H28.1049" stroke="white" stroke-linecap="square" />
+        <path d="M1 1H28.1049" stroke="white" stroke-linecap="square" />
+    </svg>
+`;
+
+const menuSvgClose = `
+    <svg 
+        class="menu__icon" 
+        width="1.1875rem" 
+        height="1.1875rem" 
+        viewBox="0 0 19 19" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M1.12109 1L17.6728 17.5518" stroke="white" stroke-linecap="square"/>
+        <path d="M1 17.5518L17.5518 1.00001" stroke="white" stroke-linecap="square"/>
+    </svg>
+`;
 
 export const owlGallery = (selector, params) => {
   let arrowIcon = `<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +225,7 @@ export function initSelect(selectClass, content) {
       .children(".select__label");
 
     selectSingle_labels.each(function () {
-      $(this).on("click", (e) => {
+      $(this).on("click", () => {
         let tabContent = $(content);
         let sel = $(selectClass);
        
@@ -218,3 +247,75 @@ export function initSelect(selectClass, content) {
     });
   });
 }
+
+export const createYouTubeEmbedLink = (btn, container) => {
+  $(btn).each((i, el) => {
+    let link = $(el).attr("data-src"),
+      linkStart = "https://www.youtube.com/embed/",
+      linkEnd = "?rel=0&showinfo=0&autoplay=1";
+    let newLink =
+      linkStart + link.slice(link.indexOf("=") + 1, link.length) + linkEnd;
+    $(el).on("click", function () {
+      $(this)
+        .parent(container)
+        .empty()
+        .append(
+          `<iframe class="production__frame" src="${newLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        );
+    });
+  });
+}
+
+export function select(btn, content, activeClass, closeButton) {
+  $(btn || closeButton).on("click", function () {
+    $(btn).toggleClass(activeClass);
+    $(content).slideToggle();
+  });
+  $(document).on("mousedown", function (e) {
+    if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
+      $(btn).toggleClass(activeClass);
+      $(content).slideToggle();
+    }
+  });
+}
+
+export const plusSlide = (classSlider, classNumber) => {
+  $(".owl-next").on("click", function () {
+      numberSlide('right', classSlider, classNumber);
+  });
+};
+
+export const minusSlide = (classSlider, classNumber) => {
+  $(".owl-prev").on("click", function () {
+      numberSlide('left', classSlider, classNumber);
+  });
+};
+
+export function numberSlide(direction, classSlider, classNumber) {
+  const items = document.querySelectorAll(`${classSlider} .owl-item:not(.cloned)`);
+  const number = document.querySelector(classNumber);
+  let num = items.length;
+  let numActive = 1;
+  for (var key in Object.keys(items)) {
+
+      if ((items[key].className === "owl-item active") && (direction === 'right')) {
+
+          numActive = Number(key) + 1;
+          break;
+      }
+      if ((items[key].className === "owl-item active") && (direction === 'left')) {
+        numActive = Number(key)+1;
+        break;
+      }
+  }
+  let formattedNumActive = numActive.toLocaleString('en-US', {
+      minimumIntegerDigits: 2,
+      useGrouping: false
+  });
+  let formattedNum = num.toLocaleString('en-US', {
+      minimumIntegerDigits: 2,
+      useGrouping: false
+  })
+
+  number.innerHTML = `${formattedNumActive}/${formattedNum}`;
+};
