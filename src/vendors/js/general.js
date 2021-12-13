@@ -290,7 +290,7 @@ export const minusSlide = (classSlider, classNumber) => {
 };
 
 export function numberSlide(direction, classSlider, classNumber) {
-  const items = document.querySelectorAll(`${classSlider} .owl-item:not(.cloned)`);
+  const items = document.querySelectorAll(`${classSlider} .owl-item`);
   const number = document.querySelector(classNumber);
   let num = items.length;
   let numActive = 1;
