@@ -83,11 +83,9 @@ export function initTabs(buttons, content) {
 export const toggleModal = (triggerClass, modalClass, classActive, closeClass) => {
   $(triggerClass).on("click", () => {
     $(modalClass).addClass(classActive);
-    $("body").css({ overflow: "hidden" });
   });
   $(closeClass).on("click", () => {
     $(modalClass).removeClass(classActive);
-    $("body").css({ overflow: "auto" });
   });
 };
 
