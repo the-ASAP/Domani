@@ -55,6 +55,13 @@ body#designers {
     }
     &_date {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4.625rem;
+      border-bottom: 1px solid #C4C4C4;
+    }
+    &_dimensions {
+      display: flex;
       margin-top: 3.125rem;
       justify-content: space-between;
       align-items: center;
