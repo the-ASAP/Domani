@@ -34,25 +34,25 @@ body#designers {
   }
 
   h4 {
-    margin-top: 1.25rem;
+    margin-top: 1.875rem;
   }
 
   h3 {
-    margin-top: 2.5rem;
+    margin-top: 3.125rem;
   }
 
   &__text {
-    max-width: 30.875rem;
+    max-width: 29.9375rem;
     justify-content: center;
-    color: #212223;
-    opacity: 0.8;
     text-align: left;
-    margin-top: 4.125rem;
-    margin-inline-end: 8.75rem;
+    margin-top: 4.625rem;
+    margin-inline-end: 10rem;
 
     &_content {
-      margin-top: 1.375rem;
+      margin-top: 1.875rem;
+      color: $grayMid;
     }
+
     &_date {
       display: flex;
       justify-content: space-between;
@@ -60,6 +60,10 @@ body#designers {
       height: 4.625rem;
       border-bottom: 1px solid #C4C4C4;
     }
+    &_date-content {
+      color: $grayMid;
+    }
+
     &_dimensions {
       display: flex;
       margin-top: 3.125rem;
@@ -70,8 +74,12 @@ body#designers {
       border-top: 1px solid #C4C4C4;
     }
 
+    &_dimensions-content {
+      color: $grayMid;
+    }
+
     &_discription {
-      color: #656565;
+      color: $grayMid;
       margin-top: 0.625rem;
       @extend%discription
     }
@@ -297,7 +305,6 @@ body#designers {
   }
 }
 
-
 .aside {
   position: fixed;
   top: 50%;
@@ -349,6 +356,7 @@ body#designers {
   &__number{
     margin-top: 0.75rem;
     margin-right: 1.25rem;
+    color:$grayMid;
   }
 
   &__info {
@@ -378,9 +386,10 @@ body#designers {
     }   
     &_item {
       display: block;
-      max-height: 22.4375rem;
-      max-width: 41.3125rem;
+      max-height: 32.6875rem;
+      max-width: 27.8125rem;
       color: rgba(255,255,255, 0.8);
+      background-color: $grayBack;
       padding-bottom: 26.5625rem; 
     } 
   }
@@ -388,11 +397,11 @@ body#designers {
 
 .details {
 
-  margin-top: 7.5rem;
+  margin-top: 6.25rem;
 
   &__container {
     display: flex;
-    margin-top: 3.1875rem;
+    margin-top: 3.125rem;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
@@ -409,10 +418,9 @@ body#designers {
   }
 
   &__image {
-    box-shadow: 5.8125rem -3.125rem 0px 0px #e3e3e3;
     margin: 3.125rem 0px 0px 0px;
-    width: 38.75rem;
-    height: 24.125rem;
+    width: 78.5625rem;
+    height: 33.5rem;
   }
 
   &__text {

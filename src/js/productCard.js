@@ -49,7 +49,7 @@ $().ready(() => {
         rewind: true,
         dots: false,
 
-        margin: 11,
+        margin: 10,
         responsive: {
             0: {
                 items: 1,
@@ -63,11 +63,11 @@ $().ready(() => {
                 nav: false,
             },
             800: {
-                items: 2,
+                items: 3,
                 nav: false,
             },
             1000: {
-                items: 2,
+                items: 3,
                 nav: true,
                 
             },
