@@ -62,7 +62,7 @@ $().ready(() => {
   //initTabs();
 
   rememberCatalogContent(".product[data-content]");
-  //rememberCatalogContent(".horTab[data-content]");
+  rememberCatalogContent(".horTab[data-content]");
 
  // initTabs(".tab__links", ".tab__content");
  // initTabs(".horTab", ".variants__item");
