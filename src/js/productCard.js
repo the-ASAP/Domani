@@ -113,9 +113,9 @@ $().ready(() => {
     plusSlide(".ideas__slider", ".ideas__number-slide");
     minusSlide(".ideas__slider", ".ideas__number-slide");
 
-    owlGallery(".panels__slider_items", {
+    owlGallery(".doors__slider_items", {
         nav: true,
-        navContainer: ".panels__controls",
+        navContainer: ".doors__controls",
         loop: false,
         rewind: true,
         dots: false,
