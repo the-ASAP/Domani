@@ -1534,7 +1534,6 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-left: -5rem;
-  overflow: hidden;
 }
 .production-block {
   margin-top: 10.5rem;
