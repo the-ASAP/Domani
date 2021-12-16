@@ -183,6 +183,16 @@ body#root{
   &__doors {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  &__style {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
   }
 
   &__button {
@@ -193,7 +203,7 @@ body#root{
     span {
       font-size: 1.3125rem;
       line-height: 1.4;
-      color: #fff;
+      color: $mainBack;
       margin-right: 0.75rem;
     }
   }
@@ -214,11 +224,19 @@ body#root{
 
   &__ref {
     display: block;
-    color: #fff;
+    color: $mainBack;
 
     & + & {
       margin-top: 0.9375rem;
     }
+  }
+
+  &__Accordion { 
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__mainAccordion {
@@ -229,7 +247,7 @@ body#root{
     padding: 1.25rem 0;
 
     &:nth-child(2) {
-      margin-top: 4.125rem;
+      
       border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
   }
@@ -242,16 +260,30 @@ body#root{
   &__profile {
     width: 22.1875rem;
     height: 4.375rem;
-    border: 1px solid #c4c4c4;
+    border: 1px solid $grayBorder;
     margin: 2.5rem auto 0;
     display: block;
     @extend %buttonFont;
   }
 
   &__contacts {
-    margin-top: 1.875rem;
-    color: #fff;
-    display: block;
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__projects {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__news {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
     text-align: center;
   }
 }
@@ -283,7 +315,6 @@ body#root{
     }
   }
 }
-
 
 .aside {
   position: fixed;
@@ -698,17 +729,15 @@ footer {
 
   .catalog {
 
-    margin-top: 65%;
+    margin-top: 70%;
 
     .tab {
       display: none;
 
       &__content.active {
-        //display: block;
-        margin-top: 2.5rem;
+        margin-top: 1.25rem;
         flex-direction: column;
         flex-wrap:none;
-        //height:inherit;
       }
     }
     &__selects {
@@ -730,6 +759,9 @@ footer {
     }
     &:last-child {
       margin: 0;
+    }
+    &__info {
+      align-items: center;
     }
   }
 

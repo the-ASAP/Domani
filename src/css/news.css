@@ -639,6 +639,11 @@ button {
   color: var(--gray-main);
   position: relative;
 }
+@media (max-width: 768px) {
+  .product__title {
+    text-align: left;
+  }
+}
 .product__collection {
   font-size: 1rem;
   color: #656565;
@@ -1428,6 +1433,11 @@ button {
   color: #212223;
   color: var(--gray-main);
   position: relative;
+}
+@media (max-width: 768px) {
+  .product__title {
+    text-align: left;
+  }
 }
 .product__collection {
   font-size: 1rem;
@@ -3597,6 +3607,11 @@ button {
   color: #212223;
   color: var(--gray-main);
   position: relative;
+}
+@media (max-width: 768px) {
+  .product__title {
+    text-align: left;
+  }
 }
 .product__collection {
   font-size: 1rem;

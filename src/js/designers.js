@@ -15,6 +15,13 @@ $().ready(() => {
         "choiceCity__active",
         ".choiceCity__close"
     );
+    toggleModal(
+        ".project-site__button",
+        ".suggestProject",
+        "suggestProject__active",
+        ".suggestProject__close"
+    );
+
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
     

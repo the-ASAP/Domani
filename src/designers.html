@@ -266,7 +266,7 @@
             </svg>
           </button>
           <div class="intro__image">
-            <img src="img/designer.png" alt="Главная страница" class="intro__picture" />
+            <img src="img/designer.png" alt="Дизайнерам" class="intro__picture" />
           </div>
         </div>
       </div>
@@ -277,7 +277,6 @@
             <path d="M19 0.75H0V1.25H19V0.75ZM19 10.75H0V11.25H19V10.75ZM19 5.75H0V6.25H19V5.75Z" fill="#212223"
               stroke="white" stroke-width="0.5" />
           </svg>
-          <span class="aside__word">меню</span>
         </button>
         <button type="button" class="aside__block">
           <svg width="0.875rem" height="1.3125rem" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -412,7 +411,7 @@
             <div id="varied_finishes" class="tab__content active">
               <a class="tab__info">
                 <div class="function__image">
-                  <img src="img/function_1.png" alt="Тяговые ручки" class="function__picture" />
+                  <img src="img/function_1.png" alt="Разнообразие отделки." class="function__picture" />
                 </div>
                 <div class="function__info">
                   <h4 class="function__title">Разнообразие отделки.</h4>
@@ -427,7 +426,7 @@
             <div id="pull_handles" class="tab__content">
               <a class="tab__info">
                 <div class="function__image">
-                  <img src="img/function_2.png" alt="Тяговые ручки" class="function__picture" />
+                  <img src="img/function_2.png" alt="" class="function__picture" />
                 </div>
                 <div class="function__info">
                   <h4 class="function__title">Тяговые ручки.</h4>
@@ -443,7 +442,7 @@
             <div id="tinted_glass" class="tab__content">
               <a class="tab__info">
                 <div class="function__image">
-                  <img src="img/function_3.png" alt="Тяговые ручки" class="function__picture" />
+                  <img src="img/function_3.png" alt="Тонирование стекла." class="function__picture" />
                 </div>
                 <div class="function__info">
                   <h4 class="function__title">Тонирование стекла.</h4>
@@ -481,7 +480,7 @@
           <div class="projects__info">
             <h3 class="projects__title">Реализованные проекты</h3>
             <div class="projects__info_slide">
-              <a href="/" class="projects__all-project">Все проекты</a>
+              <a href="/projects.html" class="projects__all-project">Все проекты</a>
               <div class="projects__number">
                 <p class="projects__number-slide">
                   01/05
@@ -494,15 +493,15 @@
           <div class="projects__slider_wrapper">
             <div class="projects__slider_items">
               <div class="projects__slider_item">
-                <a href="catalog.html" class="project">
+                <a href="/projectDetail.html" class="project">
                   <div class="projects__image">
-                    <img src="img/project.png" alt="1" class="projects__picture" />
+                    <img src="img/project.png" alt="0" class="projects__picture" />
                   </div>
                   <h4 class="projects__title">Проект Verge</h4>
                 </a>
               </div>
               <div class="projects__slider_item">
-                <a href="catalog.html" class="project">
+                <a href="/projectDetail.html" class="project">
                   <div class="projects__image">
                     <img src="img/project.png" alt="1" class="projects__picture" />
                   </div>
@@ -510,25 +509,25 @@
                 </a>
               </div>
               <div class="projects__slider_item">
-                <a href="catalog.html" class="project">
+                <a href="/projectDetail.html" class="project">
                   <div class="projects__image">
-                    <img src="img/project.png" alt="1" class="projects__picture" />
+                    <img src="img/project.png" alt="2" class="projects__picture" />
                   </div>
                   <h4 class="projects__title">Проект Verge2</h4>
                 </a>
               </div>
               <div class="projects__slider_item">
-                <a href="catalog.html" class="project">
+                <a href="/projectDetail.html" class="project">
                   <div class="projects_image">
-                    <img src="img/project.png" alt="1" class="projects__picture" />
+                    <img src="img/project.png" alt="3" class="projects__picture" />
                   </div>
                   <h4 class="projects__title">Проект Verge3</h4>
                 </a>
               </div>
               <div class="projects__slider_item">
-                <a href="catalog.html" class="project">
+                <a href="/projectDetail.html" class="project">
                   <div class="projects__image">
-                    <img src="img/project.png" alt="1" class="projects__picture" />
+                    <img src="img/project.png" alt="4" class="projects__picture" />
                   </div>
                   <h4 class="projects__title">Проект Verge4</h4>
                 </a>
@@ -557,6 +556,34 @@
           <div class="project-site__info_image">
             <img src="img/project-site.png" class="project-site__image" />
           </div>
+        </div>
+      </div>
+
+      <div class="suggestProject">
+        <div class="suggestProject__content">
+          <div class="suggestProject__button_close">
+            <button type="button" class="suggestProject__close"></button>
+          </div>
+          <div class="suggestProject__intro">
+            <h3 class="suggestProject__title">Поделиться проектом</h3>
+            <div class="suggestProject__text">
+              <p>Предложите свой проект и мы разместим его на сайте</p>
+            </div>
+          </div>
+
+          <form class="suggestProject__form">
+            <input class="suggestProject__input" type="text" placeholder="Имя" />
+            <input class="suggestProject__input" type="text" placeholder="Номер телефона" />
+            <input class="suggestProject__input" type="text" placeholder="E-mail" />
+            <input class="suggestProject__input" type="text" placeholder="Ссылка на проект" />
+            <input class="suggestProject__input suggestProject__comments" type="text" placeholder="Комментарий" />
+          </form>
+          <div class="suggestProject__button_send">
+            <button type="button" class="suggestProject__send">Отправить</button>
+            <button type="button" class="suggestProject__privacyPolicy">Нажимая на кнопку вы соглашаетесь 
+              с политикой конфиденциальности</button>
+          </div>  
+
         </div>
       </div>
     </section>
