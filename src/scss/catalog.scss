@@ -1,3 +1,12 @@
+@import "./rootStyles/main.scss";
+@import "./rootStyles/mixins.scss";
+@import "./header.scss";
+@import "./index.scss";
+
+body#root{
+  background-color: $graySmall;
+}
+
 .catalog {
   &__selects {
     display: flex;

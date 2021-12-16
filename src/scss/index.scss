@@ -2,7 +2,7 @@
 @import "./rootStyles/mixins.scss";
 
 body#root{
-  
+  background-color: $graySmall;
 }
 
 .intro {
@@ -31,7 +31,7 @@ body#root{
   }
 
   &__title {
-    color: #fff;
+    color: $mainBack;
     max-width: 37rem;
     font-size: 3.875rem;
     line-height: 1.25;
@@ -44,7 +44,7 @@ body#root{
     padding: 1.125rem 0;
     font-size: 16px;
     line-height: 1.45;
-    color: #ffffff;
+    color: $mainBack;
     transition: background-color 0.3s ease-in;
 
     &:hover {
@@ -74,7 +74,7 @@ body#root{
   &__content {
     width: 58.75rem;
     height: 35rem;
-    background-color: #fff;
+    background-color: $mainBack;
     padding: 2.1875rem 2.5rem 3.125rem;
     position: relative;
     animation-name: slide-in;
@@ -89,7 +89,7 @@ body#root{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -171,6 +171,16 @@ body#root{
   &__doors {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  &__style {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
   }
 
   &__button {
@@ -181,7 +191,7 @@ body#root{
     span {
       font-size: 1.3125rem;
       line-height: 1.4;
-      color: #fff;
+      color: $mainBack;
       margin-right: 0.75rem;
     }
   }
@@ -202,11 +212,19 @@ body#root{
 
   &__ref {
     display: block;
-    color: #fff;
+    color: $mainBack;
 
     & + & {
       margin-top: 0.9375rem;
     }
+  }
+
+  &__Accordion { 
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__mainAccordion {
@@ -217,7 +235,7 @@ body#root{
     padding: 1.25rem 0;
 
     &:nth-child(2) {
-      margin-top: 4.125rem;
+      
       border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
   }
@@ -230,16 +248,30 @@ body#root{
   &__profile {
     width: 22.1875rem;
     height: 4.375rem;
-    border: 1px solid #c4c4c4;
+    border: 1px solid $grayBorder;
     margin: 2.5rem auto 0;
     display: block;
     @extend %buttonFont;
   }
 
   &__contacts {
-    margin-top: 1.875rem;
-    color: #fff;
-    display: block;
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__projects {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__news {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
     text-align: center;
   }
 }
@@ -255,7 +287,7 @@ body#root{
   &__horizontal {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $mainBack;
   }
   &__vertical {
     transform: rotate(90deg);
@@ -300,20 +332,19 @@ body#root{
     transform: translateX(-50%);
     font-size: 0.75rem;
     line-height: 1.25;
-    color: #ffffff;
+    color: $mainBack;
     opacity: 0.3;
   }
 }
 
 .quote {
   padding: 4.875rem 0 0;
-  // border-bottom: 1px solid #a8a8a8;
-
+  
   &__border {
-    margin-top: 3.75rem;
+    margin-top: 6.25rem;
     height: 1px;
     width: 100%;
-    background-color: #a8a8a8;
+    background-color: $grayLight;
   }
 
   &__title {
@@ -328,7 +359,7 @@ body#root{
     height: 2.9375rem;
     position: absolute;
     top: -1.5rem;
-    left: 5%;
+    left: 22%;
 
     svg {
       height: auto;
@@ -340,8 +371,8 @@ body#root{
     width: 3.5rem;
     height: 2.9375rem;
     position: absolute;
-    bottom: -1.2rem;
-    left: 91%;
+    bottom: 5rem;
+    left: 74%;
 
     svg {
       height: auto;
@@ -351,6 +382,9 @@ body#root{
 }
 
 .catalog {
+
+  margin-top: 7.1875rem;
+
   &__title {
     text-align: center;
   }
@@ -408,14 +442,14 @@ body#root{
   }
 
   &__text {
-    color: #fff;
+    color: $mainBack;
   }
 
   &__number {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid $mainBack;
     position: absolute;
     bottom: 1.875rem;
     left: calc(50% - 1.25rem);
@@ -427,7 +461,7 @@ body#root{
     span {
       font-size: 1rem;
       line-height: 1.45;
-      color: #fff;
+      color: $mainBack;
     }
   }
 }
@@ -448,7 +482,7 @@ body#root{
 
     &:hover {
       background-color: $grayMain;
-      color: #fff;
+      color: $mainBack;
     }
   }
 }
@@ -696,7 +730,7 @@ footer {
   &__title {
     position: relative;
     text-align: center;
-    color: #fff;
+    color: $mainBack;
   }
 
   &__point {
@@ -722,7 +756,7 @@ footer {
   &__content {
     width: 23.3125rem;
     height: 57rem;
-    background-color: #fff;
+    background-color: $mainBack;
   }
 
   &__image {
@@ -787,7 +821,7 @@ footer {
     margin-left: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     border-radius: 50%;
 
     svg {
@@ -837,7 +871,7 @@ footer {
     font-size: 0.875rem;
     line-height: 1.2;
     letter-spacing: 0.035em;
-    color: #ffffff;
+    color: $mainBack;
     display: block;
     margin-bottom: 1.75rem;
   }
@@ -863,7 +897,7 @@ footer {
   &__phone {
     font-size: 1.125rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: $mainBack;
 
     &_mobile {
       display: none;
@@ -876,7 +910,7 @@ footer {
     line-height: 1.45;
     text-decoration-line: underline;
     text-transform: capitalize;
-    color: #ffffff;
+    color: $mainBack;
   }
   &__text {
     @extend %discription2;
@@ -922,19 +956,13 @@ footer {
       margin-bottom: 10.875rem;
     }
   }
+
   .menu {
     height: 5.0625rem;
 
-
     &__block {
       &:nth-child(2) {
-        display: flex;
-        order: 1;
-        justify-content: flex-end;
-      }
-      &:nth-child(3) {
-        order: -1;
-        justify-content: flex-start;
+        display: none;
       }
     }
     &__catalog {
@@ -944,7 +972,11 @@ footer {
       display: none;
     }
     &__where {
-      display: none;
+      display: none !important;
+    }
+
+    &__inst {
+      display: none !important;
     }
     &__text {
       display: none;
@@ -957,13 +989,21 @@ footer {
       margin: 0;
     }
   }
+
   .aside {
-    display: none;
+    display: flex;
+    position: initial;
+    margin-left: -1.9rem;
+    width: 120%;
+    &__block {
+      width: 9.625rem;
+      height: 4.375rem;
+    }
   }
 
   .quote {
     padding: 3.125rem 0 0;
-
+    margin-bottom: 0;
     &__title {
       font-size: 1.125rem;
       line-height: 1.4;
@@ -974,6 +1014,20 @@ footer {
       position: relative;
       width: 1.5rem;
       height: 1.25rem;
+      top: 0.5rem;
+      left: -2%;
+
+      svg {
+        height: 100%;
+      }
+    }
+
+    &__icon__second {
+      position: relative;
+      width: 1.5rem;
+      height: 1.25rem;
+      bottom: 0.75rem;
+      left: 95%;
 
       svg {
         height: 100%;
@@ -981,7 +1035,8 @@ footer {
     }
 
     &__border {
-      margin-top: 3.125rem;
+      margin-top: 0;
+      border-bottom: 1px solid $graySmall;
     }
   }
 
@@ -990,6 +1045,7 @@ footer {
   }
 
   .catalog {
+    margin-top: 2.8125rem;
     &__list {
       display: block;
       margin-top: 2.5rem;
@@ -998,7 +1054,7 @@ footer {
   .product {
     width: 100%;
     display: block;
-    margin-bottom: 3.875rem;
+    margin-bottom: 1.6875rem;
 
     &:nth-child(2) {
       margin: 3.875rem 0 0;
@@ -1027,7 +1083,15 @@ footer {
   .posts {
     margin-top: 1.875rem;
   }
+  .post:nth-child(2){
+    display: none;
+  }
+  .post:nth-child(3){
+    display: none;
+  }
+
   .post {
+    
     flex-direction: column;
     padding: 1.875rem 0;
 
@@ -1074,6 +1138,7 @@ footer {
     }
     &__more {
       margin-top: 2.5rem;
+      position: relative;
     }
   }
   .production {
@@ -1214,7 +1279,7 @@ footer {
         display: block;
         font-size: 1.125rem;
         line-height: 1.4;
-        color: #ffffff;
+        color: $mainBack;
       }
     }
   }

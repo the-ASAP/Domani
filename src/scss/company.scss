@@ -1,9 +1,8 @@
 @import "./rootStyles/main.scss";
 @import "./rootStyles/mixins.scss";
 
-
-
-body#company {
+body#root{
+  background-color: $graySmall;
 }
 
 .intro {

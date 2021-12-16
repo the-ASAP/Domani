@@ -74,7 +74,7 @@ $().ready(() => {
   countNews();
 
   accordion(
-    ".menuCatalog__accordion",
+    ".menuCatalog__Accordion",
     ".menuCatalog__information",
     "activeAccordion"
   );

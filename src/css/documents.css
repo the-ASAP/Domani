@@ -304,6 +304,7 @@
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -387,6 +388,7 @@
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -838,7 +840,7 @@ button {
   left: 0;
   width: 100%;
   height: 12.0625rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 .product__image {
   position: relative;
@@ -997,6 +999,7 @@ button {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -1035,6 +1038,10 @@ button {
   background: #212223;
   background: var(--main-color);
 }
+body#root {
+  background-color: #f2f2f2;
+  background-color: var(--gray-small);
+}
 .intro {
   margin: 0;
   width: 100%;
@@ -1070,6 +1077,7 @@ button {
   width: 58.75rem;
   height: 35rem;
   background-color: #fff;
+  background-color: var(--main-back);
   padding: 2.1875rem 2.5rem 3.125rem;
   position: relative;
   -webkit-animation-name: slide-in;
@@ -1090,6 +1098,7 @@ button {
   width: 2.5rem;
   height: 2.5rem;
   background-color: #e3e3e3;
+  background-color: var(--gray-background);
   position: relative;
 }
 .choiceCity__close::before, .choiceCity__close::after {
@@ -1196,6 +1205,19 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 0;
+}
+.menuCatalog__style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 0;
 }
 .menuCatalog__button {
   position: relative;
@@ -1210,6 +1232,7 @@ button {
   font-size: 1.3125rem;
   line-height: 1.4;
   color: #fff;
+  color: var(--main-back);
   margin-right: 0.75rem;
 }
 .menuCatalog__information {
@@ -1226,9 +1249,26 @@ button {
 .menuCatalog__ref {
   display: block;
   color: #fff;
+  color: var(--main-back);
 }
 .menuCatalog__ref + .menuCatalog__ref {
   margin-top: 0.9375rem;
+}
+.menuCatalog__Accordion {
+  width: 33.3333333333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .menuCatalog__mainAccordion {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -1245,7 +1285,6 @@ button {
   padding: 1.25rem 0;
 }
 .menuCatalog__mainAccordion:nth-child(2) {
-  margin-top: 4.125rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 .menuCatalog__mainItems {
@@ -1256,13 +1295,29 @@ button {
   width: 22.1875rem;
   height: 4.375rem;
   border: 1px solid #c4c4c4;
+  border: 1px solid var(--gray-border);
   margin: 2.5rem auto 0;
   display: block;
 }
 .menuCatalog__contacts {
-  margin-top: 1.875rem;
   color: #fff;
-  display: block;
+  color: var(--main-back);
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.menuCatalog__projects {
+  color: #fff;
+  color: var(--main-back);
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.menuCatalog__news {
+  color: #fff;
+  color: var(--main-back);
+  font-size: 1.3125rem;
+  line-height: 1.4;
   text-align: center;
 }
 .plus {
@@ -1280,6 +1335,7 @@ button {
   width: 100%;
   height: 2px;
   background-color: #fff;
+  background-color: var(--main-back);
 }
 .plus__vertical {
   -webkit-transform: rotate(90deg);
@@ -1329,7 +1385,8 @@ button {
           transform: translateX(-50%);
   font-size: 0.75rem;
   line-height: 1.25;
-  color: #ffffff;
+  color: #fff;
+  color: var(--main-back);
   opacity: 0.3;
 }
 .documents__title {
@@ -1381,6 +1438,8 @@ button {
 .documents__image {
   -webkit-box-shadow: 5.8125rem -3.125rem 0px 0px #e3e3e3;
           box-shadow: 5.8125rem -3.125rem 0px 0px #e3e3e3;
+  -webkit-box-shadow: 5.8125rem -3.125rem 0px 0px var(--gray-background);
+          box-shadow: 5.8125rem -3.125rem 0px 0px var(--gray-background);
   margin: 3.125rem 0px 0px 0px;
   width: 38.75rem;
   height: 24.125rem;
@@ -1426,7 +1485,7 @@ button {
   width: calc((100% - 2.5rem) / 4);
   position: relative;
   padding: 1.875rem 2.5rem;
-  border: 1px solid;
+  border: 1px solid rgba(33, 34, 35, 0.2);
 }
 .document:nth-child(2) {
   margin: 0 0.75rem;
@@ -1440,6 +1499,7 @@ button {
   left: 0;
   height: 100%;
   background-color: #e3e3e3;
+  background-color: var(--gray-background);
   width: 100%;
 }
 .document__back_white {
@@ -1449,6 +1509,7 @@ button {
   width: 100%;
   height: 12.0625rem;
   background-color: #fff;
+  background-color: var(--main-back);
 }
 .document__image {
   position: relative;
@@ -1563,6 +1624,7 @@ button {
   width: 38.8125rem;
   height: 50rem;
   background-color: #fff;
+  background-color: var(--main-back);
   position: relative;
   -webkit-animation-name: slide-in;
           animation-name: slide-in;
@@ -1593,6 +1655,7 @@ button {
   width: 2.5rem;
   height: 2.5rem;
   background-color: #e3e3e3;
+  background-color: var(--gray-background);
   position: relative;
 }
 .modalDocument__close::before, .modalDocument__close::after {
@@ -1644,6 +1707,7 @@ footer {
   position: relative;
   text-align: center;
   color: #fff;
+  color: var(--main-back);
 }
 .map__point {
   width: 1.75rem;
@@ -1671,6 +1735,7 @@ footer {
   width: 23.3125rem;
   height: 57rem;
   background-color: #fff;
+  background-color: var(--main-back);
 }
 .modal__image {
   height: 16.875rem;
@@ -1739,6 +1804,7 @@ footer {
   width: 2.5rem;
   height: 2.5rem;
   background-color: #e3e3e3;
+  background-color: var(--gray-background);
   border-radius: 50%;
 }
 .modal__button svg {
@@ -1784,7 +1850,8 @@ footer {
   font-size: 0.875rem;
   line-height: 1.2;
   letter-spacing: 0.035em;
-  color: #ffffff;
+  color: #fff;
+  color: var(--main-back);
   display: block;
   margin-bottom: 1.75rem;
 }
@@ -1812,7 +1879,8 @@ footer {
 .outro__phone {
   font-size: 1.125rem;
   line-height: 1.4;
-  color: #ffffff;
+  color: #fff;
+  color: var(--main-back);
 }
 .outro__phone_mobile {
   display: none;
@@ -1824,7 +1892,8 @@ footer {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   text-transform: capitalize;
-  color: #ffffff;
+  color: #fff;
+  color: var(--main-back);
 }
 .asap {
   display: -webkit-box;
@@ -1972,7 +2041,8 @@ footer {
     display: block;
     font-size: 1.125rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: #fff;
+    color: var(--main-back);
   }
 
   .asap {
@@ -2080,6 +2150,7 @@ footer {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -2150,6 +2221,7 @@ body::-webkit-scrollbar-thumb {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -2601,7 +2673,7 @@ button {
   left: 0;
   width: 100%;
   height: 12.0625rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 .product__image {
   position: relative;
@@ -2957,6 +3029,7 @@ button {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -3018,6 +3091,7 @@ body::-webkit-scrollbar-thumb {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -3469,7 +3543,7 @@ button {
   left: 0;
   width: 100%;
   height: 12.0625rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 .product__image {
   position: relative;

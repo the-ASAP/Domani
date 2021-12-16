@@ -305,6 +305,7 @@
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -395,6 +396,7 @@
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -846,7 +848,7 @@ button {
   left: 0;
   width: 100%;
   height: 12.0625rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 .product__image {
   position: relative;
@@ -1005,6 +1007,7 @@ button {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -1049,6 +1052,10 @@ button {
   border-left: 1px solid var(--main-back);
   background: #212223;
   background: var(--main-color);
+}
+body#root {
+  background-color: #f2f2f2;
+  background-color: var(--gray-small);
 }
 .intro {
   margin: 0;
@@ -1285,6 +1292,19 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 0;
+}
+.menuCatalog__style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 0;
 }
 .menuCatalog__button {
   position: relative;
@@ -1299,7 +1319,6 @@ button {
   font-size: 1.3125rem;
   line-height: 1.4;
   color: #fff;
-  color: var(--main-back);
   margin-right: 0.75rem;
 }
 .menuCatalog__information {
@@ -1316,10 +1335,25 @@ button {
 .menuCatalog__ref {
   display: block;
   color: #fff;
-  color: var(--main-back);
 }
 .menuCatalog__ref + .menuCatalog__ref {
   margin-top: 0.9375rem;
+}
+.menuCatalog__Accordion {
+  width: 33.3333333333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .menuCatalog__mainAccordion {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -1336,7 +1370,6 @@ button {
   padding: 1.25rem 0;
 }
 .menuCatalog__mainAccordion:nth-child(2) {
-  margin-top: 4.125rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 .menuCatalog__mainItems {
@@ -1351,10 +1384,24 @@ button {
   display: block;
 }
 .menuCatalog__contacts {
-  margin-top: 1.875rem;
   color: #fff;
   color: var(--main-back);
-  display: block;
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.menuCatalog__projects {
+  color: #fff;
+  color: var(--main-back);
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.menuCatalog__news {
+  color: #fff;
+  color: var(--main-back);
+  font-size: 1.3125rem;
+  line-height: 1.4;
   text-align: center;
 }
 .plus {
@@ -2487,6 +2534,7 @@ footer {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -2557,6 +2605,7 @@ body::-webkit-scrollbar-thumb {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -3008,7 +3057,7 @@ button {
   left: 0;
   width: 100%;
   height: 12.0625rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 .product__image {
   position: relative;
@@ -3364,6 +3413,7 @@ button {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -3425,6 +3475,7 @@ body::-webkit-scrollbar-thumb {
   --gray-light: #a8a8a8;
   --gray-small: #f2f2f2;
   --gray-background: #e3e3e3;
+  --gray-border: #c4c4c4;
   --gray-hover-select: rgba(196, 196, 196, 0.2);
   --main-font: "Montserrat", sans-serif;
 }
@@ -3876,7 +3927,7 @@ button {
   left: 0;
   width: 100%;
   height: 12.0625rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 .product__image {
   position: relative;

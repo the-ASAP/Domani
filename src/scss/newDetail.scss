@@ -1,4 +1,11 @@
 @import "./rootStyles/main.scss";
+@import "./rootStyles/mixins.scss";
+@import "../scss/index.scss";
+@import '../scss/header.scss';
+
+body#root{
+  background-color: $graySmall;
+}
 .new {
   &__header {
     display: flex;

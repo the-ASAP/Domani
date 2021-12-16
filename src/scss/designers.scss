@@ -1,9 +1,8 @@
 @import "./rootStyles/main.scss";
 @import "./rootStyles/mixins.scss";
 
-
-
-body#designers {
+body#root{
+  background-color: $graySmall;
 }
 
 .intro {
@@ -195,6 +194,16 @@ body#designers {
   &__doors {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  &__style {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
   }
 
   &__button {
@@ -205,7 +214,7 @@ body#designers {
     span {
       font-size: 1.3125rem;
       line-height: 1.4;
-      color: $mainBack;
+      color: #fff;
       margin-right: 0.75rem;
     }
   }
@@ -226,11 +235,19 @@ body#designers {
 
   &__ref {
     display: block;
-    color: $mainBack;
+    color: #fff;
 
     & + & {
       margin-top: 0.9375rem;
     }
+  }
+
+  &__Accordion { 
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__mainAccordion {
@@ -241,7 +258,7 @@ body#designers {
     padding: 1.25rem 0;
 
     &:nth-child(2) {
-      margin-top: 4.125rem;
+      
       border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
   }
@@ -261,9 +278,23 @@ body#designers {
   }
 
   &__contacts {
-    margin-top: 1.875rem;
     color: $mainBack;
-    display: block;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__projects {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__news {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
     text-align: center;
   }
 }
