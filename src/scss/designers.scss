@@ -50,6 +50,7 @@ body#root{
   &__button {
     max-width: 28.625rem;
     margin-top: 1.875rem;
+    display: flex;
     color: $mainBack;
     transition: background-color 0.3s ease-in, 
                 color 0.3s ease-in, 
@@ -811,7 +812,6 @@ body#root{
 
   &__send {
     background-color: $grayMain;
-    width: 13.75rem;
     //margin-top: 3.75rem;
     background-color: var(--gray-main);
     width: 79%;

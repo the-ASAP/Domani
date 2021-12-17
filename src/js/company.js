@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import { initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
+import { toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/company.scss';
 import '../scss/header.scss';
 import "../scss/rootStyles/main.scss";

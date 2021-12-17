@@ -15,12 +15,20 @@ $().ready(() => {
         "choiceCity__active",
         ".choiceCity__close"
     );
+
     toggleModal(
         ".intro__button",
         ".suggestProject",
         "suggestProject__active",
         ".suggestProject__close"
     );
+
+    toggleModal(
+      ".projects__selects_mobile",
+      ".filterModal",
+      "filterModal__active",
+      ".filterModal__close"
+  );
 
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
@@ -34,7 +42,7 @@ $().ready(() => {
     openModalCatalog();
 
     accordion(
-        ".menuCatalog__accordion",
+        ".menuCatalog__Accordion",
         ".menuCatalog__information",
         "activeAccordion"
       );

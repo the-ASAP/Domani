@@ -29,7 +29,7 @@ body#root{
   &__text {
     max-width: 32.5rem;
     justify-content: center;
-    color: #656565;
+    color: $grayMid;
     text-align: center;
     margin-top: 1.25rem;
   }
@@ -73,7 +73,7 @@ body#root{
   &__content {
     width: 58.75rem;
     height: 35rem;
-    background-color: #fff;
+    background-color: $mainBack;
     padding: 2.1875rem 2.5rem 3.125rem;
     position: relative;
     animation-name: slide-in;
@@ -88,7 +88,7 @@ body#root{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -190,7 +190,7 @@ body#root{
     span {
       font-size: 1.3125rem;
       line-height: 1.4;
-      color: #fff;
+      color: $mainBack;
       margin-right: 0.75rem;
     }
   }
@@ -211,7 +211,7 @@ body#root{
 
   &__ref {
     display: block;
-    color: #fff;
+    color: $mainBack;
 
     & + & {
       margin-top: 0.9375rem;
@@ -245,7 +245,7 @@ body#root{
   &__profile {
     width: 22.1875rem;
     height: 4.375rem;
-    border: 1px solid #c4c4c4;
+    border: 1px solid $grayBorder;
     margin: 2.5rem auto 0;
     display: block;
     @extend %buttonFont;
@@ -301,7 +301,7 @@ body#root{
   &__content {
     width: 38.8125rem;
     height: 50rem;
-    background-color: #fff;
+    background-color: $mainBack;
     
     position: relative;
     animation-name: slide-in;
@@ -325,7 +325,7 @@ body#root{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -397,20 +397,23 @@ body#root{
 
   &__send {
     background-color: $grayMain;
-    width: 13.75rem;
     //margin-top: 3.75rem;
     background-color: var(--gray-main);
     width: 79%;
     padding: 1.125rem 0;
     font-size: 16px;
     line-height: 1.45;
-    color: #ffffff;
+    color: $mainBack;
     transition: background-color 0.3s ease-in;
 
     &:hover {
       background-color: #000;
     }
   }
+}
+
+.filterModal {
+  display: none;
 }
 
 .plus {
@@ -424,7 +427,7 @@ body#root{
   &__horizontal {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $mainBack;
   }
   &__vertical {
     transform: rotate(90deg);
@@ -440,7 +443,6 @@ body#root{
     }
   }
 }
-
 
 .aside {
   position: fixed;
@@ -469,12 +471,16 @@ body#root{
     transform: translateX(-50%);
     font-size: 0.75rem;
     line-height: 1.25;
-    color: #ffffff;
+    color: $mainBack;
     opacity: 0.3;
   }
 }
 
 .project {
+  margin-top: 2.875rem;
+}
+
+.projects {
   margin-top: 2.875rem;
 
   &__selects {
@@ -536,7 +542,7 @@ footer {
   &__content {
     width: 23.3125rem;
     height: 57rem;
-    background-color: #fff;
+    background-color: $mainBack;
   }
 
   &__image {
@@ -601,7 +607,7 @@ footer {
     margin-left: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     border-radius: 50%;
 
     svg {
@@ -651,7 +657,7 @@ footer {
     font-size: 0.875rem;
     line-height: 1.2;
     letter-spacing: 0.035em;
-    color: #ffffff;
+    color: $mainBack;
     display: block;
     margin-bottom: 1.75rem;
   }
@@ -677,7 +683,7 @@ footer {
   &__phone {
     font-size: 1.125rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: $mainBack;
 
     &_mobile {
       display: none;
@@ -690,7 +696,7 @@ footer {
     line-height: 1.45;
     text-decoration-line: underline;
     text-transform: capitalize;
-    color: #ffffff;
+    color: $mainBack;
   }
   &__text {
     @extend %discription2;
@@ -735,25 +741,63 @@ footer {
       object-fit: cover;
       object-position: -18.125rem 0;
       margin-left: -1.875rem;
-      
+    }
+
+    &__text {
+      max-width: 21rem;
+      opacity: 0.8;
+    }
+
+    &__button {
+      margin-top: 2.5rem;
     }
 
     &__info {
       margin-left: 0;
     }
+
     &__title {
       font-size: 2.8125rem;
       line-height: 1.29;
     }
+  }
 
-    &__text {
-      display: none;
-     // color: #E3E3E3;
-     // margin-top: 0.9375rem;
+  .suggestProject {
+  
+    &__content {
+      width: 100%;
+      height: 100%;
     }
-    &__button {
-      //margin-top: 1.875rem;
-      display: none;
+    &__title {
+      text-align: center;
+    }
+  
+    &__intro {
+      padding: 0 0.9375rem;
+      margin-top: -0.75rem;
+    }
+  
+    &__close {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  
+    &__form {
+      margin-top: 1.5625rem;
+      padding: 0 1.125rem 1.25rem 1.125rem;
+    }
+  
+    &__comments {
+      height: 6.25rem;
+    }
+  
+    &__comments::placeholder {
+      transform: translateY(-1.5625rem);
+    }
+  
+    &__input {
+     padding: 0.9375rem;
+     margin-bottom: 0.625rem;
     }
   }
 
@@ -798,8 +842,137 @@ footer {
     display: none;
   }
 
-  .project {
-    margin-top: 3.125rem;
+  .filterModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: appear;
+    animation-duration: 300ms;
+  
+    &__active {
+      display: flex;
+    }
+  
+    &__button_close {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1.25rem;
+      margin-right: 1.25rem;
+    }
+  
+    &__content {
+      width: 85%;
+      height: 70%;
+      background-color: $mainBack;
+      
+      position: relative;
+      animation-name: slide-in;
+      animation-duration: 0.7s;
+    }
+
+    &__title {
+      text-align: center;
+    }
+  
+    &__intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0.9375rem;
+      margin-top: -0.75rem;
+    }
+    &__text{
+      max-width: 21.5625rem;
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+  
+    &__close {
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $grayBack;
+      position: relative;
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 0.5625rem);
+        width: 1.125rem;
+        height: 2px;
+        background-color: $grayMain;
+        transform: rotate(45deg);
+      }
+  
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  
+    &__form {
+      margin-top: 1.875rem;
+      padding: 0 1.0625rem 1.25rem 1.125rem;
+    }
+  
+    &__input {
+      width: 100%;
+      border: 1px solid #e0e0e0;
+      padding: 0.9375rem;
+      margin-bottom: 0.9375rem;
+      font-size: 0.875rem;
+      line-height: 1.45;
+      color: $grayMid;
+  
+      &::placeholder {
+        font-size: 0.875rem;
+        line-height: 1.45;
+        color: $grayMid;
+      }
+    }
+  
+    &__button_apply {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__apply {
+      background-color: $grayMain;
+      //margin-top: 3.75rem;
+      background-color: var(--gray-main);
+      width: 91%;
+      padding: 1.125rem 0;
+      font-size: 16px;
+      line-height: 1.45;
+      color: $mainBack;
+      transition: background-color 0.3s ease-in;
+  
+      &:hover {
+        background-color: #000;
+      }
+    }
+
+    .select {
+      width: 100%;
+      margin-bottom: 0.625rem;
+      &:first-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .projects {
+    margin-top: 21.5625rem;
   
     &__selects {
       display: none;
@@ -808,17 +981,18 @@ footer {
         display: flex;
         margin-top: 1.25rem;
         width: 100%;
+        border: 1px solid $grayBack;
+        padding: 0.9375rem 1.25rem;
       }
     }
     
-    
-
     &__border {
      display: none;
     }
 
     &__filters {
       //margin-bottom: 60px;
+      margin-top: -15%;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -836,9 +1010,32 @@ footer {
       padding-left: 0;
     }
 
-    .select__title {
-      justify-content: space-between;
+    .selects {
+      &__image {
+        border-radius: 0.9375rem;
+        background-color: hsla(0,0%,76.9%, 0.2);
+        width: 1.75rem;
+        height: 1.75rem; 
 
+        svg {
+          padding-top: 0.3125rem;
+          padding-left: 0.3125rem;
+        }
+      }
+
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &::before {
+          transform: translate(-1/3px, 0%) rotate(0deg);
+        }
+
+        &::after {
+          transform: translate(1/3px, 0%) rotate(0deg);
+        }
+      }  
     }
     
   }
@@ -890,7 +1087,7 @@ footer {
         display: block;
         font-size: 1.125rem;
         line-height: 1.4;
-        color: #ffffff;
+        color: $mainBack;
       }
     }
   }
