@@ -10,7 +10,7 @@ body#root{
   width: 100%;
   height: 43.75rem;
   position: relative;
-  background-color: #212223;
+  background-color: $mainColor;
   padding: 0 1.875rem;
   
   &__image {
@@ -39,7 +39,7 @@ body#root{
   &__text {
     max-width: 32.5rem;
     justify-content: center;
-    color: #FFFFFF;
+    color: $mainBack;
     opacity: 0.8;
     text-align: center;
     margin-top: 1.25rem;
@@ -68,7 +68,7 @@ body#root{
   &__content {
     width: 58.75rem;
     height: 35rem;
-    background-color: #fff;
+    background-color: $mainBack;
     padding: 2.1875rem 2.5rem 3.125rem;
     position: relative;
     animation-name: slide-in;
@@ -83,7 +83,7 @@ body#root{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -165,6 +165,16 @@ body#root{
   &__doors {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  &__style {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
   }
 
   &__button {
@@ -175,7 +185,7 @@ body#root{
     span {
       font-size: 1.3125rem;
       line-height: 1.4;
-      color: #fff;
+      color: $mainBack;
       margin-right: 0.75rem;
     }
   }
@@ -196,11 +206,19 @@ body#root{
 
   &__ref {
     display: block;
-    color: #fff;
+    color: $mainBack;
 
     & + & {
       margin-top: 0.9375rem;
     }
+  }
+
+  &__Accordion { 
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__mainAccordion {
@@ -211,7 +229,7 @@ body#root{
     padding: 1.25rem 0;
 
     &:nth-child(2) {
-      margin-top: 4.125rem;
+      
       border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
   }
@@ -224,16 +242,30 @@ body#root{
   &__profile {
     width: 22.1875rem;
     height: 4.375rem;
-    border: 1px solid #c4c4c4;
+    border: 1px solid $grayBorder;
     margin: 2.5rem auto 0;
     display: block;
     @extend %buttonFont;
   }
 
   &__contacts {
-    margin-top: 1.875rem;
-    color: #fff;
-    display: block;
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__projects {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__news {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
     text-align: center;
   }
 }
@@ -249,7 +281,7 @@ body#root{
   &__horizontal {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $mainBack;
   }
   &__vertical {
     transform: rotate(90deg);
@@ -294,7 +326,7 @@ body#root{
     transform: translateX(-50%);
     font-size: 0.75rem;
     line-height: 1.25;
-    color: #ffffff;
+    color: $mainBack;
     opacity: 0.3;
   }
 }
@@ -307,7 +339,7 @@ body#root{
     margin-top: 7.75rem;
     height: 1px;
     width: 100%;
-    background-color: #a8a8a8;
+    background-color: $grayLight;
   }
 
   &__container {
@@ -354,7 +386,7 @@ body#root{
   }
 
   &__image {
-    box-shadow: 3.25rem 2.4375rem 0px -1.25rem #e3e3e3;
+    box-shadow: 4.25rem 4.4375rem 0px -1.25rem $grayBack;
     width: 38.9375rem;
     height: 22rem;
   }
@@ -367,6 +399,10 @@ body#root{
   &__title {
     text-align: left;
     position: relative;
+  }
+
+  &__info {
+    max-width: 30.3125rem;
   }
 }
 
@@ -466,15 +502,16 @@ body#root{
   }
 
   &__text {
-
     &_left {
       margin-top: 1.25rem;
       max-width: 28.5rem;
+      color: $grayMid;
     }
 
     &_right {
       margin-top: 1.25rem;
       max-width: 36rem;
+      color: $grayMid;
     }
   }
 
@@ -506,12 +543,12 @@ body#root{
     
 
     &_left {
-      box-shadow: -5.875rem -3.125rem 0px 0px #e3e3e3;
+      box-shadow: -5.875rem -3.125rem 0px 0px $grayBack;
       max-width: 29rem;
       max-height: 18.125rem;
     }
     &_right {
-      box-shadow: 4.5rem -4.9375rem 0px -1.125rem #e3e3e3;
+      box-shadow: 4.5rem -4.9375rem 0px -1.125rem $grayBack;
       max-width: 39.125rem;
       max-height: 26.125rem;
     }
@@ -536,7 +573,7 @@ body#root{
     justify-content: space-around;
     position: relative;
     flex-direction: row;
-    background-color: #E3E3E3;
+    background-color: $grayBack;
     margin-bottom: 6.25rem;
 
     &_text {
@@ -556,21 +593,21 @@ body#root{
   }
 
   &__title {
-    color: #212223;
+    color: $mainColor;
     max-width: 19.375rem;
     margin-bottom: 1.0625rem;
   }
 
   &__text {
     max-width: 35.875rem;
-    color: #797979;
+    color: $grayMid;
   }
 
   &__button {
-    background-color: #212223;
+    background-color: $mainColor;
     max-width: 15.625rem;
     margin-top: 3.125rem;
-    color: #ffffff;
+    color: $mainBack;
     font-size: 1rem;
     transition: background-color 0.3s ease-in;
     @extend%buttonOutlined;
@@ -682,7 +719,7 @@ footer {
   &__title {
     position: relative;
     text-align: center;
-    color: #fff;
+    color: $mainBack;
   }
 
   &__point {
@@ -708,7 +745,7 @@ footer {
   &__content {
     width: 23.3125rem;
     height: 57rem;
-    background-color: #fff;
+    background-color: $mainBack;
   }
 
   &__image {
@@ -773,7 +810,7 @@ footer {
     margin-left: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     border-radius: 50%;
 
     svg {
@@ -823,7 +860,7 @@ footer {
     font-size: 0.875rem;
     line-height: 1.2;
     letter-spacing: 0.035em;
-    color: #ffffff;
+    color: $mainBack;
     display: block;
     margin-bottom: 1.75rem;
   }
@@ -849,7 +886,7 @@ footer {
   &__phone {
     font-size: 1.125rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: $mainBack;
 
     &_mobile {
       display: none;
@@ -862,7 +899,7 @@ footer {
     line-height: 1.45;
     text-decoration-line: underline;
     text-transform: capitalize;
-    color: #ffffff;
+    color: $mainBack;
   }
   &__text {
     @extend %discription2;
@@ -931,7 +968,7 @@ footer {
     }
 
     &__text {
-      color: #E3E3E3;
+      color: $grayBack;
       margin-top: 1.5625rem;
       max-width: 21.1875rem;
     }
@@ -987,7 +1024,7 @@ footer {
       margin-top: 3.125rem;
       height: 1px;
       width: 100%;
-      background-color: #a8a8a8;
+      background-color: $grayLight;
     }
   
     &__title {
@@ -1043,7 +1080,7 @@ footer {
       margin-top: 3.125rem;
       width: inherit;
       height: inherit;
-      box-shadow: 2.575rem 2.9375rem 0px -1.25rem #e3e3e3;
+      box-shadow: 2.575rem 2.9375rem 0px -1.25rem $grayBack;
       max-width: 39.125rem;
       max-height: 22.075rem;
     }
@@ -1120,7 +1157,7 @@ footer {
 
     &__text {
       margin-top: 0.625rem;
-      color: #797979;
+      color: $grayMidText;
     }
 
     &__container{
@@ -1181,7 +1218,7 @@ footer {
     &__image {
   
       &_left {
-        box-shadow: -1.9375rem -2.875rem 0px -0.8125rem #e3e3e3;
+        box-shadow: -1.9375rem -2.875rem 0px -0.8125rem $grayBack;
       }
       &_right {
         @media (min-width: 300px) and (max-width: 511px) {
@@ -1190,7 +1227,7 @@ footer {
         @media (min-width: 511px) {
           margin-top: 26.375rem;
         }
-        box-shadow: 2.9375rem -3.8125rem 0px -1.875rem #e3e3e3;
+        box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
       }
     
     }
@@ -1361,7 +1398,7 @@ footer {
         display: block;
         font-size: 1.125rem;
         line-height: 1.4;
-        color: #ffffff;
+        color: $mainBack;
       }
     }
   }

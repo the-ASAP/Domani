@@ -10,7 +10,7 @@ body#root{
   width: 100%;
   height: 43.75rem;
   position: relative;
-  background-color: #212223;
+  background-color: $mainColor;
   padding: 0 1.875rem;
   
   &__image {
@@ -49,7 +49,7 @@ body#root{
   &__button {
     max-width: 13.75rem;
     margin-top: 1.875rem;
-    color: #ffffff;
+    color: $mainBack;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
     @extend%buttonOutlined;
 
@@ -58,7 +58,7 @@ body#root{
     }
 
     &:hover {
-      background-color: #ffffff;
+      background-color: $mainBack;
       color: #000;
     }
   }
@@ -86,7 +86,7 @@ body#root{
   &__content {
     width: 58.75rem;
     height: 35rem;
-    background-color: #fff;
+    background-color: $mainBack;
     padding: 2.1875rem 2.5rem 3.125rem;
     position: relative;
     animation-name: slide-in;
@@ -101,7 +101,7 @@ body#root{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -299,7 +299,7 @@ body#root{
   &__horizontal {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $mainBack;
   }
   &__vertical {
     transform: rotate(90deg);
@@ -343,7 +343,7 @@ body#root{
     transform: translateX(-50%);
     font-size: 0.75rem;
     line-height: 1.25;
-    color: #ffffff;
+    color: $mainBack;
     opacity: 0.3;
   }
 }
@@ -385,7 +385,7 @@ body#root{
   }
 
   &__image {
-    box-shadow: 5.8125rem -3.125rem 0px 0px #e3e3e3;
+    box-shadow: 5.8125rem -3.125rem 0px 0px $grayBack;
     margin: 3.125rem 0px 0px 0px;
     width: 38.75rem;
     height: 24.125rem;
@@ -401,7 +401,7 @@ body#root{
       display: flex;
     }
     &__text {
-      color: #656565;
+      color: $grayMid;
       position: relative;
     }
     &:nth-child(5) {
@@ -455,7 +455,7 @@ footer {
   &__content {
     width: 23.3125rem;
     height: 57rem;
-    background-color: #fff;
+    background-color: $mainBack;
   }
 
   &__image {
@@ -520,7 +520,7 @@ footer {
     margin-left: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     border-radius: 50%;
 
     svg {
@@ -570,7 +570,7 @@ footer {
     font-size: 0.875rem;
     line-height: 1.2;
     letter-spacing: 0.035em;
-    color: #ffffff;
+    color: $mainBack;
     display: block;
     margin-bottom: 1.75rem;
   }
@@ -596,7 +596,7 @@ footer {
   &__phone {
     font-size: 1.125rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: $mainBack;
 
     &_mobile {
       display: none;
@@ -609,7 +609,7 @@ footer {
     line-height: 1.45;
     text-decoration-line: underline;
     text-transform: capitalize;
-    color: #ffffff;
+    color: $mainBack;
   }
   &__text {
     @extend %discription2;
@@ -676,7 +676,7 @@ footer {
     }
 
     &__text {
-      color: #E3E3E3;
+      color: $grayBack;
       opacity: 0.8;
       margin-top: 0.9375rem;
     }
@@ -812,7 +812,7 @@ footer {
         display: block;
         font-size: 1.125rem;
         line-height: 1.4;
-        color: #ffffff;
+        color: $mainBack;
       }
     }
   }

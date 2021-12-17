@@ -715,7 +715,7 @@ body#root{
   &__content {
     width: 38.8125rem;
     height: 50rem;
-    background-color: #fff;
+    background-color: $mainBack;
     
     position: relative;
     animation-name: slide-in;
@@ -739,7 +739,7 @@ body#root{
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #e3e3e3;
+    background-color: $grayBack;
     position: relative;
 
     &::before,
@@ -818,7 +818,7 @@ body#root{
     padding: 1.125rem 0;
     font-size: 16px;
     line-height: 1.45;
-    color: #ffffff;
+    color: $mainBack;
     transition: background-color 0.3s ease-in;
 
     &:hover {
@@ -1261,7 +1261,7 @@ footer {
         position: absolute;
         z-index: 3;
         width: 100%;
-        border-bottom: 1px solid #C4C4C4;
+        border-bottom: 1px solid $grayBorder;
         padding-bottom: 1.25rem;
       }
       
