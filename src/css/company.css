@@ -1515,6 +1515,8 @@ body#root {
 .development__text {
   margin-top: 1.25rem;
   max-width: 30.3125rem;
+  color: #656565;
+  color: var(--gray-mid);
 }
 .development__title {
   text-align: left;
