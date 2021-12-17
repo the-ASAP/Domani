@@ -1120,6 +1120,9 @@ body#root {
 .intro__button {
   max-width: 28.625rem;
   margin-top: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in, fill 0.3s ease-in, stroke 0.3s ease-in;
@@ -2029,7 +2032,6 @@ body#root {
 .suggestProject__send {
   background-color: #212223;
   background-color: var(--gray-main);
-  width: 13.75rem;
   background-color: #212223;
   background-color: var(--gray-main);
   width: 79%;
