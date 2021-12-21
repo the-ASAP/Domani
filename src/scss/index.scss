@@ -304,7 +304,6 @@ body#root{
   }
 }
 
-
 .aside {
   position: fixed;
   top: 50%;
@@ -488,13 +487,13 @@ body#root{
 }
 
 .posts {
-  margin-top: 3.75rem;
+  margin-top: 3.125rem;
 }
 
 .post {
   display: flex;
   justify-content: space-between;
-  padding: 2.5rem 0;
+  padding: 3.125rem 0;
   border-bottom: 1px solid #cccccc;
 
   &__theme {
@@ -545,7 +544,7 @@ body#root{
     position: absolute;
     left: 0;
     bottom: 0;
-    font-weight: 500;
+    color:$mainColor;
   }
 }
 

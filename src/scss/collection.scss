@@ -41,7 +41,7 @@ body#root{
   &__text {
     max-width: 32.5rem;
     justify-content: center;
-    color: $mainBack;
+    color: $grayBack;
     text-align: center;
     margin-top: 1.25rem;
   }
@@ -367,7 +367,6 @@ body#root{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  
   }
 
   &__info {
@@ -413,14 +412,13 @@ body#root{
     display: flex;
     margin-top: 3.125rem;
 
-    &__content{
+    &__content {
       display: none;
       flex-wrap: wrap;
     }
     
     &__content.active {
       display: flex;
-      //flex-wrap: wrap;
     }
     
     &__links {

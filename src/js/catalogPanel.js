@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import '../scss/catalog.scss';
+import '../scss/catalogPanel.scss';
 import { openSelect, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 
 $().ready(() => {
