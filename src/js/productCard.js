@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
 import { plusSlide, minusSlide, numberSlide, owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
-import '../scss/fittingCard.scss';
+import '../scss/productCard.scss';
 import '../scss/header.scss';
 import "../scss/rootStyles/main.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -15,14 +15,6 @@ $().ready(() => {
         "choiceCity__active",
         ".choiceCity__close"
     );
-
-    toggleModal(
-        ".colorSolution__button_price",
-        ".findPrice",
-        "findPrice__active",
-        ".findPrice__close"
-    );
-    
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
     
@@ -46,9 +38,9 @@ $().ready(() => {
         "activeAccordion"
       );
 
-    owlGallery(".colorSolution__slider_items", {
+    owlGallery(".variants__slider_items", {
         nav: true,
-        navContainer: ".colorSolution__controls",
+        navContainer: ".variants__controls",
         loop: false,
         rewind: true,
         dots: false,
@@ -58,7 +50,7 @@ $().ready(() => {
             0: {
                 items: 1,
             },
-            500: {
+            600: {
                 items: 1,
                 nav: false,
             },
@@ -77,6 +69,10 @@ $().ready(() => {
             },
         },
     });
+
+    numberSlide('right', ".variants__slider", ".variants__number-slide");
+    plusSlide(".variants__slider", ".variants__number-slide");
+    minusSlide(".variants__slider", ".variants__number-slide");
 
     owlGallery(".ideas__slider_items", {
         nav: true,
@@ -113,9 +109,9 @@ $().ready(() => {
     plusSlide(".ideas__slider", ".ideas__number-slide");
     minusSlide(".ideas__slider", ".ideas__number-slide");
 
-    owlGallery(".fittings__slider_items", {
+    owlGallery(".doors__slider_items", {
         nav: true,
-        navContainer: ".fittings__controls",
+        navContainer: ".doors__controls",
         loop: false,
         rewind: true,
         dots: false,

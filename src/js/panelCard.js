@@ -144,4 +144,7 @@ $().ready(() => {
             },
         },
     });
+    numberSlide('right', ".panels__slider", ".panels__number-slide");
+    plusSlide(".panels__slider", ".panels__number-slide");
+    minusSlide(".panels__slider", ".panels__number-slide");
 });

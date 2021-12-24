@@ -65,6 +65,10 @@ body#root{
     
     .select {
       width: 24%;
+      &__title {
+        border: 1px solid $grayBack;
+        color: $grayMid;
+      }
     }
   }
 

@@ -727,7 +727,7 @@ footer {
 
   .catalog {
 
-    margin-top: 70%;
+    margin-top: 81%;
 
     .tab {
       display: none;
@@ -744,7 +744,11 @@ footer {
       width:100%;
     }
     .select {
-      width: 100%
+      width: 100%;
+      &__title {
+        border: 1px solid $grayBack;
+        color: $grayMid;
+      }
     }
   }
 
