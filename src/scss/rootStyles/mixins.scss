@@ -16,8 +16,17 @@
 %buttonOutlined {
   background-color: transparent;
   border: 1px solid #ffffff;
-  padding: 17px 30px;
-  font-size: 18px;
+  padding: 1.0625rem 1.875rem;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+
+%buttonOutlined2 {
+  background-color: transparent;
+  border: 1px solid #212223;
+  padding: 1.1875rem 1.5625rem;
+  font-size: 1.125rem;
   text-align: center;
 }
 

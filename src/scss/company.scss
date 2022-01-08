@@ -1,0 +1,1442 @@
+@import "./rootStyles/main.scss";
+@import "./rootStyles/mixins.scss";
+
+body#root{
+  background-color: $graySmall;
+}
+
+.intro {
+  margin: 0;
+  width: 100%;
+  height: 43.75rem;
+  position: relative;
+  background-color: $mainColor;
+  padding: 0 1.875rem;
+  
+  &__image {
+    position: relative;
+    margin-top: 3.5625rem;
+    left: 0;
+    max-width: 78.3125rem;
+    max-height: 37.5625rem;
+    object-fit: cover;
+  }
+
+  &__info {
+    max-height: 55.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    align-items: center;
+    margin-top: 3.625rem;
+  }
+
+  &__title {
+    justify-content: center;
+  }
+
+  &__text {
+    max-width: 32.5rem;
+    justify-content: center;
+    color: $mainBack;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+
+}
+
+.choiceCity {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation-name: appear;
+  animation-duration: 300ms;
+
+  &__active {
+    display: flex;
+  }
+
+  &__content {
+    width: 58.75rem;
+    height: 35rem;
+    background-color: $mainBack;
+    padding: 2.1875rem 2.5rem 3.125rem;
+    position: relative;
+    animation-name: slide-in;
+    animation-duration: 0.7s;
+  }
+
+  &__intro {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__close {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $grayBack;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: calc(50% - 0.5625rem);
+      width: 1.125rem;
+      height: 2px;
+      background-color: $grayMain;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__form {
+    margin-top: 1.25rem;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 0.9375rem;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: $grayMid;
+
+    &::placeholder {
+      font-size: 0.875rem;
+      line-height: 1.45;
+      color: $grayMid;
+    }
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__block {
+    margin-top: 3.125rem;
+  }
+
+  &__country {
+    font-size: 1.3125rem;
+  }
+
+  &__city {
+    display: block;
+    color: $grayMain;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.9375rem;
+
+    & + & {
+      margin-top: 0.625rem;
+    }
+  }
+}
+
+.menuCatalog {
+  @extend %scrollbar;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $grayMain;
+  z-index: 2;
+  padding-top: 9.375rem;
+  overflow-y: scroll;
+  transition: top 0.3s ease-in;
+  display: none;
+
+  &__doors {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  &__style {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 1.3125rem;
+      line-height: 1.4;
+      color: $mainBack;
+      margin-right: 0.75rem;
+    }
+  }
+
+  &__information {
+    display: none;
+  }
+
+  &__image {
+    margin-top: 3rem;
+    width: 12.75rem;
+    height: 15.1875rem;
+  }
+
+  &__items {
+    margin-top: 1.875rem;
+  }
+
+  &__ref {
+    display: block;
+    color: $mainBack;
+
+    & + & {
+      margin-top: 0.9375rem;
+    }
+  }
+
+  &__Accordion { 
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__mainAccordion {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 0;
+
+    &:nth-child(2) {
+      
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  &__mainItems {
+    margin-top: 1.875rem;
+    text-align: center;
+  }
+
+  &__profile {
+    width: 22.1875rem;
+    height: 4.375rem;
+    border: 1px solid $grayBorder;
+    margin: 2.5rem auto 0;
+    display: block;
+    @extend %buttonFont;
+  }
+
+  &__contacts {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__projects {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__news {
+    color: $mainBack;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.plus {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+
+  &__vertical,
+  &__horizontal {
+    width: 100%;
+    height: 2px;
+    background-color: $mainBack;
+  }
+  &__vertical {
+    transform: rotate(90deg);
+    position: absolute;
+    transition: transform 0.3s ease-in;
+  }
+}
+
+.activeAccordion {
+  .plus {
+    &__vertical {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+
+.aside {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  &__block {
+    position: relative;
+    background-color: $grayMain;
+    width: 4.375rem;
+    height: 4.375rem;
+    display: block;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #bfbfbf;
+    }
+  }
+
+  &__word {
+    position: absolute;
+    bottom: 0.5625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    line-height: 1.25;
+    color: $mainBack;
+    opacity: 0.3;
+  }
+}
+
+.quote {
+  margin-top: 28.5rem;
+  // border-bottom: 1px solid #a8a8a8;
+
+  &__border {
+    margin-top: 7.75rem;
+    height: 1px;
+    width: 100%;
+    background-color: $grayLight;
+  }
+
+  &__container {
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__icon {
+    width: 3.5rem;
+    height: 2.9375rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 2%;
+
+    svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__icon__second {
+    width: 3.5rem;
+    height: 2.9375rem;
+    position: absolute;
+    bottom: -1.2rem;
+    left: 93%;
+
+    svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.development {
+
+  &__container {
+    display: flex;
+    margin-top: 4.125rem;
+   align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    box-shadow: 4.25rem 4.4375rem 0px -1.25rem $grayBack;
+    width: 38.9375rem;
+    height: 22rem;
+  }
+
+  &__text{
+    margin-top: 1.25rem;
+    max-width: 30.3125rem;
+    color: $grayMid;
+  }
+
+  &__title {
+    text-align: left;
+    position: relative;
+  }
+
+  &__info {
+    max-width: 30.3125rem;
+  }
+}
+
+.production {
+  margin-top: 9.8125rem;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__video {
+    background-color: #000;
+    margin-top: 3.75rem;
+    height: 40.9375rem;
+    max-width: 84.125rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7rem;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__button {
+    position: relative;
+    width: 8.75rem;
+    height: 8.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $grayMain;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image {
+  margin-top: 7.5rem;
+  
+  &__svg {
+
+    
+    &_1{
+      margin-right: 7.8125rem;
+      svg {
+        max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+      
+    }
+
+    &_2{
+      margin-right: 7.8125rem;
+      svg {
+       max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+    }
+      
+    &_3{
+      svg {
+        max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+    }
+ } 
+
+  &__logo{
+    display: flex;
+    margin-left: -5rem;
+
+  }
+}
+
+.production-block {
+  margin-top: 10.5rem;
+
+  &__title {
+    position: relative;
+    margin-top: 1.25rem;
+    text-align: left;
+  }
+
+  &__text {
+    &_left {
+      margin-top: 1.25rem;
+      max-width: 28.5rem;
+      color: $grayMid;
+    }
+
+    &_right {
+      margin-top: 1.25rem;
+      max-width: 36rem;
+      color: $grayMid;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 8.75rem;
+    justify-content: space-between;
+    
+    &_left {
+      display: grid;
+      align-items: center;
+      align-content: center;
+      max-width: 34.8125rem;
+    }
+
+    &_right{
+      display: grid;
+      align-items: center;
+      align-content: center;
+    }
+
+    &_row:first-child {
+      margin-bottom: 11.0625rem;
+    }
+  }
+
+  &__image {
+    position: relative;
+    
+
+    &_left {
+      box-shadow: -5.875rem -3.125rem 0px 0px $grayBack;
+      max-width: 29rem;
+      max-height: 18.125rem;
+    }
+    &_right {
+      box-shadow: 4.5rem -4.9375rem 0px -1.125rem $grayBack;
+      max-width: 39.125rem;
+      max-height: 26.125rem;
+    }
+    
+  }
+}
+
+.cooperation {
+
+  margin: 0;
+  width: 100%;
+  max-height: 27rem;
+  position: relative;
+  margin-top: 9.5rem;
+  
+
+  &__info {
+    
+    max-height: 23.3125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    flex-direction: row;
+    background-color: $grayBack;
+    margin-bottom: 6.25rem;
+
+    &_text {
+     
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.9375rem;
+      margin-bottom: 3.125rem;
+    }
+
+    &_image {
+      margin-top: -4.125rem;
+      max-height: 24.125rem;
+      max-width: 38.9375rem;
+    }
+
+  }
+
+  &__title {
+    color: $mainColor;
+    max-width: 19.375rem;
+    margin-bottom: 1.0625rem;
+  }
+
+  &__text {
+    max-width: 35.875rem;
+    color: $grayMid;
+  }
+
+  &__button {
+    background-color: $mainColor;
+    max-width: 15.625rem;
+    margin-top: 3.125rem;
+    color: $mainBack;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in;
+    @extend%buttonOutlined;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+.contacts {
+  &__main {
+    width: 16.8125rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    font-family: Inter;
+    color: $grayMid;
+  }
+
+  &__phone {
+    margin: 1.375rem 0 0.8125rem;
+    font-size: 1.75rem;
+    line-height: 1.29;
+ 
+  }
+
+  &__other {
+    margin-top: 3.125rem;
+    display: flex;
+  }
+}
+
+.contact {
+  width: calc((100% - 1.25rem) / 3);
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  padding: 1.875rem 0;
+
+  &:nth-child(3n + 2) {
+    margin: 0 0.625rem;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+  &__position {
+    display: block;
+    margin: 1.25rem 0 0.625rem;
+    color: $grayMid;
+    opacity: 0.7;
+  }
+  &__person {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.62;
+    color: $grayMain;
+  }
+  &__text {
+    display: block;
+    margin: 1.25rem 0 0.625rem;
+    color: $grayMid;
+    opacity: 0.7;
+  }
+
+  &__phone {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.62;
+    text-align: center;
+    text-decoration-line: underline;
+    color: $grayMain;
+  }
+
+  &__image {
+    margin: 3.75rem auto 0;
+    height: 7.5rem;
+    width: 7.5rem;
+    position: relative;
+  }
+}
+
+footer {
+  margin-top: 6.25rem;
+  background: linear-gradient(180deg, #393a3a 0%, $grayMain 100%);
+}
+
+.map {
+  height: 65.625rem;
+  position: relative;
+  padding-top: 6.25rem;
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    position: relative;
+    text-align: center;
+    color: $mainBack;
+  }
+
+  &__point {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: $grayMid;
+    border: 5px solid $grayLight;
+    position: absolute;
+    top: 51%;
+    left: 63%;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -25.8125rem;
+  transition: right 0.3s ease;
+  z-index: 1;
+
+  &__content {
+    width: 23.3125rem;
+    height: 57rem;
+    background-color: $mainBack;
+  }
+
+  &__image {
+    height: 16.875rem;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 1.875rem 2.25rem 2rem;
+  }
+
+  &__text {
+    color: $grayMid;
+    display: block;
+
+    &_sm {
+      margin-top: 1.25rem;
+      color: $grayMid;
+      display: block;
+    }
+
+    &_bm {
+      margin-top: 3.125rem;
+      color: $grayMid;
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0.625rem;
+  }
+
+  &__phone {
+    font-size: 1.75rem;
+    line-height: 129%;
+    color: $grayMain;
+  }
+  &__mail {
+    margin-top: 0.625rem;
+    display: block;
+    font-size: 1.125rem;
+    line-height: 140%;
+    color: $grayMain;
+    padding-bottom: 3.125rem;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  &__more {
+    margin-top: 1.9375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: $grayMain;
+  }
+
+  &__button {
+    margin-left: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $grayBack;
+    border-radius: 50%;
+
+    svg {
+      height: 100%;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    left: -2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  &__active {
+    right: 0;
+    overflow-y: scroll;
+  }
+}
+
+.outro {
+  border-bottom: 1px solid rgba(249, 249, 249, 0.33);
+  border-top: 1px solid rgba(249, 249, 249, 0.33);
+  padding: 2.5rem 0 4.75rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__block {
+    &:last-child {
+      margin-left: 13.4375rem;
+      text-align: right;
+    }
+  }
+
+  &__mainRef {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    letter-spacing: 0.035em;
+    color: $mainBack;
+    display: block;
+    margin-bottom: 1.75rem;
+  }
+  &__ref {
+    display: block;
+    font-family: Inter;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.035em;
+    color: $grayMid;
+
+    & + & {
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__where {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.25rem;
+  }
+
+  &__phone {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: $mainBack;
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__office {
+    margin-top: 7rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: $mainBack;
+  }
+  &__text {
+    @extend %discription2;
+  }
+}
+
+.asap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.875rem 0 2.5rem;
+
+  &__text {
+    @extend %discription;
+  }
+
+  &__logo {
+    width: 7.0625rem;
+    height: 2.3125rem;
+
+    svg {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .intro {
+
+    max-height: 37.1875rem;
+
+    &__image {
+      margin-left: -60vw;
+      width: 160vw;
+      height: 21.3125rem;
+    }
+
+    &__image > div {
+      width: 100vw;
+      margin-left: -100%;
+    }
+
+    &__image &__picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &__picture {
+      object-position: 5rem 0;
+    }
+
+    &__info {
+      margin-left: 0;
+    }
+
+    &__title {
+      justify-content: center;
+
+      svg {
+        max-width: 12.6875rem;
+        max-height: 2.75rem;
+      }
+    }
+
+    &__text {
+      color: $grayBack;
+      margin-top: 1.5625rem;
+      max-width: 21.1875rem;
+    }
+  }
+
+  .menu {
+    height: 5.0625rem;
+
+    &__where {
+      display: none;
+    }
+
+    &__inst {
+      display: none;
+    }
+
+    &__block {
+      
+      &:nth-child(2) {
+        display: none;
+       
+      }
+    }
+
+    &__catalog {
+      display: none;
+    }
+    &__phone {
+      display: none;
+    }
+    &__text {
+      display: none;
+    }
+    &__logo {
+      width: 6.25rem;
+      margin: 0;
+    }
+    &__openCatalog {
+      margin: 0;
+    }
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .quote {
+
+    margin-top: 50%;
+    margin-bottom: 0;
+  
+    &__border {
+      margin-top: 3.125rem;
+      height: 1px;
+      width: 100%;
+      background-color: $grayLight;
+    }
+  
+    &__title {
+      max-width: 95%;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      font-size: 1.125rem;
+    }
+  
+    &__icon {
+      width: 1.75rem;
+      height: 1.5rem;
+      position: absolute;
+      top: -0.875rem;
+      left: -3%;
+  
+      svg {
+        height: auto;
+        width: 100%;
+      }
+    }
+  
+    &__icon__second {
+      width: 1.75rem;
+      height: 1.5rem;
+      position: absolute;
+      bottom: -0.3125rem;
+      left: 97%;
+  
+      svg {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .development {
+   
+
+    &__container {
+      margin-bottom: 3.125rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__text {
+      margin-top: 0.9375rem;
+    }
+
+    &__image {
+      margin-top: 3.125rem;
+      width: inherit;
+      height: inherit;
+      box-shadow: 2.575rem 2.9375rem 0px -1.25rem $grayBack;
+      max-width: 39.125rem;
+      max-height: 22.075rem;
+    }
+  }
+
+  .production {
+    margin-top: 9.6875rem;
+    
+    &__video {
+      margin-top: 1.875rem;
+      height: 70vw;
+      width: 100%;
+      margin-left: 0;
+    }
+    &__button {
+      width: 3.75rem;
+      height: 3.75rem;
+
+      svg {
+        height: 1rem;
+      }
+    }
+  }
+
+  .image {
+    margin-top: 7.5rem;
+    
+    &__svg {
+  
+      
+      &_1{
+        margin-right: 1.6875rem;
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+        
+      }
+  
+      &_2{
+        margin-right: 1.6875rem;
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+      }
+        
+      &_3{
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+      }
+   } 
+  
+    &__logo{
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .production-block {
+    margin-top: 5.9375rem;
+
+    &__title {
+      font-size: 1.5rem;
+      max-width: 18.75rem;
+      margin: 0;
+
+      &_4 {
+        margin-top: 1.1875rem;
+      }
+    }
+
+    &__text {
+      margin-top: 0.625rem;
+      color: $grayMidText;
+    }
+
+    &__container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__list{
+      display: block;
+      margin-top: 3.75rem;
+      position: absolute;
+      z-index: 3;
+
+      &_left{
+        margin: 0;
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       // height: 79.8125rem;
+      }
+
+      &_right{
+        //margin-top: 27.0625rem;
+        position: relative;
+        z-index: 1;
+        @media (min-width: 300px) and (max-width: 511px) {
+          margin-top: 54%;
+        }
+        @media (min-width: 511px) {
+          margin-top: 10%;
+        }
+      }
+
+      &_row:first-child {
+       margin-bottom: 0;
+      }
+      &_row:nth-child(2) {
+        @media (min-width: 300px) and (max-width: 511px) {
+          margin-top: 51%;
+          .production-block__image_left {
+            margin-top: 391px;
+          }
+        }
+
+        @media (min-width: 511px) {
+          margin-top: 81%;
+          .production-block__image_left {
+            margin-top: 348px;
+          }
+        }
+      }
+      
+    }
+
+    &__image {
+  
+      &_left {
+        box-shadow: -1.9375rem -2.875rem 0px -0.8125rem $grayBack;
+      }
+      &_right {
+        @media (min-width: 300px) and (max-width: 511px) {
+          margin-top: 14.625rem;
+        }
+        @media (min-width: 511px) {
+          margin-top: 26.375rem;
+        }
+        box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
+      }
+    
+    }
+
+  } 
+ 
+  .cooperation {
+
+    @media (min-width: 300px) and (max-width: 510px) {
+      margin-top: 150%;
+    }
+    @media (min-width: 511px) {
+      margin-top: 150%;
+    }
+    margin-bottom: 15.3125rem;
+
+    &__container {
+      @media (min-width: 300px) and (max-width: 510px) {
+        padding-top: 850px;
+      }
+      @media (min-width: 511px) {
+        margin-top: 1700px;
+      }
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      line-height: 1.9375rem;
+
+    }
+
+    &__text {
+      max-width: 17.875rem;
+      margin-top: 0.625rem;
+    }
+
+    &__info{
+      flex-direction: column;
+      margin-left: -1.25rem;
+      width: 110%;
+      max-height: 31.5625rem;
+      display: flex;
+      justify-content: flex-start;
+
+      &_text {
+        margin-left: 2.375rem;
+       
+      }
+
+      &_image {
+        margin-top: 3.125rem;
+        margin-left: 1.25rem; 
+        margin-right: 1.25rem;
+      }
+
+    }
+
+    &__button {
+      margin-top: 2.5rem;
+    }
+  } 
+
+  .contacts {
+    @media (min-width: 300px) and (max-width: 510px) {
+      margin-top: 170%;
+    }
+    @media (min-width: 511px) {
+      margin-top: 58%;
+    }
+    
+    &__main {
+      @media (min-width: 300px) and (max-width: 510px) {
+        padding-top: 507px;
+      }
+      @media (min-width: 511px) {
+        margin-top: 340px;
+      }
+    }
+
+
+    &__title {
+      margin-bottom: 1.875rem;
+    }
+    &__text {
+      font-size: 0.875rem;
+      line-height: 1.43;
+    }
+    &__phone {
+      font-size: 1.125rem;
+      line-height: 1.4;
+      display: block;
+      margin: 1.25rem 0 0.625rem;
+    }
+    &__other {
+      display: block;
+    }
+  }
+
+  .contact {
+    width: 100%;
+    margin-bottom: 1.25rem;
+
+    &:nth-child(2) {
+      margin: 0 0 1.25rem;
+    }
+    &__position {
+      margin: 5.625rem 0 0.625rem;
+      font-size: 0.875rem;
+      line-height: 1.43;
+    }
+    &__person,
+    &__phone {
+      font-size: 0.875rem;
+      line-height: 1.43;
+      text-decoration: none;
+    }
+  }
+
+  .map {
+    display: none;
+  }
+
+  .outro {
+    flex-wrap: wrap;
+    padding: 1.875rem 0;
+
+    &__block {
+      width: 50%;
+      margin-top: 3.125rem;
+
+      &:first-child {
+        margin-top: 0;
+        width: 100%;
+        padding-bottom: 1.875rem;
+        border-bottom: 1px solid rgba(249, 249, 249, 0.33);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 6.25rem;
+          height: 1.8125rem;
+        }
+      }
+
+      &:last-child {
+        margin-top: 3.875rem;
+        margin-left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__where {
+      margin-top: 0;
+    }
+    &__office {
+      margin-top: 0;
+      font-size: 0.875rem;
+    }
+
+    &__phone {
+      display: none;
+
+      &_mobile {
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1.4;
+        color: $mainBack;
+      }
+    }
+  }
+
+  .asap {
+    padding: 1.75rem 0;
+    display: block;
+
+    &__text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      letter-spacing: 0.035em;
+    }
+
+    &__logo {
+      display: block;
+      margin-top: 1.75rem;
+    }
+  }
+
+  .modal {
+    overflow: scroll;
+
+    &__close {
+      left: auto;
+      right: 1.5rem;
+    }
+    &__text {
+      &_bm {
+        margin-top: 1.125rem;
+      }
+    }
+    &__mail {
+      padding-bottom: 2rem;
+    }
+    &__more {
+      margin-top: 1rem;
+    }
+  }
+}
