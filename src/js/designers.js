@@ -29,7 +29,7 @@ $().ready(() => {
     initTabs(".tab__links", ".tab__content");
     //initTabs(".horTab", ".variants__item");
 
-   // fillCatalogContent();
+    fillCatalogContent();
 
     openModalCatalog();
 

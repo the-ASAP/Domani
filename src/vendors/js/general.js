@@ -145,7 +145,7 @@ export function rememberCatalogContent(items) {
 };
 
 export const fillCatalogContent = () => {
-  if (localStorage.getItem("content").length) {
+  if (localStorage.getItem("content")) {
     const tabButtons = $(".tab__links");
     const tabs = $(".tab__content");
 
@@ -240,21 +240,21 @@ export function initSelect(selectClass, content) {
       $(this).on("click", () => {
         let tabContent = $(content);
         let sel = $(selectClass);
-       
+
         const selAttr = sel.attr("data-category");
-          localStorage.setItem("content", "");
+        localStorage.setItem("content", "");
 
-          sel.remove("data-category");
-          tabContent.removeClass("active");
+        sel.remove("data-category");
+        tabContent.removeClass("active");
 
-          tabContent.each((index, element) => { 
-            
-            if (selAttr === $(element).attr("id")) {
-              $(element).addClass("active");
-              sel.attr("data-category", $(element).attr("id"));
-            }
-          })
-       
+        tabContent.each((index, element) => {
+
+          if (selAttr === $(element).attr("id")) {
+            $(element).addClass("active");
+            sel.attr("data-category", $(element).attr("id"));
+          }
+        })
+
       });
     });
   });
@@ -293,13 +293,13 @@ export function select(btn, content, activeClass, closeButton) {
 
 export const plusSlide = (classSlider, classNumber) => {
   $(".owl-next").on("click", function () {
-      numberSlide('right', classSlider, classNumber);
+    numberSlide('right', classSlider, classNumber);
   });
 };
 
 export const minusSlide = (classSlider, classNumber) => {
   $(".owl-prev").on("click", function () {
-      numberSlide('left', classSlider, classNumber);
+    numberSlide('left', classSlider, classNumber);
   });
 };
 
@@ -310,23 +310,23 @@ export function numberSlide(direction, classSlider, classNumber) {
   let numActive = 1;
   for (var key in Object.keys(items)) {
 
-      if ((items[key].className === "owl-item active") && (direction === 'right')) {
+    if ((items[key].className === "owl-item active") && (direction === 'right')) {
 
-          numActive = Number(key) + 1;
-          break;
-      }
-      if ((items[key].className === "owl-item active") && (direction === 'left')) {
-        numActive = Number(key)+1;
-        break;
-      }
+      numActive = Number(key) + 1;
+      break;
+    }
+    if ((items[key].className === "owl-item active") && (direction === 'left')) {
+      numActive = Number(key) + 1;
+      break;
+    }
   }
   let formattedNumActive = numActive.toLocaleString('en-US', {
-      minimumIntegerDigits: 2,
-      useGrouping: false
+    minimumIntegerDigits: 2,
+    useGrouping: false
   });
   let formattedNum = num.toLocaleString('en-US', {
-      minimumIntegerDigits: 2,
-      useGrouping: false
+    minimumIntegerDigits: 2,
+    useGrouping: false
   })
 
   number.innerHTML = `${formattedNumActive}/${formattedNum}`;
