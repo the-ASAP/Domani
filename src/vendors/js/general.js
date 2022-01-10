@@ -262,9 +262,9 @@ export function initSelect(selectClass, content) {
 
 export const createYouTubeEmbedLink = (btn, container) => {
   $(btn).each((i, el) => {
-    let link = $(el).attr("data-src"),
-      linkStart = "https://www.youtube.com/embed/",
-      linkEnd = "?rel=0&showinfo=0&autoplay=1";
+    let link = $(el).attr("data-src");
+    let linkStart = "https://www.youtube.com/embed/";
+    let linkEnd = "?rel=0&showinfo=0&autoplay=1";
     let newLink =
       linkStart + link.slice(link.indexOf("=") + 1, link.length) + linkEnd;
     $(el).on("click", function () {
