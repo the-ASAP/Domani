@@ -306,7 +306,11 @@ export const minusSlide = (classSlider, classNumber) => {
 export function numberSlide(direction, classSlider, classNumber) {
   const items = document.querySelectorAll(`${classSlider} .owl-item`);
   const number = document.querySelector(classNumber);
-  let num = items.length;
+  let num;
+  if (items) {
+    num = items.length;
+  }
+
   let numActive = 1;
   for (var key in Object.keys(items)) {
 
