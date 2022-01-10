@@ -1,25 +1,11 @@
 import * as $ from "jquery";
-import {createYouTubeEmbedLink, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
+import {createYouTubeEmbedLink, rememberCatalogContent, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 //import "../scss/style.scss";
 import "../scss/index.scss";
 import '../scss/header.scss';
 import "../scss/rootStyles/main.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
-
-function rememberCatalogContent(items) {
-  const products = $(items);
-
-  if (products.length) {
-    products.each((i, product) => {
-      $(product).on("click", function () {
-        let content = $(this).attr("data-content");
-
-        localStorage.setItem("content", content);
-      });
-    });
-  }
-}
 
 function declOfNum(n, text_forms) {
   if (n > 5 || n == 0) {

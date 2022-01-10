@@ -128,7 +128,21 @@ export function accordion(btn, content, activeClass) {
     $(this).toggleClass(activeClass);
     $(this).find(content).slideToggle();
   });
-}
+};
+
+export function rememberCatalogContent(items) {
+  const products = $(items);
+
+  if (products.length) {
+    products.each((i, product) => {
+      $(product).on("click", function () {
+        let content = $(this).attr("data-content");
+
+        localStorage.setItem("content", content);
+      });
+    });
+  }
+};
 
 export const fillCatalogContent = () => {
   if (localStorage.getItem("content").length) {
