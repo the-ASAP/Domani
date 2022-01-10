@@ -77,7 +77,7 @@ export function initTabs(buttons, content) {
       });
     });
   });
-}
+};
 
 
 export const toggleModal = (triggerClass, modalClass, classActive, closeClass) => {
@@ -211,7 +211,7 @@ export function openSelectMobile() {
       });
     });
   });
-}
+};
 
 export function initSelect(selectClass, content) {
   const selectSingle_title = $(".select__title");
@@ -244,7 +244,7 @@ export function initSelect(selectClass, content) {
       });
     });
   });
-}
+};
 
 export const createYouTubeEmbedLink = (btn, container) => {
   $(btn).each((i, el) => {
@@ -262,7 +262,7 @@ export const createYouTubeEmbedLink = (btn, container) => {
         );
     });
   });
-}
+};
 
 export function select(btn, content, activeClass, closeButton) {
   $(btn || closeButton).on("click", function () {
@@ -275,7 +275,7 @@ export function select(btn, content, activeClass, closeButton) {
       $(content).slideToggle();
     }
   });
-}
+};
 
 export const plusSlide = (classSlider, classNumber) => {
   $(".owl-next").on("click", function () {

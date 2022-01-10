@@ -811,10 +811,28 @@ footer {
         padding-top: 85vh;
       }
     }
-    @media (min-width: 568px) {
+    @media (min-width: 668px) {
+      &__slider {
+        &_wrapper {
+          margin-top: 6vw;
+        }
+      }
       &__info {
         &_slide{
-          padding-top: 90vh;
+          padding-top: 35.9375rem;
+        }
+      }
+    }
+
+    @media (min-width: 347px)  and (max-width: 667px) {
+      &__slider {
+        &_wrapper {
+          margin-top: 9vw;
+        }
+      }
+      &__info {
+        &_slide{
+          padding-top: 36.5625rem;
         }
       }
     }
@@ -911,9 +929,6 @@ footer {
   }
 
   footer {
-    margin-top: 120vh;
-    @media (min-width: 568px) {
-      margin-top: 125vh;
-    }
+    margin-top: 125vh;
   }
 }

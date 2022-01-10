@@ -428,6 +428,12 @@ h1 {
   font-size: 3.875rem;
   line-height: 1.1;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8125rem;
+    line-height: 1.29;
+  }
+}
 h2 {
   font-weight: 400;
   font-size: 2.8125rem;
@@ -452,7 +458,7 @@ h3 {
   }
 }
 h4 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.3125rem;
   line-height: 1.4;
 }
@@ -1110,8 +1116,8 @@ body#root {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #fff;
-  color: var(--main-back);
+  color: #e3e3e3;
+  color: var(--gray-background);
   text-align: center;
   margin-top: 1.25rem;
 }
@@ -1851,7 +1857,7 @@ footer {
   }
 
   .catalog {
-    margin-top: 70%;
+    margin-top: 81%;
   }
   .catalog .tab {
     display: none;
@@ -1876,6 +1882,12 @@ footer {
   }
   .catalog .select {
     width: 100%;
+  }
+  .catalog .select__title {
+    border: 1px solid #e3e3e3;
+    border: 1px solid var(--gray-background);
+    color: #656565;
+    color: var(--gray-mid);
   }
 
   .product {
@@ -2163,6 +2175,12 @@ h1 {
   font-size: 3.875rem;
   line-height: 1.1;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8125rem;
+    line-height: 1.29;
+  }
+}
 h2 {
   font-weight: 400;
   font-size: 2.8125rem;
@@ -2187,7 +2205,7 @@ h3 {
   }
 }
 h4 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.3125rem;
   line-height: 1.4;
 }
@@ -2739,6 +2757,7 @@ button {
 }
 .menu__box {
   border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid var(--gray-background);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2793,13 +2812,15 @@ button {
   font-weight: 500;
   font-size: 0.75rem;
   color: #fff;
+  color: var(--main-back);
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
 .menu__phone {
   font-size: 1.125rem;
   line-height: 140%;
-  color: #ffffff;
+  color: #fff;
+  color: var(--main-back);
   margin: 0 1.25rem 0 1.875rem;
 }
 .menu__inst {
@@ -2835,7 +2856,8 @@ button {
 .menu__catalog {
   font-size: 1rem;
   line-height: 1.45;
-  color: #ffffff;
+  color: #fff;
+  color: var(--main-back);
   margin-left: 1.125rem;
 }
 .menu__point {
@@ -3038,6 +3060,12 @@ h1 {
   font-size: 3.875rem;
   line-height: 1.1;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8125rem;
+    line-height: 1.29;
+  }
+}
 h2 {
   font-weight: 400;
   font-size: 2.8125rem;
@@ -3062,7 +3090,7 @@ h3 {
   }
 }
 h4 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.3125rem;
   line-height: 1.4;
 }

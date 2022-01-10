@@ -1017,7 +1017,10 @@ body#root {
       margin-top: 1.25rem;
   }
 
-
+  &__number {
+    display: none;
+  }
+  
   &__info {
     display: flex;
     justify-content: space-between;
