@@ -1,11 +1,6 @@
 import * as $ from 'jquery';
 import { toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/contacts.scss';
-import '../scss/header.scss';
-import "../scss/rootStyles/main.scss";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
-
 
 $().ready(() => {
 

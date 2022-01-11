@@ -2,8 +2,6 @@ import * as $ from 'jquery';
 import { plusSlide, minusSlide, numberSlide, owlGallery, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 
 import '../scss/newDetail.scss';
-import "../scss/index.scss";
-import '../scss/header.scss';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
 

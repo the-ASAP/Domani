@@ -1,10 +1,6 @@
 import * as $ from 'jquery';
 import { initSelect, openSelectMobile, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/documents.scss';
-import '../scss/header.scss';
-import "../scss/rootStyles/main.scss";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
 
 const zoomPictureModal = (triggerClass, modalPictureClass) => {
   $(triggerClass).on("click", () => {

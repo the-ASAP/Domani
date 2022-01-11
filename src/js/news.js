@@ -1,11 +1,6 @@
 import * as $ from 'jquery';
 import '../scss/news.scss';
-import { toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
-
-import "../scss/index.scss";
-import '../scss/header.scss';
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
+import { toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general";
 
 $().ready(() => {
     toggleModal(".map__point", ".modal", "modal__active", ".modal__close");
