@@ -18,7 +18,7 @@ function declOfNum(n, text_forms) {
     return text_forms[1];
   }
   return text_forms[3];
-}
+};
 
 const countNews = () => {
   const count = $(".news__count");
@@ -44,15 +44,9 @@ $().ready(() => {
   //OutsideClick(".select", "", "data-state");
   OutsideClick('.menuCatalog');
 
-  //openSelect();
-  //initTabs();
-
   rememberCatalogContent(".product[data-content]");
   //rememberCatalogContent(".horTab[data-content]");
-
- // initTabs(".tab__links", ".tab__content");
- // initTabs(".horTab", ".variants__item");
-
+    
   fillCatalogContent();
 
   openModalCatalog();

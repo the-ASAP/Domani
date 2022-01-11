@@ -23,7 +23,7 @@ $().ready(() => {
       ".choiceCity__close"
     );
     OutsideClick(".modal", "modal__active");
-    OutsideClick('.menuCatalog')
+    OutsideClick('.menuCatalog');
   
     fillCatalogContent();
   

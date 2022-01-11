@@ -27,6 +27,7 @@ $().ready(() => {
     
 
     OutsideClick(".modal", "modal__active");
+    OutsideClick('.menuCatalog');
     openSelectMobile();
     initSelect(".select__title", ".tab__content");
     

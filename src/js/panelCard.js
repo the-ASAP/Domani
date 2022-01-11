@@ -17,6 +17,7 @@ $().ready(() => {
     );
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
+    OutsideClick('.menuCatalog');
     
     initTabs();
     initTabs(".tab__links", ".tab__content");

@@ -32,6 +32,7 @@ $().ready(() => {
 
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
+    OutsideClick('.menuCatalog');
     
     openSelect();
 

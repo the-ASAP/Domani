@@ -93,7 +93,9 @@ export const OutsideClick = (elem, activeClass = "active", attr = "") => {
   $(document).on("mousedown", function (e) {
     if (!$(elem).is(e.target) && $(elem).has(e.target).length === 0) {
       $(elem).removeClass(activeClass);
-      $(elem).attr(attr, "");
+      if (attr!="") {
+        $(elem).attr(attr, "");
+      };
       $("body").css({ overflow: "auto" });
     }
   });
@@ -275,19 +277,6 @@ export const createYouTubeEmbedLink = (btn, container) => {
           `<iframe class="production__frame" src="${newLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         );
     });
-  });
-};
-
-export function select(btn, content, activeClass, closeButton) {
-  $(btn || closeButton).on("click", function () {
-    $(btn).toggleClass(activeClass);
-    $(content).slideToggle();
-  });
-  $(document).on("mousedown", function (e) {
-    if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
-      $(btn).toggleClass(activeClass);
-      $(content).slideToggle();
-    }
   });
 };
 
