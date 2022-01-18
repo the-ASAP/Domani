@@ -3232,7 +3232,7 @@ footer {
     display: flex;
     position: fixed;
     margin-left: -1.9rem;
-    width: 120%;
+    width: 100%;
     top: 80vh;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
