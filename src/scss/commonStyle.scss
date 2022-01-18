@@ -513,6 +513,19 @@
   }
 
   @media (max-width: 768px) {
+    
+    .aside {
+      display: flex;
+      position: fixed;
+      margin-left: -1.9rem;
+      width: 120%;
+      top: 80vh;
+      transform: translateY(100%);
+      &__block {
+        width: 9.625rem;
+        height: 4.375rem;
+      }
+    }
   
     .map {
       height: 120vw;
