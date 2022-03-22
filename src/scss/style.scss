@@ -1,5 +1,287 @@
 @import "./rootStyles/main.scss";
 @import "./rootStyles/mixins.scss";
-@import "./index.scss";
+@import "./commonStyle.scss";
+@import "./header.scss";
 
+body#root{
+  background-color: $graySmall;
+}
 
+.intro {
+  margin: 0;
+  width: 100%;
+  height: 43.75rem;
+  position: relative;
+  background-color: $mainColor;
+  padding: 0 1.875rem;
+  
+  &__image {
+    position: relative;
+    margin-top: 3.125rem;
+    left: 0;
+    max-width: 78.4375rem;
+    max-height: 37.5625rem;
+    object-fit: cover;
+  }
+
+  &__info {
+    max-height: 55.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    align-items: center;
+    margin-top: 3.625rem;
+  }
+
+  &__title {
+    justify-content: center;
+    color: $mainBack;
+    max-width: 43.5625rem;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 32.5rem;
+    justify-content: center;
+    color: $grayBack;
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+
+  &__button {
+    max-width: 13.75rem;
+    margin-top: 1.875rem;
+    color: $mainBack;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    @extend%buttonOutlined;
+
+    &_arrow {
+      margin-left: 0.75rem;
+    }
+
+    &:hover {
+      background-color: $mainBack;
+      color: #000;
+    }
+  }
+
+}
+
+.catalog {
+  margin-top: 20.875rem;
+
+  &__selects {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 7.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__tabs {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__info {
+    margin-top: 1.125rem;
+  }
+
+  &__content {
+    display: grid;
+  }
+
+  &__picture {
+    object-fit: cover;
+    height: inherit;
+    object-position: left bottom;
+  }
+
+  &__image {
+    box-shadow: 5.8125rem -3.125rem 0px 0px $grayBack;
+    margin: 3.125rem 0px 0px 0px;
+    width: 38.75rem;
+    height: 24.125rem;
+  }
+
+  &__text{
+    margin-top: 0.5rem;
+    max-width: 29.1875rem;
+  }
+  
+  .product{
+    &__info {
+      display: flex;
+    }
+    &__text {
+      color: $grayMid;
+      position: relative;
+    }
+    &:nth-child(5) {
+    margin: 0 0.75rem 0 0.75rem;
+    }   
+  }
+
+  .tab {
+    display: flex;
+    margin-top: 3.125rem;
+
+    &__content {
+      display: none;
+      flex-wrap: wrap;
+    }
+    
+    &__content.active {
+      display: flex;
+    }
+    
+    &__links {
+      text-align: center;
+      justify-content: center;
+      max-width: 28.6875rem;
+      max-height: 4.5625rem;
+
+      &:hover,
+      &.active {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .intro {
+
+   height: 80vh;
+
+    &__image {
+      margin-left: -60vw;
+      width: 160vw;
+      height: 21.3125rem;
+    }
+
+    &__image > div {
+      width: 100vw;
+      margin-left: -100%;
+    }
+
+    &__image &__picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    &__picture {
+     
+      object-position: 11.15rem 0;
+     
+    }
+
+    &__info {
+      margin-left: 0;
+    }
+
+    &__title {
+      font-size: 2.8125rem;
+      line-height: 1.29;
+    }
+
+    &__text {
+      color: $grayBack;
+      opacity: 0.8;
+      margin-top: 0.9375rem;
+    }
+
+    &__button {
+      margin-top: 1.875rem;
+    }
+  }
+
+  .menu {
+    height: 5.0625rem;
+
+    &__where {
+      display: none !important;
+    }
+
+    &__inst {
+      display: none !important;
+    }
+
+    &__block {
+      
+      &:nth-child(2) {
+        display: none;
+       
+      }
+    }
+
+    &__catalog {
+      display: none;
+    }
+    &__phone {
+      display: none;
+    }
+    &__text {
+      display: none;
+    }
+    &__logo {
+      width: 6.25rem;
+      margin: 0;
+    }
+    &__openCatalog {
+      margin: 0;
+    }
+  }
+
+  .catalog {
+
+    margin-top: 81%;
+
+    .tab {
+      display: none;
+
+      &__content.active {
+        margin-top: 1.25rem;
+        flex-direction: column;
+        flex-wrap:none;
+      }
+    }
+    &__selects {
+      display: flex;
+      justify-content: space-between;
+      width:100%;
+    }
+    .select {
+      width: 100%;
+      &__title {
+        border: 1px solid $grayBack;
+        color: $grayMid;
+      }
+    }
+  }
+
+  .product {
+    display: block;
+    margin-bottom: 3.875rem;
+
+    &:nth-child(2) {
+      margin: 3.875rem 0 0;
+    }
+    &:last-child {
+      margin: 0;
+    }
+    &__info {
+      align-items: center;
+    }
+  }
+}

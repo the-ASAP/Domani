@@ -1,14 +1,10 @@
 import * as $ from 'jquery';
-import { toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
+import { toggleModal, createYouTubeEmbedLink, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/company.scss';
-import '../scss/header.scss';
-import "../scss/rootStyles/main.scss";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
-
 
 $().ready(() => {
 
+    createYouTubeEmbedLink($(".production__button"), $(".production__video"));
     toggleModal(".map__point", ".modal", "modal__active", ".modal__close");
     toggleModal(
         ".menu__city",
@@ -17,7 +13,7 @@ $().ready(() => {
         ".choiceCity__close"
     );
     OutsideClick(".modal", "modal__active");
-    
+    OutsideClick('.menuCatalog');
 
     fillCatalogContent();
 

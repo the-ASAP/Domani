@@ -1,5 +1,7 @@
 @import "./rootStyles/main.scss";
 @import "./rootStyles/mixins.scss";
+@import "../scss/index.scss";
+@import "../scss/header.scss";
 
 body#root {
   background-color: $graySmall;
@@ -141,9 +143,6 @@ body#root {
 }
 
 @media (max-width: 768px) {
-  .aside {
-    display: none !important;
-  }
 
   .new {
     margin-top: 1.875rem;

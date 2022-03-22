@@ -48,9 +48,6 @@ body#root{
 }
 
 @media (max-width: 768px) {
-  .aside {
-    display: none !important;
-  }
 
   .news {
     &__sorting {

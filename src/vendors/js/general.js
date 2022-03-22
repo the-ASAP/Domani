@@ -77,7 +77,7 @@ export function initTabs(buttons, content) {
       });
     });
   });
-}
+};
 
 
 export const toggleModal = (triggerClass, modalClass, classActive, closeClass) => {
@@ -93,7 +93,9 @@ export const OutsideClick = (elem, activeClass = "active", attr = "") => {
   $(document).on("mousedown", function (e) {
     if (!$(elem).is(e.target) && $(elem).has(e.target).length === 0) {
       $(elem).removeClass(activeClass);
-      $(elem).attr(attr, "");
+      if (attr!="") {
+        $(elem).attr(attr, "");
+      };
       $("body").css({ overflow: "auto" });
     }
   });
@@ -128,10 +130,24 @@ export function accordion(btn, content, activeClass) {
     $(this).toggleClass(activeClass);
     $(this).find(content).slideToggle();
   });
-}
+};
+
+export function rememberCatalogContent(items) {
+  const products = $(items);
+
+  if (products.length) {
+    products.each((i, product) => {
+      $(product).on("click", function () {
+        let content = $(this).attr("data-content");
+
+        localStorage.setItem("content", content);
+      });
+    });
+  }
+};
 
 export const fillCatalogContent = () => {
-  if (localStorage.getItem("content").length) {
+  if (localStorage.getItem("content")) {
     const tabButtons = $(".tab__links");
     const tabs = $(".tab__content");
 
@@ -211,7 +227,7 @@ export function openSelectMobile() {
       });
     });
   });
-}
+};
 
 export function initSelect(selectClass, content) {
   const selectSingle_title = $(".select__title");
@@ -226,31 +242,31 @@ export function initSelect(selectClass, content) {
       $(this).on("click", () => {
         let tabContent = $(content);
         let sel = $(selectClass);
-       
+
         const selAttr = sel.attr("data-category");
-          localStorage.setItem("content", "");
+        localStorage.setItem("content", "");
 
-          sel.remove("data-category");
-          tabContent.removeClass("active");
+        sel.remove("data-category");
+        tabContent.removeClass("active");
 
-          tabContent.each((index, element) => { 
-            
-            if (selAttr === $(element).attr("id")) {
-              $(element).addClass("active");
-              sel.attr("data-category", $(element).attr("id"));
-            }
-          })
-       
+        tabContent.each((index, element) => {
+
+          if (selAttr === $(element).attr("id")) {
+            $(element).addClass("active");
+            sel.attr("data-category", $(element).attr("id"));
+          }
+        })
+
       });
     });
   });
-}
+};
 
 export const createYouTubeEmbedLink = (btn, container) => {
   $(btn).each((i, el) => {
-    let link = $(el).attr("data-src"),
-      linkStart = "https://www.youtube.com/embed/",
-      linkEnd = "?rel=0&showinfo=0&autoplay=1";
+    let link = $(el).attr("data-src");
+    let linkStart = "https://www.youtube.com/embed/";
+    let linkEnd = "?rel=0&showinfo=0&autoplay=1";
     let newLink =
       linkStart + link.slice(link.indexOf("=") + 1, link.length) + linkEnd;
     $(el).on("click", function () {
@@ -262,57 +278,48 @@ export const createYouTubeEmbedLink = (btn, container) => {
         );
     });
   });
-}
-
-export function select(btn, content, activeClass, closeButton) {
-  $(btn || closeButton).on("click", function () {
-    $(btn).toggleClass(activeClass);
-    $(content).slideToggle();
-  });
-  $(document).on("mousedown", function (e) {
-    if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
-      $(btn).toggleClass(activeClass);
-      $(content).slideToggle();
-    }
-  });
-}
+};
 
 export const plusSlide = (classSlider, classNumber) => {
   $(".owl-next").on("click", function () {
-      numberSlide('right', classSlider, classNumber);
+    numberSlide('right', classSlider, classNumber);
   });
 };
 
 export const minusSlide = (classSlider, classNumber) => {
   $(".owl-prev").on("click", function () {
-      numberSlide('left', classSlider, classNumber);
+    numberSlide('left', classSlider, classNumber);
   });
 };
 
 export function numberSlide(direction, classSlider, classNumber) {
   const items = document.querySelectorAll(`${classSlider} .owl-item`);
   const number = document.querySelector(classNumber);
-  let num = items.length;
+  let num;
+  if (items) {
+    num = items.length;
+  }
+
   let numActive = 1;
   for (var key in Object.keys(items)) {
 
-      if ((items[key].className === "owl-item active") && (direction === 'right')) {
+    if ((items[key].className === "owl-item active") && (direction === 'right')) {
 
-          numActive = Number(key) + 1;
-          break;
-      }
-      if ((items[key].className === "owl-item active") && (direction === 'left')) {
-        numActive = Number(key)+1;
-        break;
-      }
+      numActive = Number(key) + 1;
+      break;
+    }
+    if ((items[key].className === "owl-item active") && (direction === 'left')) {
+      numActive = Number(key) + 1;
+      break;
+    }
   }
   let formattedNumActive = numActive.toLocaleString('en-US', {
-      minimumIntegerDigits: 2,
-      useGrouping: false
+    minimumIntegerDigits: 2,
+    useGrouping: false
   });
   let formattedNum = num.toLocaleString('en-US', {
-      minimumIntegerDigits: 2,
-      useGrouping: false
+    minimumIntegerDigits: 2,
+    useGrouping: false
   })
 
   number.innerHTML = `${formattedNumActive}/${formattedNum}`;

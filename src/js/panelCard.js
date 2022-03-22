@@ -2,7 +2,6 @@ import * as $ from 'jquery';
 import { plusSlide, minusSlide, numberSlide, owlGallery, initTabs, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/panelCard.scss';
 import '../scss/header.scss';
-import "../scss/rootStyles/main.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
 
@@ -17,6 +16,7 @@ $().ready(() => {
     );
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
+    OutsideClick('.menuCatalog');
     
     initTabs();
     initTabs(".tab__links", ".tab__content");

@@ -1,8 +1,6 @@
 import * as $ from 'jquery';
 import { plusSlide, minusSlide, numberSlide, owlGallery, openSelect, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
 import '../scss/projectDetail.scss';
-import '../scss/header.scss';
-import "../scss/rootStyles/main.scss";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
 
@@ -24,6 +22,7 @@ $().ready(() => {
 
     OutsideClick(".modal", "modal__active");
     OutsideClick(".select", "", "data-state");
+    OutsideClick('.menuCatalog');
     
     openSelect();
 
