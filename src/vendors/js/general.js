@@ -1,6 +1,6 @@
-import * as $ from "jquery";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
+import * as $ from 'jquery';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 const menuSvgMain = `
     <svg class="menu__icon"
@@ -40,236 +40,247 @@ export const owlGallery = (selector, params) => {
     </svg>
     `;
 
-  if (params == undefined) params = "";
+  if (params == undefined) params = '';
   const owl = $(selector);
   owl
     .each((i, el) => {
       $(el)
-        .addClass("owl-carousel owl-theme")
+        .addClass('owl-carousel owl-theme')
         .owlCarousel(
           Object.assign(params, {
             lazyLoad: true,
             smartSpeed: 1000,
-            navText: [arrowIcon, arrowIcon],
+            navText: [arrowIcon, arrowIcon]
           })
         );
     })
-    .trigger("refresh.owl.carousel");
+    .trigger('refresh.owl.carousel');
 };
 
 export function initTabs(buttons, content) {
   let tab = $(buttons);
   let tabContent = $(content);
   tab.each(function () {
-    $(this).on("click", () => {
-      const tabAttr = $(this).attr("data-category");
-      localStorage.setItem("content", "");
+    $(this).on('click', () => {
+      const tabAttr = $(this).attr('data-category');
+      localStorage.setItem('content', '');
 
-      tab.removeClass("active");
-      tabContent.removeClass("active");
+      tab.removeClass('active');
+      tabContent.removeClass('active');
 
       tabContent.each((index, element) => {
-        if (tabAttr === $(element).attr("id")) {
-          console.log($(element).attr("id"));
-          $(element).addClass("active");
-          $(`#${tabAttr}`).addClass("active");
+        if (tabAttr === $(element).attr('id')) {
+          console.log($(element).attr('id'));
+          $(element).addClass('active');
+          $(`#${tabAttr}`).addClass('active');
         }
       });
     });
   });
-};
-
+}
 
 export const toggleModal = (triggerClass, modalClass, classActive, closeClass) => {
-  $(triggerClass).on("click", () => {
+  $(triggerClass).on('click', () => {
     $(modalClass).addClass(classActive);
   });
-  $(closeClass).on("click", () => {
+  $(closeClass).on('click', () => {
     $(modalClass).removeClass(classActive);
   });
 };
 
-export const OutsideClick = (elem, activeClass = "active", attr = "") => {
-  $(document).on("mousedown", function (e) {
+export const OutsideClick = (elem, activeClass = 'active', attr = '') => {
+  $(document).on('mousedown', function (e) {
     if (!$(elem).is(e.target) && $(elem).has(e.target).length === 0) {
       $(elem).removeClass(activeClass);
-      if (attr!="") {
-        $(elem).attr(attr, "");
-      };
-      $("body").css({ overflow: "auto" });
+      if (attr != '') {
+        $(elem).attr(attr, '');
+      }
+      $('body').css({ overflow: 'auto' });
     }
   });
 };
 
-export const openModalCatalog = () => {
-  $(".menu__openCatalog").on("click", function () {
-    $(this).toggleClass("menu__openCatalog_active");
-    if (!$("header").hasClass("menu_white")) {
-      $("header").toggleClass("menu_black");
+export const openModalCatalog = (openMenuBtn) => {
+  $(openMenuBtn).on('click', function () {
+    $('.aside__menu, .menu__openCatalog').toggleClass('active');
+    if (!$('header').hasClass('menu_white')) {
+      $('header').toggleClass('menu_black');
     }
-    $(".menuCatalog").slideToggle();
-    if ($(this).hasClass("menu__openCatalog_active")) {
-      $(".menu__catalog").text("Закрыть");
-      $(".menu").addClass("menu_active");
+    $('.menuCatalog').slideToggle();
+    if (($('.aside__menu') || $('.menu__openCatalog')).hasClass('active')) {
+      $('.menu__catalog').text('Закрыть');
+      $('.menu').addClass('menu_active');
 
-      $(".menu__icon").replaceWith(menuSvgClose);
-      $("body").css({ overflow: "hidden" });
+      $('.menu__icon').replaceWith(menuSvgClose);
+      $('body').css({ overflow: 'hidden' });
     } else {
-      $(".menu__catalog").text("Каталог");
-      $(".menu").removeClass("menu_active");
+      $('.menu__catalog').text('Каталог');
+      $('.menu').removeClass('menu_active');
 
-      $(".menu__icon").replaceWith(menuSvgMain);
+      $('.menu__icon').replaceWith(menuSvgMain);
 
-      $("body").css({ overflow: "auto" });
+      $('body').css({ overflow: 'auto' });
     }
   });
 };
 
 export function accordion(btn, content, activeClass) {
-  $(btn).on("click", function () {
+  $(btn).on('click', function () {
     $(this).toggleClass(activeClass);
     $(this).find(content).slideToggle();
   });
-};
+}
 
 export function rememberCatalogContent(items) {
   const products = $(items);
 
   if (products.length) {
     products.each((i, product) => {
-      $(product).on("click", function () {
-        let content = $(this).attr("data-content");
+      $(product).on('click', function () {
+        let content = $(this).attr('data-content');
 
-        localStorage.setItem("content", content);
+        localStorage.setItem('content', content);
       });
     });
   }
-};
+}
 
 export const fillCatalogContent = () => {
-  if (localStorage.getItem("content")) {
-    const tabButtons = $(".tab__links");
-    const tabs = $(".tab__content");
+  if (localStorage.getItem('content')) {
+    const tabButtons = $('.tab__links');
+    const tabs = $('.tab__content');
 
-    tabButtons.removeClass("active");
-    tabs.removeClass("active");
+    tabButtons.removeClass('active');
+    tabs.removeClass('active');
 
     tabs.each(function (i, tab) {
-      if (localStorage.getItem("content") === $(tab).attr("id")) {
-        $(tab).addClass("active");
+      if (localStorage.getItem('content') === $(tab).attr('id')) {
+        $(tab).addClass('active');
       }
     });
 
     tabButtons.each((i, button) => {
-      if (localStorage.getItem("content") === $(button).attr("data-category")) {
-        $(button).addClass("active");
+      if (localStorage.getItem('content') === $(button).attr('data-category')) {
+        $(button).addClass('active');
       }
     });
   }
 };
 
 export function openSelect() {
-  const selectSingle_title = $(".select__title");
+  const selectSingle_title = $('.select__title');
 
   selectSingle_title.each(function () {
-    $(this).on("click", function () {
-      const selectSingle = $(this).closest(".select");
+    $(this).on('click', function () {
+      const selectSingle = $(this).closest('.select');
 
-      if ("active" === selectSingle.attr("data-state")) {
-        selectSingle.attr("data-state", "");
+      if ('active' === selectSingle.attr('data-state')) {
+        selectSingle.attr('data-state', '');
       } else {
-        selectSingle.attr("data-state", "active");
+        selectSingle.attr('data-state', 'active');
       }
     });
 
-    const selectSingle_labels = $(this)
-      .siblings(".select__content")
-      .children(".select__label");
+    const selectSingle_labels = $(this).siblings('.select__content').children('.select__label');
 
     selectSingle_labels.each(function () {
-      $(this).on("click", (e) => {
-        $(this)
-          .closest(".select__content")
-          .siblings(".select__title")
-          .text(e.target.textContent);
-        $(this).closest(".select").attr("data-state", "");
+      $(this).on('click', (e) => {
+        $(this).closest('.select__content').siblings('.select__title').text(e.target.textContent);
+        $(this).closest('.select').attr('data-state', '');
       });
     });
   });
 }
 
 export function openSelectMobile() {
-  const selectSingle_title = $(".select__title");
+  const selectSingle_title = $('.select__title');
 
   selectSingle_title.each(function () {
-    $(this).on("click", function () {
-      const selectSingle = $(this).closest(".select");
+    $(this).on('click', function () {
+      const selectSingle = $(this).closest('.select');
 
-      if ("active" === selectSingle.attr("data-state")) {
-        selectSingle.attr("data-state", "");
+      if ('active' === selectSingle.attr('data-state')) {
+        selectSingle.attr('data-state', '');
       } else {
-        selectSingle.attr("data-state", "active");
+        selectSingle.attr('data-state', 'active');
       }
     });
 
-    const selectSingle_labels = $(this)
-      .siblings(".select__content")
-      .children(".select__label");
+    const selectSingle_labels = $(this).siblings('.select__content').children('.select__label');
 
     selectSingle_labels.each(function () {
-      $(this).on("click", (e) => {
+      $(this).on('click', (e) => {
         $(this)
-          .closest(".select__content")
-          .siblings(".select__title")
-          .attr("data-category", e.target.getAttribute('for'))
+          .closest('.select__content')
+          .siblings('.select__title')
+          .attr('data-category', e.target.getAttribute('for'))
           .text(e.target.textContent);
-        $(this).closest(".select").attr("data-state", "");
+        $(this).closest('.select').attr('data-state', '');
       });
     });
   });
-};
+}
 
 export function initSelect(selectClass, content) {
-  const selectSingle_title = $(".select__title");
+  const selectSingle_title = $('.select__title');
 
   selectSingle_title.each(function () {
-
-    const selectSingle_labels = $(this)
-      .siblings(".select__content")
-      .children(".select__label");
+    const selectSingle_labels = $(this).siblings('.select__content').children('.select__label');
 
     selectSingle_labels.each(function () {
-      $(this).on("click", () => {
+      $(this).on('click', () => {
         let tabContent = $(content);
         let sel = $(selectClass);
 
-        const selAttr = sel.attr("data-category");
-        localStorage.setItem("content", "");
+        const selAttr = sel.attr('data-category');
+        localStorage.setItem('content', '');
 
-        sel.remove("data-category");
-        tabContent.removeClass("active");
+        sel.remove('data-category');
+        tabContent.removeClass('active');
 
         tabContent.each((index, element) => {
-
-          if (selAttr === $(element).attr("id")) {
-            $(element).addClass("active");
-            sel.attr("data-category", $(element).attr("id"));
+          if (selAttr === $(element).attr('id')) {
+            $(element).addClass('active');
+            sel.attr('data-category', $(element).attr('id'));
           }
-        })
-
+        });
       });
     });
   });
+}
+
+export const pageUp = () => {
+  $('.aside__up').on('click', () => {
+    $('html, body').animate({ scrollTop: '0px' }, 300);
+  });
 };
+
+export const cutColorsCount = () => {
+  $('.product__colors').each((_, colors) => {
+    if ($(colors).children().length > 5) {
+      $(colors).children().slice(5).remove();
+    }
+  });
+};
+
+export function setEqualHeight(columns) {
+  let tallestcolumn = 0;
+  columns.each(function () {
+    let currentHeight = $(this).height();
+    if (currentHeight > tallestcolumn) {
+      tallestcolumn = currentHeight + 60;
+    }
+  });
+  columns.height(tallestcolumn);
+}
 
 export const createYouTubeEmbedLink = (btn, container) => {
   $(btn).each((i, el) => {
-    let link = $(el).attr("data-src");
-    let linkStart = "https://www.youtube.com/embed/";
-    let linkEnd = "?rel=0&showinfo=0&autoplay=1";
-    let newLink =
-      linkStart + link.slice(link.indexOf("=") + 1, link.length) + linkEnd;
-    $(el).on("click", function () {
+    let link = $(el).attr('data-src');
+    let linkStart = 'https://www.youtube.com/embed/';
+    let linkEnd = '?rel=0&showinfo=0&autoplay=1';
+    let newLink = linkStart + link.slice(link.indexOf('=') + 1, link.length) + linkEnd;
+    $(el).on('click', function () {
       $(this)
         .parent(container)
         .empty()
@@ -281,13 +292,13 @@ export const createYouTubeEmbedLink = (btn, container) => {
 };
 
 export const plusSlide = (classSlider, classNumber) => {
-  $(".owl-next").on("click", function () {
+  $('.owl-next').on('click', function () {
     numberSlide('right', classSlider, classNumber);
   });
 };
 
 export const minusSlide = (classSlider, classNumber) => {
-  $(".owl-prev").on("click", function () {
+  $('.owl-prev').on('click', function () {
     numberSlide('left', classSlider, classNumber);
   });
 };
@@ -302,13 +313,11 @@ export function numberSlide(direction, classSlider, classNumber) {
 
   let numActive = 1;
   for (var key in Object.keys(items)) {
-
-    if ((items[key].className === "owl-item active") && (direction === 'right')) {
-
+    if (items[key].className === 'owl-item active' && direction === 'right') {
       numActive = Number(key) + 1;
       break;
     }
-    if ((items[key].className === "owl-item active") && (direction === 'left')) {
+    if (items[key].className === 'owl-item active' && direction === 'left') {
       numActive = Number(key) + 1;
       break;
     }
@@ -320,7 +329,8 @@ export function numberSlide(direction, classSlider, classNumber) {
   let formattedNum = num.toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
-  })
-
-  number.innerHTML = `${formattedNumActive}/${formattedNum}`;
-};
+  });
+  if (number) {
+    number.innerHTML = `${formattedNumActive}/${formattedNum}`;
+  }
+}

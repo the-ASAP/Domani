@@ -1,42 +1,44 @@
 import * as $ from 'jquery';
 import '../scss/fittings.scss';
-import { openSelect, toggleModal, OutsideClick, openModalCatalog, accordion, fillCatalogContent } from "../vendors/js/general"
+import {
+  openSelect,
+  cutColorsCount,
+  toggleModal,
+  OutsideClick,
+  pageUp,
+  openModalCatalog,
+  accordion,
+  fillCatalogContent,
+  setEqualHeight
+} from '../vendors/js/general';
 
 $().ready(() => {
-
-    toggleModal(".map__point", ".modal", "modal__active", ".modal__close");
-    toggleModal(
-        ".menu__city",
-        ".choiceCity",
-        "choiceCity__active",
-        ".choiceCity__close"
-    );
-    toggleModal(
-      ".catalog__selects_mobile",
-      ".filterModal",
-      "filterModal__active",
-      ".filterModal__close"
+  toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
+  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  cutColorsCount();
+  setEqualHeight($('.product'));
+  toggleModal(
+    '.catalog__selects_mobile',
+    '.filterModal',
+    'filterModal__active',
+    '.filterModal__close'
   );
-    OutsideClick(".modal", "modal__active");
-    OutsideClick(".select", "", "data-state");
-    OutsideClick('.menuCatalog');
-    
-    openSelect();
-     
-    fillCatalogContent();
+  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
-    openModalCatalog();
+  OutsideClick('.modal', 'modal__active');
+  OutsideClick('.select', '', 'data-state');
+  OutsideClick('.menuCatalog');
 
-    accordion(
-        ".menuCatalog__Accordion",
-        ".menuCatalog__information",
-        "activeAccordion"
-      );
-      accordion(
-        ".menuCatalog__mainAccordion",
-        ".menuCatalog__information",
-        "activeAccordion"
-      );
+  openSelect();
 
-    
+  fillCatalogContent();
+
+  openModalCatalog('.menu__openCatalog');
+  openModalCatalog('.aside__menu');
+
+  accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
+  accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
+
+  pageUp();
 });

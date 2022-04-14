@@ -115,6 +115,7 @@ body#root {
   &__img {
     width: 38.75rem;
     height: 23.75rem;
+    object-fit: cover;
   }
 
   &__options {

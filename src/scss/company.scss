@@ -1,9 +1,9 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "./commonStyle.scss";
-@import "./header.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import './commonStyle.scss';
+@import './header.scss';
 
-body#root{
+body#root {
   background-color: $graySmall;
 }
 
@@ -14,7 +14,7 @@ body#root{
   position: relative;
   background-color: $mainColor;
   padding: 0 1.875rem;
-  
+
   &__image {
     position: relative;
     margin-top: 3.5625rem;
@@ -47,6 +47,37 @@ body#root{
     margin-top: 1.25rem;
   }
 
+  &__video {
+    position: relative;
+    margin-top: 3.5625rem;
+    width: 78.3125rem;
+    height: 37.5625rem;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__poster {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__button {
+    position: absolute;
+    width: 8.75rem;
+    height: 8.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $grayMain;
+
+    svg {
+      height: 100%;
+    }
+  }
 }
 
 .quote {
@@ -95,11 +126,10 @@ body#root{
 }
 
 .development {
-
   &__container {
     display: flex;
     margin-top: 4.125rem;
-   align-items: center;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -109,7 +139,7 @@ body#root{
     height: 22rem;
   }
 
-  &__text{
+  &__text {
     margin-top: 1.25rem;
     max-width: 30.3125rem;
     color: $grayMid;
@@ -175,39 +205,35 @@ body#root{
 
 .image {
   margin-top: 7.5rem;
-  
+
   &__svg {
-
-    
-    &_1{
+    &_1 {
       margin-right: 7.8125rem;
       svg {
         max-width: 30.5625rem;
         max-height: 5.4375rem;
       }
-      
     }
 
-    &_2{
+    &_2 {
       margin-right: 7.8125rem;
-      svg {
-       max-width: 30.5625rem;
-        max-height: 5.4375rem;
-      }
-    }
-      
-    &_3{
       svg {
         max-width: 30.5625rem;
         max-height: 5.4375rem;
       }
     }
- } 
 
-  &__logo{
+    &_3 {
+      svg {
+        max-width: 30.5625rem;
+        max-height: 5.4375rem;
+      }
+    }
+  }
+
+  &__logo {
     display: flex;
     margin-left: -5rem;
-
   }
 }
 
@@ -238,7 +264,7 @@ body#root{
     display: flex;
     margin-top: 8.75rem;
     justify-content: space-between;
-    
+
     &_left {
       display: grid;
       align-items: center;
@@ -246,7 +272,7 @@ body#root{
       max-width: 34.8125rem;
     }
 
-    &_right{
+    &_right {
       display: grid;
       align-items: center;
       align-content: center;
@@ -259,7 +285,6 @@ body#root{
 
   &__image {
     position: relative;
-    
 
     &_left {
       box-shadow: -5.875rem -3.125rem 0px 0px $grayBack;
@@ -271,21 +296,17 @@ body#root{
       max-width: 39.125rem;
       max-height: 26.125rem;
     }
-    
   }
 }
 
 .cooperation {
-
   margin: 0;
   width: 100%;
   max-height: 27rem;
   position: relative;
   margin-top: 9.5rem;
-  
 
   &__info {
-    
     max-height: 23.3125rem;
     display: flex;
     flex-direction: column;
@@ -296,7 +317,6 @@ body#root{
     margin-bottom: 6.25rem;
 
     &_text {
-     
       display: flex;
       flex-direction: column;
       margin-top: 2.9375rem;
@@ -308,7 +328,6 @@ body#root{
       max-height: 24.125rem;
       max-width: 38.9375rem;
     }
-
   }
 
   &__title {
@@ -329,7 +348,7 @@ body#root{
     color: $mainBack;
     font-size: 1rem;
     transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
+    @extend %buttonOutlined;
 
     &:hover {
       background-color: #000;
@@ -357,7 +376,6 @@ body#root{
     margin: 1.375rem 0 0.8125rem;
     font-size: 1.75rem;
     line-height: 1.29;
- 
   }
 
   &__other {
@@ -418,14 +436,17 @@ body#root{
 }
 
 @media (max-width: 768px) {
-
   .intro {
-
     max-height: 37.1875rem;
 
-    &__image {
+    &__poster {
       margin-left: -60vw;
       width: 160vw;
+      height: 21.3125rem;
+      margin-top: 0;
+    }
+
+    &__video {
       height: 21.3125rem;
     }
 
@@ -477,10 +498,8 @@ body#root{
     }
 
     &__block {
-      
       &:nth-child(2) {
         display: none;
-       
       }
     }
 
@@ -503,17 +522,16 @@ body#root{
   }
 
   .quote {
-
-    margin-top: 50%;
+    margin-top: 150px;
     margin-bottom: 0;
-  
+
     &__border {
       margin-top: 3.125rem;
       height: 1px;
       width: 100%;
       background-color: $grayLight;
     }
-  
+
     &__title {
       max-width: 95%;
       text-align: center;
@@ -521,27 +539,27 @@ body#root{
       position: relative;
       font-size: 1.125rem;
     }
-  
+
     &__icon {
       width: 1.75rem;
       height: 1.5rem;
       position: absolute;
       top: -0.875rem;
       left: -3%;
-  
+
       svg {
         height: auto;
         width: 100%;
       }
     }
-  
+
     &__icon__second {
       width: 1.75rem;
       height: 1.5rem;
       position: absolute;
       bottom: -0.3125rem;
       left: 97%;
-  
+
       svg {
         height: auto;
         width: 100%;
@@ -550,8 +568,6 @@ body#root{
   }
 
   .development {
-   
-
     &__container {
       margin-bottom: 3.125rem;
       display: flex;
@@ -575,7 +591,7 @@ body#root{
 
   .production {
     margin-top: 9.6875rem;
-    
+
     &__video {
       margin-top: 1.875rem;
       height: 70vw;
@@ -594,36 +610,33 @@ body#root{
 
   .image {
     margin-top: 7.5rem;
-    
+
     &__svg {
-  
-      
-      &_1{
-        margin-right: 1.6875rem;
-        svg {
-          width: 15.0625rem;
-          height: 2.6875rem;
-        }
-        
-      }
-  
-      &_2{
+      &_1 {
         margin-right: 1.6875rem;
         svg {
           width: 15.0625rem;
           height: 2.6875rem;
         }
       }
-        
-      &_3{
+
+      &_2 {
+        margin-right: 1.6875rem;
         svg {
           width: 15.0625rem;
           height: 2.6875rem;
         }
       }
-   } 
-  
-    &__logo{
+
+      &_3 {
+        svg {
+          width: 15.0625rem;
+          height: 2.6875rem;
+        }
+      }
+    }
+
+    &__logo {
       display: flex;
       justify-content: center;
     }
@@ -647,29 +660,29 @@ body#root{
       color: $grayMidText;
     }
 
-    &__container{
+    &__container {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    &__list{
+    &__list {
       display: block;
       margin-top: 3.75rem;
       position: absolute;
       z-index: 3;
 
-      &_left{
+      &_left {
         margin: 0;
         z-index: 2;
         position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-       // height: 79.8125rem;
+        // height: 79.8125rem;
       }
 
-      &_right{
+      &_right {
         //margin-top: 27.0625rem;
         position: relative;
         z-index: 1;
@@ -682,7 +695,7 @@ body#root{
       }
 
       &_row:first-child {
-       margin-bottom: 0;
+        margin-bottom: 0;
       }
       &_row:nth-child(2) {
         @media (min-width: 300px) and (max-width: 511px) {
@@ -699,11 +712,9 @@ body#root{
           }
         }
       }
-      
     }
 
     &__image {
-  
       &_left {
         box-shadow: -1.9375rem -2.875rem 0px -0.8125rem $grayBack;
       }
@@ -716,13 +727,10 @@ body#root{
         }
         box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
       }
-    
     }
+  }
 
-  } 
- 
   .cooperation {
-
     @media (min-width: 300px) and (max-width: 510px) {
       margin-top: 150%;
     }
@@ -744,7 +752,6 @@ body#root{
       font-size: 1.5rem;
       margin-bottom: 0;
       line-height: 1.9375rem;
-
     }
 
     &__text {
@@ -752,7 +759,7 @@ body#root{
       margin-top: 0.625rem;
     }
 
-    &__info{
+    &__info {
       flex-direction: column;
       margin-left: -1.25rem;
       width: 110%;
@@ -762,21 +769,19 @@ body#root{
 
       &_text {
         margin-left: 2.375rem;
-       
       }
 
       &_image {
         margin-top: 3.125rem;
-        margin-left: 1.25rem; 
+        margin-left: 1.25rem;
         margin-right: 1.25rem;
       }
-
     }
 
     &__button {
       margin-top: 2.5rem;
     }
-  } 
+  }
 
   .contacts {
     @media (min-width: 300px) and (max-width: 510px) {
@@ -785,7 +790,7 @@ body#root{
     @media (min-width: 511px) {
       margin-top: 58%;
     }
-    
+
     &__main {
       @media (min-width: 300px) and (max-width: 510px) {
         padding-top: 507px;
@@ -794,7 +799,6 @@ body#root{
         margin-top: 340px;
       }
     }
-
 
     &__title {
       margin-bottom: 1.875rem;
@@ -837,5 +841,4 @@ body#root{
   .map {
     display: none;
   }
-
 }

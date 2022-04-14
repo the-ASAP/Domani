@@ -1,7 +1,7 @@
-@import "media";
-@import "mixins";
-@import "keyframes";
-@import "root";
+@import 'media';
+@import 'mixins';
+@import 'keyframes';
+@import 'root';
 
 * {
   padding: 0;
@@ -25,6 +25,25 @@ section {
 header {
   margin-bottom: 2.1875rem;
   color: $grayMain;
+
+  &.fixed {
+    position: fixed;
+    z-index: 15;
+
+    left: 0;
+    top: 0;
+
+    padding: 0 1.875rem;
+    margin-bottom: 0;
+
+    width: 100%;
+    background-color: $mainColor;
+    border: none;
+
+    & > .menu__box {
+      border: none;
+    }
+  }
 }
 //Создание базовых стилей для основных тегов
 h1 {
@@ -159,7 +178,7 @@ button {
   height: 3.125rem;
   margin: 0 auto;
 
-  &[data-state="active"] {
+  &[data-state='active'] {
     .select {
       &__title {
         background-color: $grayHoverSelect;
@@ -201,7 +220,7 @@ button {
 
     &::before,
     &::after {
-      content: "";
+      content: '';
 
       position: absolute;
       top: 50%;
@@ -286,98 +305,98 @@ button {
     min-width: 14.375rem;
     height: 3.125rem;
     margin: 0 auto;
-  
-    &[data-state="active"] {
+
+    &[data-state='active'] {
       .select {
         &__title {
           background-color: $grayHoverSelect;
           &::before {
             transform: translate(-3px, -50%) rotate(-45deg);
           }
-  
+
           &::after {
             transform: translate(3px, -50%) rotate(45deg);
           }
         }
-  
+
         &__content {
           opacity: 1;
         }
-  
+
         &__label + &__input + &__label {
           max-height: 3.125rem;
           border-top-width: 1px;
         }
-  
+
         &__label {
           max-height: 2.5rem;
           overflow: visible;
         }
       }
     }
-  
+
     &__title {
       display: flex;
       align-items: center;
       width: 100%;
       height: 100%;
       padding: 0.5rem 1rem;
-  
+
       border: solid 1px rgba(101, 101, 101, 0.2);
-  
+
       cursor: pointer;
-  
+
       &::before,
       &::after {
-        content: "";
-  
+        content: '';
+
         position: absolute;
         top: 50%;
         right: 16px;
-  
+
         display: block;
         width: 7px;
         height: 1px;
-  
+
         transition: all 0.3s ease-out;
-  
+
         background-color: #333333;
-  
+
         transform: translate(-3px, -50%) rotate(45deg);
       }
       &::after {
         transform: translate(1px, -50%) rotate(-45deg);
       }
-  
+
       &:hover {
         background-color: $grayHoverSelect;
       }
     }
-  
+
     &__content {
       position: absolute;
       top: 3.125rem;
       left: 0px;
-  
+
       display: flex;
       flex-direction: column;
       width: 100%;
-  
+
       background-color: #ffffff;
-  
+
       border: 1px solid #c7ccd1;
       border-top: none;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
-  
+
       transition: all 0.3s ease-out;
-  
+
       opacity: 0;
       z-index: 8;
     }
     &__input {
       display: none;
-  
+
       &:checked + label {
         background-color: #dedede;
       }
@@ -386,7 +405,7 @@ button {
         pointer-events: none;
       }
     }
-  
+
     &__label {
       display: flex;
       align-items: center;
@@ -394,17 +413,17 @@ button {
       height: 3.125rem;
       max-height: 0;
       padding: 0 1rem;
-  
+
       transition: all 0.2s ease-out;
-  
+
       cursor: pointer;
-  
+
       overflow: hidden;
-  
+
       & + input + & {
         border-top: 0 solid $grayHoverSelect;
       }
-  
+
       &:hover {
         background-color: $grayHoverSelect;
       }
@@ -448,14 +467,10 @@ button {
 }
 
 .product {
-  height: 34.5625rem;
+  height: max-content;
   width: calc((100% - 2.5rem) / 3);
   position: relative;
   padding: 0 1.25rem;
-
-  &:nth-child(2) {
-    margin: 0 0.75rem;
-  }
 
   &__back {
     position: absolute;
@@ -471,7 +486,7 @@ button {
       left: 0;
       width: 100%;
       height: 12.0625rem;
-      background-color: #f2f2f2;;
+      background-color: #f2f2f2;
     }
   }
 
@@ -575,7 +590,7 @@ button {
     padding-bottom: 3.125rem;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -3.125rem;
       left: -3.75rem;

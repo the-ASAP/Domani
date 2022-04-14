@@ -1,9 +1,9 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "./commonStyle.scss";
-@import "./header.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import './commonStyle.scss';
+@import './header.scss';
 
-body#root{
+body#root {
   background-color: $graySmall;
 }
 
@@ -14,7 +14,7 @@ body#root{
   position: relative;
   background-color: $mainColor;
   padding: 0 1.875rem;
-  
+
   &__image {
     position: relative;
     margin-top: 3.125rem;
@@ -53,7 +53,7 @@ body#root{
     margin-top: 1.875rem;
     color: $mainBack;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
-    @extend%buttonOutlined;
+    @extend %buttonOutlined;
 
     &_arrow {
       margin-left: 0.75rem;
@@ -64,7 +64,6 @@ body#root{
       color: #000;
     }
   }
-
 }
 
 .catalog {
@@ -109,12 +108,12 @@ body#root{
     height: 24.125rem;
   }
 
-  &__text{
+  &__text {
     margin-top: 0.5rem;
     max-width: 29.1875rem;
   }
-  
-  .product{
+
+  .product {
     &__info {
       display: flex;
     }
@@ -122,9 +121,6 @@ body#root{
       color: $grayMid;
       position: relative;
     }
-    &:nth-child(5) {
-    margin: 0 0.75rem 0 0.75rem;
-    }   
   }
 
   .tab {
@@ -135,11 +131,11 @@ body#root{
       display: none;
       flex-wrap: wrap;
     }
-    
+
     &__content.active {
       display: flex;
     }
-    
+
     &__links {
       text-align: center;
       justify-content: center;
@@ -156,10 +152,8 @@ body#root{
 }
 
 @media (max-width: 768px) {
-
   .intro {
-
-   height: 70vh;
+    height: 70vh;
 
     &__image {
       margin-left: -60vw;
@@ -180,9 +174,7 @@ body#root{
     }
 
     &__picture {
-     
       object-position: 10rem 0;
-     
     }
 
     &__info {
@@ -217,10 +209,8 @@ body#root{
     }
 
     &__block {
-      
       &:nth-child(2) {
         display: none;
-       
       }
     }
 
@@ -243,7 +233,6 @@ body#root{
   }
 
   .catalog {
-
     margin-top: 81%;
 
     .tab {
@@ -252,13 +241,13 @@ body#root{
       &__content.active {
         margin-top: 1.25rem;
         flex-direction: column;
-        flex-wrap:none;
+        flex-wrap: none;
       }
     }
     &__selects {
       display: flex;
       justify-content: space-between;
-      width:100%;
+      width: 100%;
     }
     .select {
       width: 100%;
@@ -283,5 +272,4 @@ body#root{
       align-items: center;
     }
   }
-
 }
