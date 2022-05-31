@@ -58,7 +58,7 @@ body#root {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 4.625rem;
+      padding: 20px 0;
       border-bottom: 1px solid $grayBorder;
     }
     &_date-content {
@@ -70,7 +70,6 @@ body#root {
       margin-top: 3.125rem;
       justify-content: space-between;
       align-items: center;
-      height: 4.625rem;
       border-bottom: 1px solid $grayBorder;
       border-top: 1px solid $grayBorder;
     }
@@ -363,7 +362,7 @@ body#root {
 
   &__picture {
     object-fit: cover;
-    height: inherit;
+    max-height: inherit;
     object-position: left bottom;
   }
 

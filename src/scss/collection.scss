@@ -36,6 +36,7 @@ body#root {
 
   &__title {
     justify-content: center;
+    text-align: center;
     color: $mainBack;
     max-width: 27rem;
   }
@@ -126,6 +127,7 @@ body#root {
   .tab {
     display: flex;
     margin-top: 3.125rem;
+    padding-top: 20px;
 
     &__content {
       display: none;
@@ -271,5 +273,11 @@ body#root {
     &__info {
       align-items: center;
     }
+  }
+}
+
+@media (max-width: 414px) {
+  .product {
+    margin: 0;
   }
 }

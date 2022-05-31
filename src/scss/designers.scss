@@ -1,9 +1,9 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "./commonStyle.scss";
-@import "./header.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import './commonStyle.scss';
+@import './header.scss';
 
-body#root{
+body#root {
   background-color: $graySmall;
 }
 
@@ -14,7 +14,7 @@ body#root{
   position: relative;
   background-color: $grayMain;
   padding: 0 1.875rem;
-  
+
   &__image {
     position: relative;
     margin-top: 2.25rem;
@@ -54,11 +54,9 @@ body#root{
     margin-top: 1.875rem;
     display: flex;
     color: $mainBack;
-    transition: background-color 0.3s ease-in, 
-                color 0.3s ease-in, 
-                fill 0.3s ease-in, 
-                stroke 0.3s ease-in;
-    @extend%buttonOutlined;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in, fill 0.3s ease-in,
+      stroke 0.3s ease-in;
+    @extend %buttonOutlined;
 
     &_arrow {
       margin-left: 0.75rem;
@@ -82,7 +80,7 @@ body#root{
 .idea {
   margin-top: 25.9375rem;
 
-  h2 { 
+  h2 {
     text-align: center;
     position: relative;
   }
@@ -100,7 +98,7 @@ body#root{
   &__list {
     display: flex;
     margin-top: 8.75rem;
-    
+
     &_left {
       display: grid;
       align-items: center;
@@ -109,7 +107,7 @@ body#root{
       margin-inline-end: 11.25rem;
     }
 
-    &_right{
+    &_right {
       display: grid;
       align-items: center;
       align-content: center;
@@ -135,7 +133,7 @@ body#root{
       max-width: 32.125rem;
       max-height: 41rem;
     }
-    
+
     img {
       height: 100%;
       object-fit: contain;
@@ -152,7 +150,6 @@ body#root{
   margin-bottom: 21.25rem;
 
   &__info {
-    
     max-height: 30rem;
     display: flex;
     flex-direction: column;
@@ -162,12 +159,10 @@ body#root{
     background-color: $grayBack;
 
     &_text {
-     
       display: flex;
       flex-direction: column;
       margin-left: 3.75rem;
       margin-top: 3.1875rem;
-    
     }
 
     &_image {
@@ -176,7 +171,6 @@ body#root{
       max-height: 40.5625rem;
       max-width: 28.75rem;
     }
-
   }
 
   &__title {
@@ -196,7 +190,7 @@ body#root{
     margin-top: 3.125rem;
     color: $mainBack;
     transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
+    @extend %buttonOutlined;
 
     &:hover {
       background-color: #000;
@@ -205,7 +199,6 @@ body#root{
 }
 
 .function {
-
   &__container {
     display: flex;
     margin-top: 7.5rem;
@@ -217,7 +210,6 @@ body#root{
     display: grid;
     align-items: flex-start;
     justify-content: center;
-  
   }
 
   &__info {
@@ -241,30 +233,27 @@ body#root{
     height: 24.125rem;
   }
 
-  &__text{
+  &__text {
     margin-top: 0.5rem;
     max-width: 29.1875rem;
   }
 
-  
-    
-    h3 {
-      max-width: 21.6875rem;
-      text-align: left;
-      position: relative;
-    }
-    h4 {
-      text-align: left;
-      position: relative;
-    }
-  
-  
+  h3 {
+    max-width: 21.6875rem;
+    text-align: left;
+    position: relative;
+  }
+  h4 {
+    text-align: left;
+    position: relative;
+  }
+
   .tab {
     display: flex;
     flex-direction: column;
     margin-top: 3.125rem;
     
-    
+
     &__links {
       text-align: left;
       width: 28.6875rem;
@@ -275,9 +264,9 @@ body#root{
       &:hover,
       &.active {
         display: flex;
-        align-items: center; 
-       
-        &:before{
+        align-items: center;
+
+        &:before {
           content: '\2014';
           padding-right: 1.25rem;
           transition: content 1s ease-in;
@@ -288,14 +277,13 @@ body#root{
 }
 
 .projects {
-
   &__controls {
     display: flex;
     justify-content: flex-end;
     padding-inline-end: 1.5625rem;
   }
 
-  &__number{
+  &__number {
     margin-right: 1.25rem;
     color: $grayMid;
   }
@@ -306,8 +294,8 @@ body#root{
   }
 
   h4 {
-      margin-top: 1.25rem;
-    }
+    margin-top: 1.25rem;
+  }
 
   &__info {
     display: flex;
@@ -323,39 +311,34 @@ body#root{
   &__slider {
     margin-top: 7.5rem;
     margin-bottom: 7.5rem;
-  
 
     &_wrapper {
-     overflow: hidden;
+      overflow: hidden;
     }
 
     &_items {
       display: flex;
       align-items: center;
       transition: transform 0.5s ease-in-out;
-     
-    }   
+    }
     &_item {
       display: block;
       max-height: 15.625rem;
       max-width: 38.625rem;
-      color: rgba(255,255,255, 0.8);
-      padding-bottom: 26.5625rem; 
-    } 
+      color: rgba(255, 255, 255, 0.8);
+      padding-bottom: 26.5625rem;
+    }
   }
 }
 
 .project-site {
-
   margin: 0;
   width: 100%;
   max-height: 27rem;
   position: relative;
-  
 
   &__info {
-    
-    max-height: 23.375rem;
+    max-height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -365,11 +348,9 @@ body#root{
     margin-bottom: 10.625rem;
 
     &_text {
-     
       display: flex;
       flex-direction: column;
       margin-top: 3.125rem;
-    
     }
 
     &_image {
@@ -377,7 +358,6 @@ body#root{
       max-height: 23.875rem;
       max-width: 38.625rem;
     }
-
   }
 
   &__title {
@@ -398,7 +378,7 @@ body#root{
     color: $mainBack;
     font-size: 1rem;
     transition: background-color 0.3s ease-in;
-    @extend%buttonOutlined;
+    @extend %buttonOutlined;
 
     &:hover {
       background-color: #000;
@@ -406,7 +386,8 @@ body#root{
   }
 }
 
-.suggestProject, .cooperationModal {
+.suggestProject,
+.cooperationModal {
   position: fixed;
   top: 0;
   left: 0;
@@ -433,12 +414,17 @@ body#root{
 
   &__content {
     width: 38.8125rem;
-    height: 50rem;
+    height: 95%;
+    overflow: auto;
     background-color: $mainBack;
-    
+
     position: relative;
     animation-name: slide-in;
     animation-duration: 0.7s;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   &__intro {
@@ -448,7 +434,7 @@ body#root{
     padding: 0 4.0625rem;
     margin-top: -1.5625rem;
   }
-  &__text{
+  &__text {
     max-width: 21.5625rem;
     margin-top: 1.25rem;
     text-align: center;
@@ -463,7 +449,7 @@ body#root{
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: calc(50% - 1px);
       left: calc(50% - 0.5625rem);
@@ -532,7 +518,6 @@ body#root{
     background-color: $grayMain;
     //margin-top: 3.75rem;
     background-color: var(--gray-main);
-    width: 79%;
     padding: 1.125rem 0;
     font-size: 16px;
     line-height: 1.45;
@@ -546,14 +531,13 @@ body#root{
 }
 
 @media (max-width: 768px) {
-
   .intro {
     height: 80vh;
 
     &__image {
-    height: 21.3125rem;
-    width: 150vw;
-    margin-left: -50vw;
+      height: 21.3125rem;
+      width: 150vw;
+      margin-left: -50vw;
     }
 
     &__image > div {
@@ -580,7 +564,6 @@ body#root{
     }
 
     &__text {
-      
       color: $grayBack;
       margin-top: 0.9375rem;
     }
@@ -601,11 +584,9 @@ body#root{
     }
 
     &__block {
-
       &:nth-child(2) {
         display: none;
       }
-      
     }
 
     &__catalog {
@@ -644,21 +625,21 @@ body#root{
       color: $grayMidText;
     }
 
-    &__container{
+    &__container {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    &__list{
+    &__list {
       display: block;
       margin-top: 3.8125rem;
 
-      &_left{
+      &_left {
         margin: 0;
       }
 
-      &_right{
+      &_right {
         margin-top: 4.9375rem;
       }
 
@@ -668,18 +649,15 @@ body#root{
     }
 
     &__image {
-  
       &_left {
         box-shadow: -1.9375rem -2.875rem 0px -0.8125rem $grayBack;
       }
       &_right {
         box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
       }
-    
     }
+  }
 
-  } 
- 
   .cooperation {
     margin-top: 4.9375rem;
     margin-bottom: 100%;
@@ -695,7 +673,7 @@ body#root{
       margin-top: 0.625rem;
     }
 
-    &__info{
+    &__info {
       flex-direction: column;
       margin-left: -1.25rem;
       width: 110%;
@@ -703,15 +681,13 @@ body#root{
 
       &_text {
         margin-left: 2.375rem;
-       
       }
 
       &_image {
         margin-top: 6.25rem;
-        margin-left: 1.25rem; 
+        margin-left: 1.25rem;
         margin-right: 1.25rem;
       }
-
     }
 
     &__button {
@@ -721,26 +697,23 @@ body#root{
     @media (min-width: 500px) {
       margin-bottom: 32.125rem;
     }
-
-  } 
+  }
 
   .function {
     margin-top: 4.375rem;
     margin-bottom: 0;
 
-    &__container{
+    &__container {
       display: grid;
       margin: 0;
-    
     }
 
     &__tabs {
       margin: 0;
       justify-items: left;
-
     }
 
-    &__image{
+    &__image {
       margin-top: 1.875rem;
       width: 100%;
       height: 13.1875rem;
@@ -759,19 +732,17 @@ body#root{
   }
 
   .projects {
-
     margin-top: 4.375rem;
 
     &__all-project {
       display: none;
     }
-  
+
     &__slider {
       margin-top: 0;
       margin-bottom: 0;
       position: relative;
       z-index: 1;
-      
 
       &_wrapper {
         margin-top: 20vw;
@@ -781,7 +752,7 @@ body#root{
         border-bottom: 1px solid $grayBorder;
         padding-bottom: 1.25rem;
       }
-      
+
       &_item {
         max-height: 100%;
         padding: 0;
@@ -792,11 +763,10 @@ body#root{
       padding: 0;
     }
 
-    h4 { 
-       // max-width: 18.5625rem;
-        margin-top: 20px;
-      }
-   
+    h4 {
+      // max-width: 18.5625rem;
+      margin-top: 20px;
+    }
 
     &__info {
       display: flex;
@@ -806,7 +776,7 @@ body#root{
       position: absolute;
       width: 100%;
 
-      &_slide{
+      &_slide {
         justify-content: space-between;
         padding-top: 90vw;
       }
@@ -818,20 +788,20 @@ body#root{
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 31.25rem;
         }
       }
     }
 
-    @media (min-width: 347px)  and (max-width: 667px) {
+    @media (min-width: 347px) and (max-width: 667px) {
       &__slider {
         &_wrapper {
           margin-top: 10vw;
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 77vw;
         }
       }
@@ -839,7 +809,6 @@ body#root{
   }
 
   .project-site {
-
     margin-top: 110vw;
     margin-bottom: 75vw;
 
@@ -853,7 +822,7 @@ body#root{
       margin-top: 0.625rem;
     }
 
-    &__info{
+    &__info {
       flex-direction: column;
       margin-left: -1.25rem;
       width: 110%;
@@ -862,15 +831,13 @@ body#root{
 
       &_text {
         margin-left: 2.375rem;
-       
       }
 
       &_image {
         margin-top: 6.25rem;
-        margin-left: 1.25rem; 
+        margin-left: 1.25rem;
         margin-right: 1.25rem;
       }
-
     }
 
     &__button {
@@ -880,28 +847,27 @@ body#root{
     @media (min-width: 700px) {
       margin-bottom: 60%;
     }
-    @media (min-width: 300px)  and (max-width: 346px) {
+    @media (min-width: 300px) and (max-width: 346px) {
       margin-top: 165vw;
     }
-    @media (min-width: 347px)  and (max-width: 400px) {
+    @media (min-width: 347px) and (max-width: 400px) {
       margin-top: 150vw;
     }
-    @media (min-width: 400px)  and (max-width: 450px) {
+    @media (min-width: 400px) and (max-width: 450px) {
       margin-top: 135vw;
     }
-    @media (min-width: 450px)  and (max-width: 500px) {
+    @media (min-width: 450px) and (max-width: 500px) {
       margin-top: 125vw;
     }
-    @media (min-width: 500px)  and (max-width: 600px) {
+    @media (min-width: 500px) and (max-width: 600px) {
       margin-top: 120vw;
     }
-    @media (min-width: 600px)  and (max-width: 667px) {
+    @media (min-width: 600px) and (max-width: 667px) {
       margin-top: 115vw;
     }
   }
 
   .suggestProject {
-  
     &__content {
       width: 100%;
       height: 100%;
@@ -909,33 +875,33 @@ body#root{
     &__title {
       text-align: center;
     }
-  
+
     &__intro {
       padding: 0 0.9375rem;
       margin-top: -0.75rem;
     }
-  
+
     &__close {
       width: 1.25rem;
       height: 1.25rem;
     }
-  
+
     &__form {
       margin-top: 1.5625rem;
       padding: 0 1.125rem 1.25rem 1.125rem;
     }
-  
+
     &__comments {
       height: 6.25rem;
     }
-  
+
     &__comments::placeholder {
       transform: translateY(-1.5625rem);
     }
-  
+
     &__input {
-     padding: 0.9375rem;
-     margin-bottom: 0.625rem;
+      padding: 0.9375rem;
+      margin-bottom: 0.625rem;
     }
   }
 }

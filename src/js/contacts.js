@@ -5,18 +5,23 @@ import {
   openModalCatalog,
   accordion,
   pageUp,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  scrollToMap
 } from '../vendors/js/general';
 import '../scss/contacts.scss';
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.menuCatalog');
+
+  closeBitrixForm();
+
+  scrollToMap();
 
   fillCatalogContent();
 
@@ -27,4 +32,5 @@ $().ready(() => {
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
   pageUp();
+  getFooterModal();
 });

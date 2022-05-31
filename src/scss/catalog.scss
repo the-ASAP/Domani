@@ -1,9 +1,9 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "./header.scss";
-@import "./index.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import './header.scss';
+@import './index.scss';
 
-body#root{
+body#root {
   background-color: $graySmall;
 }
 
@@ -61,7 +61,7 @@ body#root{
   &__filters {
     margin-bottom: 3.125rem;
   }
-  
+
   .select {
     width: 24%;
     margin: 0 0.3125rem 0 0.3125rem;
@@ -77,12 +77,10 @@ body#root{
   display: none;
 }
 
-
 @media (max-width: 768px) {
-
   .intro {
     &__image {
-      object-position: -29.125rem 0px;
+      object-position: right;
     }
     &__info {
       margin-left: 0;
@@ -94,7 +92,7 @@ body#root{
       max-width: 50%;
     }
   }
-  
+
   .filterModal {
     position: fixed;
     top: 0;
@@ -108,23 +106,23 @@ body#root{
     align-items: center;
     animation-name: appear;
     animation-duration: 300ms;
-  
+
     &__active {
       display: flex;
     }
-  
+
     &__button_close {
       display: flex;
       justify-content: flex-end;
       margin-top: 1.25rem;
       margin-right: 1.25rem;
     }
-  
+
     &__content {
       width: 85%;
       height: 70%;
       background-color: $mainBack;
-      
+
       position: relative;
       animation-name: slide-in;
       animation-duration: 0.7s;
@@ -133,7 +131,7 @@ body#root{
     &__title {
       text-align: center;
     }
-  
+
     &__intro {
       display: flex;
       flex-direction: column;
@@ -141,22 +139,22 @@ body#root{
       padding: 0 0.9375rem;
       margin-top: -0.75rem;
     }
-    &__text{
+    &__text {
       max-width: 21.5625rem;
       margin-top: 1.25rem;
       text-align: center;
     }
-  
+
     &__close {
       border-radius: 50%;
       width: 2.5rem;
       height: 2.5rem;
       background-color: $grayBack;
       position: relative;
-  
+
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: calc(50% - 1px);
         left: calc(50% - 0.5625rem);
@@ -165,17 +163,17 @@ body#root{
         background-color: $grayMain;
         transform: rotate(45deg);
       }
-  
+
       &::after {
         transform: rotate(-45deg);
       }
     }
-  
+
     &__form {
       margin-top: 1.875rem;
       padding: 0 1.0625rem 1.25rem 1.125rem;
     }
-  
+
     &__input {
       width: 100%;
       border: 1px solid #e0e0e0;
@@ -184,14 +182,14 @@ body#root{
       font-size: 0.875rem;
       line-height: 1.45;
       color: $grayMid;
-  
+
       &::placeholder {
         font-size: 0.875rem;
         line-height: 1.45;
         color: $grayMid;
       }
     }
-  
+
     &__button_apply {
       display: flex;
       justify-content: center;
@@ -199,7 +197,7 @@ body#root{
       align-items: center;
       padding: 0 1.0625rem 0 1.125rem;
     }
-  
+
     &__apply {
       background-color: $grayMain;
       background-color: var(--gray-main);
@@ -209,7 +207,7 @@ body#root{
       line-height: 1.45;
       color: $mainBack;
       transition: background-color 0.3s ease-in;
-  
+
       &:hover {
         background-color: #000;
       }
@@ -225,7 +223,6 @@ body#root{
   }
 
   .catalog {
-
     &__selects {
       display: none;
 
@@ -241,9 +238,9 @@ body#root{
     .selects {
       &__image {
         border-radius: 0.9375rem;
-        background-color: hsla(0,0%,76.9%, 0.2);
+        background-color: hsla(0, 0%, 76.9%, 0.2);
         width: 1.75rem;
-        height: 1.75rem; 
+        height: 1.75rem;
 
         svg {
           padding-top: 0.3125rem;
@@ -263,7 +260,7 @@ body#root{
         &::after {
           transform: translate(1/3px, 0%) rotate(0deg);
         }
-      }  
+      }
     }
   }
 }

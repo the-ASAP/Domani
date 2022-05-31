@@ -1,9 +1,9 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "./commonStyle.scss";
-@import "./header.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import './commonStyle.scss';
+@import './header.scss';
 
-body#root{
+body#root {
   background-color: $graySmall;
 }
 
@@ -13,7 +13,7 @@ body#root{
   height: 43.75rem;
   position: relative;
   padding: 0 1.875rem;
-  
+
   &__image {
     left: 0;
     max-width: 38.75rem;
@@ -59,27 +59,27 @@ body#root{
       margin-top: 3.125rem;
       justify-content: space-between;
       align-items: center;
-      height: 4.625rem;
+      padding: 20px 0;
       border-bottom: 1px solid $grayBorder;
       border-top: 1px solid $grayBorder;
     }
 
     &_date-number {
-      color:$grayMid;
+      color: $grayMid;
     }
 
     &_discription {
       color: $grayMid;
       margin-top: 0.625rem;
-      @extend%discription
+      @extend%discription;
     }
   }
 }
 
 .configurator {
   margin-top: 17.3125rem;
-  
-  &__list{
+
+  &__list {
     margin-top: 3.75rem;
   }
 }
@@ -90,14 +90,13 @@ body#root{
   &__controls {
     display: flex;
     justify-content: flex-end;
-    
   }
 
   &__title {
     margin-bottom: 1.875rem;
   }
 
-  &__number{
+  &__number {
     margin-top: 0.75rem;
     margin-right: 1.25rem;
   }
@@ -113,29 +112,25 @@ body#root{
   }
 
   &__slider {
-  
     &_wrapper {
-     overflow: hidden;
+      overflow: hidden;
     }
 
     &_items {
       display: flex;
       align-items: center;
       transition: transform 0.5s ease-in-out;
-     
-    }   
+    }
     &_item {
       display: block;
-      max-height: 22.4375rem;
+      height: 32.6875rem;
       max-width: 41.3125rem;
-      color: rgba(255,255,255, 0.8);
-      padding-bottom: 26.5625rem; 
-    } 
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 
 .details {
-
   margin-top: 5rem;
 
   &__container {
@@ -148,7 +143,6 @@ body#root{
 
   &__info {
     &_service p {
-
       margin-top: 1.25rem;
 
       &:nth-child(1) {
@@ -158,18 +152,17 @@ body#root{
       &:nth-child(2) {
         margin-right: 8.375rem;
       }
-
     }
   }
 
   &__picture {
     object-fit: cover;
-    height: inherit;
+    max-height: inherit;
+    max-height: 24rem;
     object-position: left bottom;
   }
 
   &__image {
-
     &_left {
       box-shadow: -3.875rem -3.125rem 0px 0px #e3e3e3;
       max-width: 38.625rem;
@@ -183,11 +176,9 @@ body#root{
   }
 
   &__text {
-
     margin-top: 1.25rem;
-    
-    &_service {
 
+    &_service {
       max-width: 40.0625rem;
     }
 
@@ -204,7 +195,7 @@ body#root{
 
   &__Accordion {
     width: 100%;
-    
+
     &:nth-child(1) {
       border-top: 1px solid $grayBorder;
     }
@@ -217,22 +208,20 @@ body#root{
     width: 100%;
     height: 5.0625rem;
     border-bottom: 1px solid $grayBorder;
-    
   }
 
   &__information {
     display: none;
     margin-top: 3.125rem;
     padding-bottom: 3.75rem;
-    border-bottom: 1px solid #C4C4C4;
+    border-bottom: 1px solid #c4c4c4;
   }
 
   h3 {
-   text-align: center;
+    text-align: center;
   }
 
   &__mainItems {
-
     &_benefits {
       display: flex;
       justify-content: space-between;
@@ -242,7 +231,6 @@ body#root{
     &_service {
       display: flex;
     }
-    
   }
 
   &__title {
@@ -254,14 +242,13 @@ body#root{
       text-align: left;
       max-width: 22.1875rem;
     }
-    
   }
 
   &__list {
     display: flex;
     margin-top: 8.75rem;
     justify-content: space-between;
-    
+
     &_left {
       display: grid;
       align-items: center;
@@ -269,7 +256,7 @@ body#root{
       max-width: 34.8125rem;
     }
 
-    &_right{
+    &_right {
       display: grid;
       align-items: center;
       align-content: center;
@@ -279,8 +266,7 @@ body#root{
       margin-bottom: 7.9375rem;
     }
   }
-  
-  
+
   .plus {
     &__vertical,
     &__horizontal {
@@ -289,22 +275,20 @@ body#root{
   }
 }
 
-.ideas{
-
+.ideas {
   &__controls {
     display: flex;
     justify-content: flex-end;
     padding-inline-end: 1.5625rem;
   }
 
-  &__number{
+  &__number {
     margin-right: 1.25rem;
   }
 
   h4 {
-      margin-top: 1.25rem;
-    }
-
+    margin-top: 1.25rem;
+  }
 
   &__info {
     display: flex;
@@ -316,39 +300,36 @@ body#root{
       align-items: center;
     }
   }
-  
+
   &__projects {
     margin-right: 4.0625rem;
     text-decoration: underline;
   }
-  
+
   &__slider {
     margin-top: 7.5rem;
     margin-bottom: 7.5rem;
-  
 
     &_wrapper {
-     overflow: hidden;
+      overflow: hidden;
     }
 
     &_items {
       display: flex;
       align-items: center;
       transition: transform 0.5s ease-in-out;
-     
-    }   
+    }
     &_item {
       display: block;
       max-height: 15.625rem;
       max-width: 38.625rem;
-      color: rgba(255,255,255, 0.8);
-      padding-bottom: 26.5625rem; 
-    } 
+      color: rgba(255, 255, 255, 0.8);
+      padding-bottom: 26.5625rem;
+    }
   }
 }
 
-.panels{
-
+.panels {
   &__controls {
     display: flex;
     justify-content: flex-end;
@@ -356,9 +337,8 @@ body#root{
   }
 
   h4 {
-      margin-top: 1.25rem;
-    }
-
+    margin-top: 1.25rem;
+  }
 
   &__info {
     display: flex;
@@ -373,33 +353,31 @@ body#root{
   &__slider {
     margin-top: 7.5rem;
     margin-bottom: 7.5rem;
-  
 
     &_wrapper {
-     overflow: hidden;
+      overflow: hidden;
     }
 
     &_items {
       display: flex;
       align-items: center;
       transition: transform 0.5s ease-in-out;
-     
-    }   
+    }
     &_item {
       display: block;
       max-height: 35.1875rem;
       max-width: 38.625rem;
-      color: rgba(255,255,255, 0.8);
-      
-    } 
+      color: rgba(255, 255, 255, 0.8);
+    }
   }
 
   &__number {
     display: none;
   }
 
-  .product{
+  .product {
     width: 100%;
+    margin-right: 5px;
     &__info {
       display: flex;
     }
@@ -407,14 +385,11 @@ body#root{
       color: $grayMid;
       position: relative;
     }
-      
   }
 }
 
 @media (max-width: 768px) {
-
   .intro {
-
     .wrapper {
       width: 100%;
     }
@@ -446,18 +421,18 @@ body#root{
     }
 
     &__text {
-      order:1;
+      order: 1;
       margin-top: 1.875rem;
       margin-inline-end: 0;
 
       &_content {
-        color:$mainColor;
+        color: $mainColor;
         opacity: 0.8;
         margin-top: 1.25rem;
       }
-      
+
       &_date {
-        margin-top: 1.875rem
+        margin-top: 1.875rem;
       }
     }
 
@@ -478,11 +453,9 @@ body#root{
     }
 
     &__block {
-
       &:nth-child(2) {
         display: none;
       }
-      
     }
 
     &__catalog {
@@ -505,21 +478,19 @@ body#root{
 
   .configurator {
     margin-top: 89.7%;
-    &__container{
+    &__container {
       padding-top: 7.5625rem;
-    } 
+    }
   }
 
   .variants {
-
     margin-top: 4.375rem;
-  
+
     &__slider {
       margin-top: 0;
       margin-bottom: 0;
       position: relative;
       z-index: 1;
-      
 
       &_wrapper {
         margin-top: 22vw;
@@ -528,7 +499,7 @@ body#root{
         width: 100%;
         padding-bottom: 1.25rem;
       }
-      
+
       &_item {
         max-height: 100%;
         padding: 0;
@@ -539,11 +510,10 @@ body#root{
       padding: 0;
     }
 
-    h4 { 
-       // max-width: 18.5625rem;
-        margin-top: 20px;
-      }
-   
+    h4 {
+      // max-width: 18.5625rem;
+      margin-top: 20px;
+    }
 
     &__info {
       display: flex;
@@ -553,7 +523,7 @@ body#root{
       position: absolute;
       width: 100%;
 
-      &_slide{
+      &_slide {
         justify-content: space-between;
         padding-top: 57vw;
       }
@@ -565,29 +535,29 @@ body#root{
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 25rem;
         }
       }
     }
 
-    @media (min-width: 319px)  and (max-width: 690px) {
+    @media (min-width: 319px) and (max-width: 690px) {
       &__slider {
         &_wrapper {
           margin-top: 11vw;
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 60vw;
         }
       }
     }
   }
-  
+
   .details {
     margin-top: 44.9%;
-    
+
     .wrapper {
       padding-top: 17.8125rem;
     }
@@ -601,7 +571,6 @@ body#root{
     }
 
     &__mainItems {
-
       &_benefits {
         display: flex;
         justify-content: space-between;
@@ -614,12 +583,11 @@ body#root{
     }
 
     &__info_service {
-      
       p:nth-child(1) {
-        margin-right:0;
+        margin-right: 0;
       }
       p:nth-child(2) {
-        margin-right:0;
+        margin-right: 0;
       }
 
       &:nth-child(2) {
@@ -627,27 +595,25 @@ body#root{
       }
     }
 
-    &__list{
-
-      &_row { 
-        &:not(:first-of-type){
-          div:nth-child(1){
-            box-shadow: 1.675rem -1.875rem 0px -0.675rem  #e3e3e3;
+    &__list {
+      &_row {
+        &:not(:first-of-type) {
+          div:nth-child(1) {
+            box-shadow: 1.675rem -1.875rem 0px -0.675rem #e3e3e3;
           }
         }
-        &:first-child{
+        &:first-child {
           margin-bottom: 5rem;
         }
-        
       }
       &_right {
         margin-top: 5rem;
       }
     }
-    
+
     &__image {
       &_left {
-        box-shadow: -1.675rem -1.875rem 0px -0.675rem  #e3e3e3;
+        box-shadow: -1.675rem -1.875rem 0px -0.675rem #e3e3e3;
       }
       &_right {
         box-shadow: -4.5rem -1.9375rem 0px -1.125rem #e3e3e3;
@@ -656,19 +622,17 @@ body#root{
   }
 
   .ideas {
-
     margin-top: 4.375rem;
 
     &__projects {
       display: none;
     }
-  
+
     &__slider {
       margin-top: 0;
       margin-bottom: 0;
       position: relative;
       z-index: 1;
-      
 
       &_wrapper {
         margin-top: 20vw;
@@ -678,7 +642,7 @@ body#root{
         border-bottom: 1px solid $grayBorder;
         padding-bottom: 1.25rem;
       }
-      
+
       &_item {
         max-height: 100%;
         padding: 0;
@@ -689,11 +653,10 @@ body#root{
       padding: 0;
     }
 
-    h4 { 
-       // max-width: 18.5625rem;
-        margin-top: 20px;
-      }
-   
+    h4 {
+      // max-width: 18.5625rem;
+      margin-top: 20px;
+    }
 
     &__info {
       display: flex;
@@ -703,7 +666,7 @@ body#root{
       position: absolute;
       width: 100%;
 
-      &_slide{
+      &_slide {
         justify-content: space-between;
         padding-top: 90vw;
       }
@@ -716,20 +679,20 @@ body#root{
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 31.25rem;
         }
       }
     }
 
-    @media (min-width: 347px)  and (max-width: 667px) {
+    @media (min-width: 347px) and (max-width: 667px) {
       &__slider {
         &_wrapper {
           margin-top: 10vw;
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 77vw;
         }
       }
@@ -748,17 +711,16 @@ body#root{
       margin-bottom: 0;
       position: relative;
       z-index: 1;
-      
 
       &_wrapper {
         margin-top: 12vw;
         position: absolute;
         z-index: 3;
         width: 100%;
-       
+
         padding-bottom: 1.25rem;
       }
-      
+
       &_item {
         max-height: 100%;
         padding: 0;
@@ -777,13 +739,12 @@ body#root{
       position: absolute;
       width: 100%;
 
-      &_slide{
+      &_slide {
         justify-content: space-between;
         align-items: center;
         padding-top: 36.25rem;
       }
     }
-
 
     @media (min-width: 668px) {
       &__slider {
@@ -792,25 +753,25 @@ body#root{
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 600px;
         }
       }
     }
 
-    @media (min-width: 347px)  and (max-width: 667px) {
+    @media (min-width: 347px) and (max-width: 667px) {
       &__slider {
         &_wrapper {
           margin-top: 9vw;
         }
       }
       &__info {
-        &_slide{
+        &_slide {
           padding-top: 37.1875rem;
         }
       }
     }
-    
+
     .product {
       &__info {
         align-items: center;

@@ -10,21 +10,63 @@ import {
   OutsideClick,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  scrollToMap,
+  closeBitrixForm,
+  setEqualHeight
 } from '../vendors/js/general';
 import '../scss/productCard.scss';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+const texttoolkit = () => {
+  $('.details__tooltip').mouseenter(function () {
+    const indexTooltip = $(this).attr('data-tooltip');
+    let activeButtonPosition = null;
+
+    $('.details__image_number').each(function (index, button) {
+      if ($(button).attr('data-number') === indexTooltip) {
+        activeButtonPosition = $(button).offset();
+      }
+    });
+
+    $('.details__tooltiptext').each(function (index, tooltiptext) {
+      $(tooltiptext).removeClass('active');
+
+      if ($(tooltiptext).attr('data-tooltiptext') === indexTooltip) {
+        $(tooltiptext).offset({
+          top: activeButtonPosition?.top - $(tooltiptext).innerHeight() - 10,
+          left: activeButtonPosition?.left - $(tooltiptext).innerWidth() / 2 + 15
+        });
+
+        $(tooltiptext).addClass('active');
+      }
+    });
+  });
+
+  $('.details__tooltip').mouseleave(function () {
+    setTimeout(() => {
+      $('.details__tooltiptext').each(function (index, tooltiptext) {
+        $(tooltiptext).removeClass('active');
+      });
+    }, 2000);
+  });
+};
+
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.select', '', 'data-state');
   OutsideClick('.menuCatalog');
+
+  closeBitrixForm();
+
+  texttoolkit();
+
+  scrollToMap();
 
   initTabs();
   initTabs('.tab__links', '.tab__content');
@@ -38,6 +80,10 @@ $().ready(() => {
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
 
   accordion('.details__Accordion', '.details__information', 'activeAccordion');
+
+  getFooterModal();
+
+  setEqualHeight($('.product'));
 
   owlGallery('.variants__slider_items', {
     nav: true,

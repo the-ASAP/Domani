@@ -10,7 +10,11 @@ import {
   OutsideClick,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  scrollToMap,
+  setEqualHeight,
+  closeBitrixForm
 } from '../vendors/js/general';
 import '../scss/fittingCard.scss';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -18,20 +22,25 @@ import 'owl.carousel';
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-
-  toggleModal(
-    '.colorSolution__button_price',
-    '.findPrice',
-    'findPrice__active',
-    '.findPrice__close'
-  );
+  // toggleModal(
+  //   '.colorSolution__button_price',
+  //   '.findPrice',
+  //   'findPrice__active',
+  //   '.findPrice__close'
+  // );
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+
+  scrollToMap();
+
+  closeBitrixForm();
+
+  setEqualHeight($('.product'));
 
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.select', '', 'data-state');
   OutsideClick('.menuCatalog');
+
+  closeBitrixForm();
 
   initTabs();
   initTabs('.tab__links', '.tab__content');
@@ -45,6 +54,8 @@ $().ready(() => {
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
 
   accordion('.details__Accordion', '.details__information', 'activeAccordion');
+
+  getFooterModal();
 
   owlGallery('.colorSolution__slider_items', {
     nav: true,

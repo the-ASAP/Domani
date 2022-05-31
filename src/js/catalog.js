@@ -7,14 +7,17 @@ import {
   OutsideClick,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  setEqualHeight,
+  getFooterModal,
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
   toggleModal(
     '.catalog__selects_mobile',
     '.filterModal',
@@ -22,13 +25,19 @@ $().ready(() => {
     '.filterModal__close'
   );
 
+  scrollToMap();
+
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.select', '', 'data-state');
   OutsideClick('.menuCatalog');
 
+  closeBitrixForm();
+
   openSelect();
 
   fillCatalogContent();
+
+  setEqualHeight($('.product'));
 
   openModalCatalog('.menu__openCatalog');
   openModalCatalog('.aside__menu');
@@ -37,4 +46,6 @@ $().ready(() => {
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
   pageUp();
+
+  getFooterModal();
 });

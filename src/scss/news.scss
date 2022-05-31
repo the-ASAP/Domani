@@ -7,7 +7,13 @@ body#root{
   background-color: $graySmall;
 }
 
+.intro{
+  height: 6.25rem;
+}
+
 .news {
+  margin-top: 3rem;
+
   &__sorting {
     display: flex;
     justify-content: space-between;
@@ -44,6 +50,8 @@ body#root{
 
   &__title {
     font-weight: 500;
+    font-size: 24px;
+    cursor: pointer;
   }
 }
 

@@ -9,13 +9,15 @@ import {
   openModalCatalog,
   accordion,
   fillCatalogContent,
-  setEqualHeight
+  setEqualHeight,
+  getFooterModal,
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+
   cutColorsCount();
   setEqualHeight($('.product'));
   toggleModal(
@@ -26,9 +28,13 @@ $().ready(() => {
   );
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
+  scrollToMap();
+
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.select', '', 'data-state');
   OutsideClick('.menuCatalog');
+
+  closeBitrixForm();
 
   openSelect();
 
@@ -41,4 +47,6 @@ $().ready(() => {
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
   pageUp();
+
+  getFooterModal();
 });

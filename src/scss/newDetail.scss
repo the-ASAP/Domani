@@ -1,12 +1,19 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "../scss/index.scss";
-@import "../scss/header.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import '../scss/index.scss';
+@import '../scss/header.scss';
 
 body#root {
   background-color: $graySmall;
 }
+
+.intro {
+  height: 6.25rem;
+}
+
 .new {
+  margin-top: 3rem;
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -115,7 +122,7 @@ body#root {
   &__img {
     width: 38.75rem;
     height: 23.75rem;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__options {
@@ -144,7 +151,6 @@ body#root {
 }
 
 @media (max-width: 768px) {
-
   .new {
     margin-top: 1.875rem;
 
@@ -169,7 +175,6 @@ body#root {
     }
 
     &__footer {
-
     }
   }
 
@@ -254,6 +259,5 @@ body#root {
         margin-top: 62vw;
       }
     }
-
   }
 }

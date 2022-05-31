@@ -8,21 +8,23 @@ import {
   pageUp,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 import '../scss/documents.scss';
 
 const zoomPictureModal = (triggerClass, modalPictureClass) => {
-  $(triggerClass).on('click', () => {
-    const srcPicture = $(triggerClass).attr('data-content');
+  $(triggerClass).on('click', function () {
+    const srcPicture = $(this).attr('data-content');
     $(modalPictureClass).attr('src', srcPicture);
   });
 };
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+
   toggleModal(
     '.document__button',
     '.modalDocument',
@@ -31,10 +33,15 @@ $().ready(() => {
   );
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
+  scrollToMap();
+
   zoomPictureModal('.document__button', '.modalDocument__picture');
 
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.menuCatalog');
+
+  closeBitrixForm();
+
   openSelectMobile();
   initSelect('.select__title', '.tab__content');
 
@@ -50,4 +57,6 @@ $().ready(() => {
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
   pageUp();
+
+  getFooterModal();
 });

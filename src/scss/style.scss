@@ -116,6 +116,7 @@ body#root{
   }
   
   .product{
+
     &__info {
       display: flex;
     }
@@ -129,6 +130,7 @@ body#root{
   .tab {
     display: flex;
     margin-top: 3.125rem;
+    padding-top: 20px;
 
     &__content {
       display: none;

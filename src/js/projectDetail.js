@@ -10,7 +10,11 @@ import {
   pageUp,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  cutColorsCount,
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 import '../scss/projectDetail.scss';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -18,8 +22,6 @@ import 'owl.carousel';
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
   toggleModal(
     '.intro__button',
@@ -32,11 +34,16 @@ $().ready(() => {
   OutsideClick('.select', '', 'data-state');
   OutsideClick('.menuCatalog');
 
+  closeBitrixForm();
+
   openSelect();
+  scrollToMap();
 
   //initTabs(".horTab", ".variants__item");
 
   fillCatalogContent();
+
+  cutColorsCount();
 
   openModalCatalog('.menu__openCatalog');
   openModalCatalog('.aside__menu');
@@ -111,4 +118,6 @@ $().ready(() => {
   minusSlide('.productProject__slider', '.productProject__number-slide');
 
   pageUp();
+
+  getFooterModal();
 });

@@ -119,7 +119,7 @@
   .menu {
     color: $grayMain;
 
-    &__logo > svg > path,
+    &__logo > svg > .path_white,
     &__openCatalog > svg > path,
     &__where > svg > path,
     &__inst > svg > path {

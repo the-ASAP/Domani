@@ -9,6 +9,148 @@
   box-sizing: border-box;
 }
 
+.feedbackModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation-name: appear;
+  animation-duration: 300ms;
+
+  &__active {
+    display: flex;
+  }
+
+  &__button_close {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.25rem;
+    margin-right: 1.25rem;
+  }
+  &__content {
+    width: 38.8125rem;
+    height: 95%;
+    overflow: auto;
+    background-color: $mainBack;
+
+    position: relative;
+    animation-name: slide-in;
+    animation-duration: 0.7s;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4.0625rem;
+    margin-top: -1.5625rem;
+  }
+  &__text {
+    max-width: 21.5625rem;
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+
+  &__close {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $grayBack;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 1px);
+      left: calc(50% - 0.5625rem);
+      width: 1.125rem;
+      height: 2px;
+      background-color: $grayMain;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__form {
+    margin-top: 1.875rem;
+    padding: 0 4.25rem 2.1875rem 4.0625rem;
+  }
+
+  &__comments {
+    height: 9.375rem;
+  }
+
+  &__comments::placeholder {
+    transform: translateY(-3.125rem);
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 0.9375rem;
+    margin-bottom: 0.9375rem;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: $grayMid;
+
+    &::placeholder {
+      font-size: 0.875rem;
+      line-height: 1.45;
+      color: $grayMid;
+    }
+  }
+
+  &__button_send {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__privacyPolicy {
+    display: block;
+    color: $grayMid;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-top: 0.9375rem;
+    width: 17.5rem;
+    border-bottom: 1px solid $grayMid;
+
+    & + & {
+      margin-top: 0.625rem;
+    }
+  }
+
+  &__send {
+    background-color: $grayMain;
+    //margin-top: 3.75rem;
+    background-color: var(--gray-main);
+    padding: 1.125rem 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: $mainBack;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
 //Базовые стили body
 body {
   background-color: $mainBack;
@@ -20,6 +162,23 @@ body {
 section {
   position: relative;
   margin-bottom: 3.75rem;
+}
+
+.validation__error {
+  color: #990000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.modal_submit {
+  width: 100%;
+}
+
+.menu {
+  &__text {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 header {
@@ -39,6 +198,21 @@ header {
     width: 100%;
     background-color: $mainColor;
     border: none;
+
+    & * {
+      color: white !important;
+    }
+
+    .menu__logo > svg > .path_white,
+    .menu__openCatalog > svg > path,
+    .menu__where > svg > path,
+    .menu__inst > svg > path {
+      fill: white !important;
+    }
+
+    .menu__openCatalog > svg > path {
+      stroke: white !important;
+    }
 
     & > .menu__box {
       border: none;
@@ -164,7 +338,6 @@ button {
   margin: 0 auto;
   max-width: 83.75rem;
   position: relative;
-  height: 100%;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -471,6 +644,7 @@ button {
   width: calc((100% - 2.5rem) / 3);
   position: relative;
   padding: 0 1.25rem;
+  margin-right: 5px;
 
   &__back {
     position: absolute;
@@ -516,6 +690,7 @@ button {
     margin-top: 2.1875rem;
     color: $grayMain;
     position: relative;
+    padding-bottom: 20px;
     @media (max-width: 768px) {
       text-align: left;
     }
@@ -622,4 +797,23 @@ button {
     font-size: 1rem;
     max-width: 15.625rem;
   }
+}
+
+#root > .b24-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+#root > .b24-form > div {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: auto;
 }

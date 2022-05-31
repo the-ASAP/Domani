@@ -1,9 +1,9 @@
-@import "./rootStyles/main.scss";
-@import "./rootStyles/mixins.scss";
-@import "./commonStyle.scss";
-@import "./header.scss";
+@import './rootStyles/main.scss';
+@import './rootStyles/mixins.scss';
+@import './commonStyle.scss';
+@import './header.scss';
 
-body#root{
+body#root {
   background-color: $graySmall;
 }
 
@@ -55,9 +55,63 @@ body#root{
   }
 }
 
+.socials {
+  &__box {
+    display: flex;
+
+    padding: 40px 60px;
+
+    background: #e3e3e3 url('../img/bcg_telegram.png') no-repeat 52% 50%;
+    background-size: 146px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    width: 35%;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    background-color: $grayMain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13.75rem;
+    margin-top: 3.75rem;
+    padding: 1.125rem 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: $mainBack;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+
+  &__img {
+    height: 410px;
+    max-width: 270px;
+    position: absolute;
+    right: 11%;
+    bottom: 0%;
+  }
+}
+
 .quote {
   padding: 4.875rem 0 0;
-  
+
   &__border {
     margin-top: 6.25rem;
     height: 1px;
@@ -100,7 +154,6 @@ body#root{
 }
 
 .catalog {
-
   margin-top: 7.1875rem;
 
   &__title {
@@ -175,7 +228,6 @@ body#root{
     justify-content: center;
     align-items: center;
 
-
     span {
       font-size: 1rem;
       line-height: 1.45;
@@ -242,6 +294,9 @@ body#root{
   }
   &__title {
     margin-bottom: 1.25rem;
+    font-weight: 500;
+    font-size: 24px;
+    cursor: pointer;
   }
 
   &__image {
@@ -263,7 +318,7 @@ body#root{
     position: absolute;
     left: 0;
     bottom: 0;
-    color:$mainColor;
+    color: $mainColor;
   }
 }
 
@@ -367,7 +422,6 @@ body#root{
     margin: 1.375rem 0 0.8125rem;
     font-size: 1.75rem;
     line-height: 1.29;
- 
   }
 
   &__other {
@@ -444,6 +498,45 @@ body#root{
     &__button {
       margin-top: 2.5rem;
       margin-bottom: 10.875rem;
+    }
+  }
+
+  .socials {
+    &__box {
+      padding: 30px 15px;
+      padding-bottom: 0;
+
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+
+      background-image: none;
+    }
+
+    &__info {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 50px;
+    }
+
+    &__button {
+      width: 250px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      position: relative;
+      right: 0;
     }
   }
 
@@ -562,15 +655,14 @@ body#root{
   .posts {
     margin-top: 1.875rem;
   }
-  .post:nth-child(2){
+  .post:nth-child(2) {
     display: none;
   }
-  .post:nth-child(3){
+  .post:nth-child(3) {
     display: none;
   }
 
   .post {
-    
     flex-direction: column;
     padding: 1.875rem 0;
 

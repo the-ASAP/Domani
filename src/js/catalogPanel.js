@@ -7,13 +7,15 @@ import {
   pageUp,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
   toggleModal(
     '.catalog__selects_mobile',
@@ -25,6 +27,9 @@ $().ready(() => {
   OutsideClick('.select', '', 'data-state');
   OutsideClick('.menuCatalog');
 
+  closeBitrixForm();
+
+  scrollToMap();
   openSelect();
 
   fillCatalogContent();
@@ -36,4 +41,6 @@ $().ready(() => {
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
   pageUp();
+
+  getFooterModal();
 });

@@ -7,7 +7,10 @@ import {
   pageUp,
   openModalCatalog,
   accordion,
-  fillCatalogContent
+  fillCatalogContent,
+  getFooterModal,
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 //import "../scss/style.scss";
 import '../scss/index.scss';
@@ -53,40 +56,19 @@ const countNews = () => {
   }
 };
 
-// const fixedHeader = () => {
-//   $(window).on('scroll', () => {
-//     if ($(window).scrollTop() > document.documentElement.clientHeight) {
-//        $('header').clone().addClass('fixed').prependTo('main');
-//     } else {
-//       console.log($('body').scrollTop())
-//       console.log(document.documentElement.clientHeight)
-//       $('header.fixed').remove();
-//     }
-//   });
-// };
-const fixedHeader = () => {
-  $(window).on('scroll', () => {
-    if ($(window).scrollTop() >= document.documentElement.clientHeight) {
-      $('header').addClass('fixed');
-    } else {
-      $('header').removeClass('fixed');
-    }
-  });
-};
-
 $().ready(() => {
   createYouTubeEmbedLink($('.production__button'), $('.production__video'));
 
-  fixedHeader();
-
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.menu__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
-  toggleModal('.menuCatalog__city_btn', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   OutsideClick('.modal', 'modal__active');
   //OutsideClick(".select", "", "data-state");
-  OutsideClick('.menuCatalog');
+  // OutsideClick('.menuCatalog');
+
+  closeBitrixForm();
+
+  scrollToMap();
 
   loadNews('.news__button', '.posts');
 
@@ -104,4 +86,6 @@ $().ready(() => {
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
   pageUp();
+
+  getFooterModal();
 });

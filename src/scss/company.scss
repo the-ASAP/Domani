@@ -344,7 +344,7 @@ body#root {
   &__button {
     background-color: $mainColor;
     max-width: 15.625rem;
-    margin-top: 3.125rem;
+    margin-top: 1.125rem;
     color: $mainBack;
     font-size: 1rem;
     transition: background-color 0.3s ease-in;
@@ -649,10 +649,15 @@ body#root {
       font-size: 1.5rem;
       max-width: 18.75rem;
       margin: 0;
+      margin-top: 20px;
 
       &_4 {
         margin-top: 1.1875rem;
       }
+    }
+
+    &__picture {
+      max-height: 18.125rem;
     }
 
     &__text {
@@ -669,13 +674,15 @@ body#root {
     &__list {
       display: block;
       margin-top: 3.75rem;
-      position: absolute;
       z-index: 3;
+
+      &__row {
+        margin-bottom: 50px;
+      }
 
       &_left {
         margin: 0;
         z-index: 2;
-        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -686,31 +693,6 @@ body#root {
         //margin-top: 27.0625rem;
         position: relative;
         z-index: 1;
-        @media (min-width: 300px) and (max-width: 511px) {
-          margin-top: 54%;
-        }
-        @media (min-width: 511px) {
-          margin-top: 10%;
-        }
-      }
-
-      &_row:first-child {
-        margin-bottom: 0;
-      }
-      &_row:nth-child(2) {
-        @media (min-width: 300px) and (max-width: 511px) {
-          margin-top: 51%;
-          .production-block__image_left {
-            margin-top: 391px;
-          }
-        }
-
-        @media (min-width: 511px) {
-          margin-top: 81%;
-          .production-block__image_left {
-            margin-top: 348px;
-          }
-        }
       }
     }
 
@@ -719,34 +701,14 @@ body#root {
         box-shadow: -1.9375rem -2.875rem 0px -0.8125rem $grayBack;
       }
       &_right {
-        @media (min-width: 300px) and (max-width: 511px) {
-          margin-top: 14.625rem;
-        }
-        @media (min-width: 511px) {
-          margin-top: 26.375rem;
-        }
         box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
       }
     }
   }
 
   .cooperation {
-    @media (min-width: 300px) and (max-width: 510px) {
-      margin-top: 150%;
-    }
-    @media (min-width: 511px) {
-      margin-top: 150%;
-    }
     margin-bottom: 15.3125rem;
-
-    &__container {
-      @media (min-width: 300px) and (max-width: 510px) {
-        padding-top: 850px;
-      }
-      @media (min-width: 511px) {
-        margin-top: 1700px;
-      }
-    }
+    max-height: none;
 
     &__title {
       font-size: 1.5rem;
@@ -784,21 +746,6 @@ body#root {
   }
 
   .contacts {
-    @media (min-width: 300px) and (max-width: 510px) {
-      margin-top: 170%;
-    }
-    @media (min-width: 511px) {
-      margin-top: 58%;
-    }
-
-    &__main {
-      @media (min-width: 300px) and (max-width: 510px) {
-        padding-top: 507px;
-      }
-      @media (min-width: 511px) {
-        margin-top: 340px;
-      }
-    }
 
     &__title {
       margin-bottom: 1.875rem;

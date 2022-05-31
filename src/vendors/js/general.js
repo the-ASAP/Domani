@@ -70,7 +70,6 @@ export function initTabs(buttons, content) {
 
       tabContent.each((index, element) => {
         if (tabAttr === $(element).attr('id')) {
-          console.log($(element).attr('id'));
           $(element).addClass('active');
           $(`#${tabAttr}`).addClass('active');
         }
@@ -90,7 +89,11 @@ export const toggleModal = (triggerClass, modalClass, classActive, closeClass) =
 
 export const OutsideClick = (elem, activeClass = 'active', attr = '') => {
   $(document).on('mousedown', function (e) {
-    if (!$(elem).is(e.target) && $(elem).has(e.target).length === 0) {
+    if (
+      !$(elem).is(e.target) &&
+      $(elem).has(e.target).length === 0 &&
+      !$(e.target)?.attr('class')?.includes('menuCatalog')
+    ) {
       $(elem).removeClass(activeClass);
       if (attr != '') {
         $(elem).attr(attr, '');
@@ -100,26 +103,49 @@ export const OutsideClick = (elem, activeClass = 'active', attr = '') => {
   });
 };
 
+export const closeBitrixForm = () => {
+  $(document).on('click', function (e) {
+    if ($(e.target).hasClass('b24-form')) {
+      $('script').each((i, script) => {
+        $(script).removeAttr('data-b24-loaded');
+      });
+      $('.b24-form').remove();
+    }
+  });
+};
+
 export const openModalCatalog = (openMenuBtn) => {
+  const closeText = $('.menu__openCatalog').attr('data-closeText');
+  const openText = $('.menu__openCatalog').attr('data-openText');
+
   $(openMenuBtn).on('click', function () {
-    $('.aside__menu, .menu__openCatalog').toggleClass('active');
+    $('.aside__menu').toggleClass('active');
+    $('.menu__openCatalog').toggleClass('active');
+
     if (!$('header').hasClass('menu_white')) {
       $('header').toggleClass('menu_black');
     }
+
     $('.menuCatalog').slideToggle();
-    if (($('.aside__menu') || $('.menu__openCatalog')).hasClass('active')) {
-      $('.menu__catalog').text('Закрыть');
+
+    if ($('.aside__menu').hasClass('active') || $('.menu__openCatalog').hasClass('active')) {
+      $('.menu__catalog').text(closeText);
       $('.menu').addClass('menu_active');
 
       $('.menu__icon').replaceWith(menuSvgClose);
+
+      $('.menu').addClass('fixed');
+
       $('body').css({ overflow: 'hidden' });
     } else {
-      $('.menu__catalog').text('Каталог');
+      $('.menu__catalog').text(openText);
       $('.menu').removeClass('menu_active');
 
       $('.menu__icon').replaceWith(menuSvgMain);
 
       $('body').css({ overflow: 'auto' });
+
+      $('.menu').removeClass('fixed');
     }
   });
 };
@@ -130,6 +156,36 @@ export function accordion(btn, content, activeClass) {
     $(this).find(content).slideToggle();
   });
 }
+
+export const fixedHeader = () => {
+  $(window).on('scroll', () => {
+    if ($(window).scrollTop() >= document.documentElement.clientHeight) {
+      $('header').addClass('fixed');
+    } else {
+      $('header').removeClass('fixed');
+    }
+  });
+};
+
+export const getFooterModal = () => {
+  $('.map__point').each((index, point) => {
+    $(point).on('click', () => {
+      $('.modal').children('.modal__content').remove();
+
+      const ids = JSON.parse($(point).attr('data-cities'));
+
+      const idsParams = ids
+        .map((id, index) => (index === 0 ? `?id[]=${id}` : `&id[]=${id}`))
+        .join('');
+
+      $.ajax({
+        url: `http://domani2.asap-lp.ru/local/ajax/city.php${idsParams}`
+      }).done((data) => {
+        $('.modal').prepend(data);
+      });
+    });
+  });
+};
 
 export function rememberCatalogContent(items) {
   const products = $(items);
@@ -259,6 +315,38 @@ export const cutColorsCount = () => {
   $('.product__colors').each((_, colors) => {
     if ($(colors).children().length > 5) {
       $(colors).children().slice(5).remove();
+    }
+  });
+};
+
+export const scrollToMap = () => {
+  $('.menu__buy').on('click', () => {
+    $('html, body').animate(
+      {
+        scrollTop: $('footer').offset().top
+      },
+      1000
+    );
+  });
+};
+
+export const validateForm = (button) => {
+  let regexPhone =
+    /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+  let regexMail =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  $(button).on('click', (e) => {
+    let phone = $(button).siblings('.phone');
+    let mail = $(button).siblings('.mail');
+
+    $('.validation__error')?.remove();
+
+    if (!regexPhone.test(phone.val()) || !regexMail.test(mail.val())) {
+      e.preventDefault();
+
+      $('.cooperationModal__send')
+        .closest('form')
+        .append('<div class="validation__error">Проверьте корректность введенных данных</div>');
     }
   });
 };
