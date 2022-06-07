@@ -10,7 +10,8 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 43.75rem;
+  height: 100%;
+  // height: 43.75rem;
   position: relative;
   padding: 0 1.875rem;
 
@@ -77,6 +78,7 @@ body#root {
 }
 
 .configurator {
+  display: none;
   margin-top: 17.3125rem;
 
   &__list {
@@ -294,6 +296,9 @@ body#root {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2.6875rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 
     &_slide {
       display: flex;
