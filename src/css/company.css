@@ -3314,7 +3314,6 @@ footer {
   .aside__up {
     margin-top: 0;
   }
-
   .map {
     height: 120vw;
     padding-top: 3.125rem;
@@ -3331,152 +3330,122 @@ footer {
     left: 53%;
     top: 41%;
   }
-
   #ulyanovsk_point {
     top: 41%;
     left: 58%;
   }
-
   #tambov_point {
     left: 52%;
     top: 43%;
   }
-
   #pyatigorsk_point {
     top: 45%;
     left: 59%;
   }
-
   #bryansk_point {
     top: 43%;
     left: 51%;
   }
-
   #hurth_point {
     top: 42%;
     left: 48%;
   }
-
   #makhachkala_point {
     top: 45%;
     left: 60%;
   }
-
   #belgrad_point {
     top: 45%;
     left: 52%;
   }
-
   #grodno_point {
     top: 41%;
     left: 53%;
   }
-
   #minsk_point {
     top: 41%;
     left: 52%;
   }
-
   #oman_point {
     top: 52%;
     left: 64%;
   }
-
   #riga_point {
     top: 39%;
     left: 53%;
   }
-
   #tyumen_point {
     top: 40%;
     left: 63%;
   }
-
   #irkutsk_point {
     top: 40%;
     left: 76%;
   }
-
   #taganrog_point {
     top: 43%;
     left: 58%;
   }
-
   #vladimir_point {
     top: 39%;
     left: 56%;
   }
-
   #cherepovets_point {
     top: 38%;
     left: 56%;
   }
-
   #moscow_point {
     top: 40%;
     left: 56%;
   }
-
   #domodedovo_point {
     top: 40.5%;
     left: 56%;
   }
-
   #сhelyabinsk_point {
     top: 42%;
     left: 66%;
   }
-
   #estonia_point {
     top: 39%;
     left: 52%;
   }
-
   #novosibirsk_point {
     top: 43%;
     left: 72%;
   }
-
   #velikiyNovgorod_point {
     top: 40%;
     left: 55%;
   }
-
   #ufa_point {
     top: 42%;
     left: 62%;
   }
-
   #yekaterinburg_point {
     top: 42%;
     left: 63%;
   }
-
   #belgorod_point {
     top: 44%;
     left: 56%;
   }
-
   #izhevsk_point {
     top: 42%;
     left: 61%;
   }
-
   #kazan_point {
     top: 43%;
     left: 60%;
   }
-
   #solikamsk_point {
     top: 39%;
     left: 63%;
   }
-
   #sharjah_point {
     top: 51%;
     left: 64%;
   }
-
   .outro {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3536,7 +3505,6 @@ footer {
     color: #fff;
     color: var(--main-back);
   }
-
   .asap {
     padding: 1.75rem 0;
     display: -webkit-box;
@@ -3554,7 +3522,6 @@ footer {
   .asap__logo {
     display: block;
   }
-
   .menuCatalog__wrapper {
     display: grid;
   }
@@ -3583,7 +3550,6 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-
   .modal {
     overflow: scroll;
   }
@@ -5277,7 +5243,6 @@ body#root {
     margin-top: 1.5625rem;
     max-width: 21.1875rem;
   }
-
   .menu {
     height: 5.0625rem;
   }
@@ -5306,7 +5271,6 @@ body#root {
   .menu__openCatalog {
     margin: 0;
   }
-
   .quote {
     margin-top: 150px;
     margin-bottom: 0;
@@ -5347,7 +5311,6 @@ body#root {
     height: auto;
     width: 100%;
   }
-
   .development__container {
     margin-bottom: 3.125rem;
     display: -webkit-box;
@@ -5375,7 +5338,6 @@ body#root {
     max-width: 39.125rem;
     max-height: 22.075rem;
   }
-
   .production {
     margin-top: 9.6875rem;
   }
@@ -5392,7 +5354,6 @@ body#root {
   .production__button svg {
     height: 1rem;
   }
-
   .image {
     margin-top: 7.5rem;
   }
@@ -5422,7 +5383,6 @@ body#root {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
   .production-block {
     margin-top: 5.9375rem;
   }
@@ -5493,9 +5453,9 @@ body#root {
     -webkit-box-shadow: 2.9375rem -3.8125rem 0px -1.875rem var(--gray-background);
             box-shadow: 2.9375rem -3.8125rem 0px -1.875rem var(--gray-background);
   }
-
   .cooperation {
     margin-bottom: 15.3125rem;
+    max-height: none;
   }
   .cooperation__title {
     font-size: 1.5rem;
@@ -5532,52 +5492,22 @@ body#root {
   .cooperation__button {
     margin-top: 2.5rem;
   }
-}
-@media (max-width: 768px) and (min-width: 300px) and (max-width: 510px) {
-  .contacts {
-    margin-top: 170%;
-  }
-}
-@media (max-width: 768px) and (min-width: 511px) {
-  .contacts {
-    margin-top: 58%;
-  }
-}
-@media (max-width: 768px) and (min-width: 300px) and (max-width: 510px) {
-  .contacts__main {
-    padding-top: 507px;
-  }
-}
-@media (max-width: 768px) and (min-width: 511px) {
-  .contacts__main {
-    margin-top: 340px;
-  }
-}
-@media (max-width: 768px) {
   .contacts__title {
     margin-bottom: 1.875rem;
   }
-}
-@media (max-width: 768px) {
   .contacts__text {
     font-size: 0.875rem;
     line-height: 1.43;
   }
-}
-@media (max-width: 768px) {
   .contacts__phone {
     font-size: 1.125rem;
     line-height: 1.4;
     display: block;
     margin: 1.25rem 0 0.625rem;
   }
-}
-@media (max-width: 768px) {
   .contacts__other {
     display: block;
   }
-}
-@media (max-width: 768px) {
   .contact {
     width: 100%;
     margin-bottom: 1.25rem;
@@ -5595,8 +5525,6 @@ body#root {
     line-height: 1.43;
     text-decoration: none;
   }
-}
-@media (max-width: 768px) {
   .map {
     display: none;
   }

@@ -3286,7 +3286,6 @@ footer {
   .aside__up {
     margin-top: 0;
   }
-
   .map {
     height: 120vw;
     padding-top: 3.125rem;
@@ -3303,152 +3302,122 @@ footer {
     left: 53%;
     top: 41%;
   }
-
   #ulyanovsk_point {
     top: 41%;
     left: 58%;
   }
-
   #tambov_point {
     left: 52%;
     top: 43%;
   }
-
   #pyatigorsk_point {
     top: 45%;
     left: 59%;
   }
-
   #bryansk_point {
     top: 43%;
     left: 51%;
   }
-
   #hurth_point {
     top: 42%;
     left: 48%;
   }
-
   #makhachkala_point {
     top: 45%;
     left: 60%;
   }
-
   #belgrad_point {
     top: 45%;
     left: 52%;
   }
-
   #grodno_point {
     top: 41%;
     left: 53%;
   }
-
   #minsk_point {
     top: 41%;
     left: 52%;
   }
-
   #oman_point {
     top: 52%;
     left: 64%;
   }
-
   #riga_point {
     top: 39%;
     left: 53%;
   }
-
   #tyumen_point {
     top: 40%;
     left: 63%;
   }
-
   #irkutsk_point {
     top: 40%;
     left: 76%;
   }
-
   #taganrog_point {
     top: 43%;
     left: 58%;
   }
-
   #vladimir_point {
     top: 39%;
     left: 56%;
   }
-
   #cherepovets_point {
     top: 38%;
     left: 56%;
   }
-
   #moscow_point {
     top: 40%;
     left: 56%;
   }
-
   #domodedovo_point {
     top: 40.5%;
     left: 56%;
   }
-
   #сhelyabinsk_point {
     top: 42%;
     left: 66%;
   }
-
   #estonia_point {
     top: 39%;
     left: 52%;
   }
-
   #novosibirsk_point {
     top: 43%;
     left: 72%;
   }
-
   #velikiyNovgorod_point {
     top: 40%;
     left: 55%;
   }
-
   #ufa_point {
     top: 42%;
     left: 62%;
   }
-
   #yekaterinburg_point {
     top: 42%;
     left: 63%;
   }
-
   #belgorod_point {
     top: 44%;
     left: 56%;
   }
-
   #izhevsk_point {
     top: 42%;
     left: 61%;
   }
-
   #kazan_point {
     top: 43%;
     left: 60%;
   }
-
   #solikamsk_point {
     top: 39%;
     left: 63%;
   }
-
   #sharjah_point {
     top: 51%;
     left: 64%;
   }
-
   .outro {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3508,7 +3477,6 @@ footer {
     color: #fff;
     color: var(--main-back);
   }
-
   .asap {
     padding: 1.75rem 0;
     display: -webkit-box;
@@ -3526,7 +3494,6 @@ footer {
   .asap__logo {
     display: block;
   }
-
   .menuCatalog__wrapper {
     display: grid;
   }
@@ -3555,7 +3522,6 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-
   .modal {
     overflow: scroll;
   }
@@ -4917,7 +4883,6 @@ body#root {
   .menu__openCatalog {
     margin: 0;
   }
-
   .contacts__title {
     margin-bottom: 1.875rem;
   }
@@ -4934,7 +4899,6 @@ body#root {
   .contacts__other {
     display: block;
   }
-
   .contact {
     width: 100%;
     margin-bottom: 1.25rem;
@@ -4952,11 +4916,9 @@ body#root {
     line-height: 1.43;
     text-decoration: none;
   }
-
   .map {
     display: none;
   }
-
   .stand__main {
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   }

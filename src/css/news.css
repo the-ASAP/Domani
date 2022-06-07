@@ -4129,7 +4129,6 @@ footer {
   .aside__up {
     margin-top: 0;
   }
-
   .map {
     height: 120vw;
     padding-top: 3.125rem;
@@ -4146,152 +4145,122 @@ footer {
     left: 53%;
     top: 41%;
   }
-
   #ulyanovsk_point {
     top: 41%;
     left: 58%;
   }
-
   #tambov_point {
     left: 52%;
     top: 43%;
   }
-
   #pyatigorsk_point {
     top: 45%;
     left: 59%;
   }
-
   #bryansk_point {
     top: 43%;
     left: 51%;
   }
-
   #hurth_point {
     top: 42%;
     left: 48%;
   }
-
   #makhachkala_point {
     top: 45%;
     left: 60%;
   }
-
   #belgrad_point {
     top: 45%;
     left: 52%;
   }
-
   #grodno_point {
     top: 41%;
     left: 53%;
   }
-
   #minsk_point {
     top: 41%;
     left: 52%;
   }
-
   #oman_point {
     top: 52%;
     left: 64%;
   }
-
   #riga_point {
     top: 39%;
     left: 53%;
   }
-
   #tyumen_point {
     top: 40%;
     left: 63%;
   }
-
   #irkutsk_point {
     top: 40%;
     left: 76%;
   }
-
   #taganrog_point {
     top: 43%;
     left: 58%;
   }
-
   #vladimir_point {
     top: 39%;
     left: 56%;
   }
-
   #cherepovets_point {
     top: 38%;
     left: 56%;
   }
-
   #moscow_point {
     top: 40%;
     left: 56%;
   }
-
   #domodedovo_point {
     top: 40.5%;
     left: 56%;
   }
-
   #сhelyabinsk_point {
     top: 42%;
     left: 66%;
   }
-
   #estonia_point {
     top: 39%;
     left: 52%;
   }
-
   #novosibirsk_point {
     top: 43%;
     left: 72%;
   }
-
   #velikiyNovgorod_point {
     top: 40%;
     left: 55%;
   }
-
   #ufa_point {
     top: 42%;
     left: 62%;
   }
-
   #yekaterinburg_point {
     top: 42%;
     left: 63%;
   }
-
   #belgorod_point {
     top: 44%;
     left: 56%;
   }
-
   #izhevsk_point {
     top: 42%;
     left: 61%;
   }
-
   #kazan_point {
     top: 43%;
     left: 60%;
   }
-
   #solikamsk_point {
     top: 39%;
     left: 63%;
   }
-
   #sharjah_point {
     top: 51%;
     left: 64%;
   }
-
   .outro {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4351,7 +4320,6 @@ footer {
     color: #fff;
     color: var(--main-back);
   }
-
   .asap {
     padding: 1.75rem 0;
     display: -webkit-box;
@@ -4369,7 +4337,6 @@ footer {
   .asap__logo {
     display: block;
   }
-
   .menuCatalog__wrapper {
     display: grid;
   }
@@ -4398,7 +4365,6 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-
   .modal {
     overflow: scroll;
   }
@@ -6068,6 +6034,7 @@ body#root {
   height: 7.5rem;
   width: 7.5rem;
   position: relative;
+  margin-top: 1rem;
 }
 @media (max-width: 768px) {
   .intro__image {
@@ -6089,7 +6056,6 @@ body#root {
     margin-top: 2.5rem;
     margin-bottom: 10.875rem;
   }
-
   .socials__box {
     padding: 30px 15px;
     padding-bottom: 0;
@@ -6125,7 +6091,6 @@ body#root {
     position: relative;
     right: 0;
   }
-
   .menu {
     height: 5.0625rem;
   }
@@ -6154,7 +6119,6 @@ body#root {
   .menu__openCatalog {
     margin: 0;
   }
-
   .quote {
     padding: 3.125rem 0 0;
     margin-bottom: 0;
@@ -6190,11 +6154,9 @@ body#root {
     border-bottom: 1px solid #f2f2f2;
     border-bottom: 1px solid var(--gray-small);
   }
-
   section {
     margin-top: 3.75rem;
   }
-
   .catalog {
     margin-top: 2.8125rem;
   }
@@ -6202,7 +6164,6 @@ body#root {
     display: block;
     margin-top: 2.5rem;
   }
-
   .product {
     width: 100%;
     display: block;
@@ -6214,7 +6175,6 @@ body#root {
   .product:last-child {
     margin: 0;
   }
-
   .ideas__list {
     margin-top: 2.5rem;
     display: block;
@@ -6223,23 +6183,15 @@ body#root {
     width: 100%;
     height: 70vw;
   }
-
-  .news__button {
-    display: none;
-  }
-
   .posts {
     margin-top: 1.875rem;
   }
-
   .post:nth-child(2) {
     display: none;
   }
-
   .post:nth-child(3) {
     display: none;
   }
-
   .post {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6268,7 +6220,7 @@ body#root {
     display: none;
   }
   .post__date_mobile {
-    display: block;
+    display: none;
     font-size: 0.875rem;
     line-height: 1.5;
     letter-spacing: 0.035em;
@@ -6292,8 +6244,8 @@ body#root {
   .post__more {
     margin-top: 2.5rem;
     position: relative;
+    display: block;
   }
-
   .production__video {
     margin-top: 1.875rem;
     height: 70vw;
@@ -6306,12 +6258,10 @@ body#root {
   .production__button svg {
     height: 1rem;
   }
-
   .instagram__list {
     display: block;
     margin-top: 1.875rem;
   }
-
   .postInst {
     display: block;
     width: 100%;
@@ -6329,7 +6279,6 @@ body#root {
   .postInst__text {
     max-width: 100%;
   }
-
   .contacts__title {
     margin-bottom: 1.875rem;
   }
@@ -6346,7 +6295,6 @@ body#root {
   .contacts__other {
     display: block;
   }
-
   .contact {
     width: 100%;
     margin-bottom: 1.25rem;
@@ -6355,7 +6303,7 @@ body#root {
     margin: 0 0 1.25rem;
   }
   .contact__position {
-    margin: 5.625rem 0 0.625rem;
+    margin: 0.625rem 0 0.625rem;
     font-size: 0.875rem;
     line-height: 1.43;
   }
@@ -7558,7 +7506,7 @@ body#root {
 }
 .news .select__title {
   font-size: 0.875rem;
-  border: 1px solid rgba(102, 102, 102, 0.2);
+  border: 1px solid hsla(0deg, 0%, 40%, 0.2);
   color: #656565;
   color: var(--gray-mid);
 }
