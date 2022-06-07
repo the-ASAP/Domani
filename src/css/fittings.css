@@ -4767,7 +4767,7 @@ button {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 1;
+  z-index: 999;
 }
 .aside__up {
   margin-top: 55px;

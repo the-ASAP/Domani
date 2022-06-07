@@ -32,7 +32,7 @@ body#root{
     justify-content: center;
     color: $grayMain;
     text-align: center;
-    margin-top: 1.25rem;
+    margin-top: 0.25rem;
   }
 
   &__button {
@@ -55,14 +55,14 @@ body#root{
 
 .contact {
   text-align: center;
-  margin-top: 3.125rem;
+  margin-top: 1.125rem;
 
   &__title {
     font-weight: 500;
   }
   &__position {
     display: block;
-    margin: 1.25rem 0 0.625rem;
+    margin: 0.75rem 0 0.625rem;
     color: $grayMain;
     opacity: 0.7;
   }
@@ -84,10 +84,10 @@ body#root{
   }
 
   &__image {
-    
     height: 7.5rem;
     width: 7.5rem;
     position: relative;
+    margin: 0 auto;
   }
 }
 
@@ -256,22 +256,22 @@ body#root{
     }
 
     &__info {
-     margin-top: -1vw;
+     margin-top: 1rem;
     }
     @media (min-width: 668px)  and (max-width: 708px) {
       &__info {
-        margin-top: -5vw;
+        margin-top: 2rem;
       }
     }
 
     @media (min-width: 449px)  and (max-width: 668px) {
       &__info {
-        margin-top: -8vw;
+        margin-top: 4vw;
       }
     }
     @media (max-width: 448px) {
       &__info {
-        margin-top: -10vw;
+        margin-top: 4vw;
       }
     }
 
@@ -296,8 +296,8 @@ body#root{
       
 
       &_wrapper {
-        margin-top: 10vw;
-        position: absolute;
+        // margin-top: 10vw;
+        // position: absolute;
         z-index: 3;
         width: 100%;
       }
@@ -321,23 +321,28 @@ body#root{
       flex-direction: column;
       justify-content: space-between;
       z-index: 2;
-      position: absolute;
+      // position: absolute;
       width: 100%;
-
       &_slide{
         justify-content: space-between;
-        padding-top: 35.9375rem;
+        // padding-top: 35.9375rem;
+      }
+    }
+    @media screen and (max-width: 475px){
+      .productProject__info{
+        margin-bottom: 0;
       }
     }
     @media (min-width: 668px) {
+      
       &__slider {
         &_wrapper {
-          margin-top: 6vw;
+          // margin-top: 6vw;
         }
       }
       &__info {
         &_slide{
-          padding-top: 35.9375rem;
+          // padding-top: 35.9375rem;
         }
       }
     }
@@ -345,12 +350,12 @@ body#root{
     @media (min-width: 347px)  and (max-width: 667px) {
       &__slider {
         &_wrapper {
-          margin-top: 9vw;
+          // margin-top: 9vw;
         }
       }
       &__info {
         &_slide{
-          padding-top: 36.5625rem;
+          // padding-top: 36.5625rem;
         }
       }
     }
@@ -359,6 +364,6 @@ body#root{
   }
 
   footer {
-    margin-top: 125vh;
+    // margin-top: 125vh;
   }
 }

@@ -2789,7 +2789,7 @@ button {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 1;
+  z-index: 999;
 }
 .aside__up {
   margin-top: 55px;
@@ -4778,7 +4778,7 @@ body#root {
   color: #212223;
   color: var(--gray-main);
   text-align: center;
-  margin-top: 1.25rem;
+  margin-top: 0.25rem;
 }
 .intro__button {
   max-width: 16.25rem;
@@ -4800,14 +4800,14 @@ body#root {
 }
 .contact {
   text-align: center;
-  margin-top: 3.125rem;
+  margin-top: 1.125rem;
 }
 .contact__title {
   font-weight: 500;
 }
 .contact__position {
   display: block;
-  margin: 1.25rem 0 0.625rem;
+  margin: 0.75rem 0 0.625rem;
   color: #212223;
   color: var(--gray-main);
   opacity: 0.7;
@@ -4833,6 +4833,7 @@ body#root {
   height: 7.5rem;
   width: 7.5rem;
   position: relative;
+  margin: 0 auto;
 }
 .project {
   margin-top: 3.75rem;
@@ -4995,22 +4996,22 @@ body#root {
     margin-bottom: 0;
   }
   .project__info {
-    margin-top: -1vw;
+    margin-top: 1rem;
   }
 }
 @media (max-width: 768px) and (min-width: 668px) and (max-width: 708px) {
   .project__info {
-    margin-top: -5vw;
+    margin-top: 2rem;
   }
 }
 @media (max-width: 768px) and (min-width: 449px) and (max-width: 668px) {
   .project__info {
-    margin-top: -8vw;
+    margin-top: 4vw;
   }
 }
 @media (max-width: 768px) and (max-width: 448px) {
   .project__info {
-    margin-top: -10vw;
+    margin-top: 4vw;
   }
 }
 @media (max-width: 768px) {
@@ -5035,8 +5036,6 @@ body#root {
     z-index: 1;
   }
   .productProject__slider_wrapper {
-    margin-top: 10vw;
-    position: absolute;
     z-index: 3;
     width: 100%;
   }
@@ -5062,34 +5061,16 @@ body#root {
         -ms-flex-pack: justify;
             justify-content: space-between;
     z-index: 2;
-    position: absolute;
     width: 100%;
   }
   .productProject__info_slide {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 35.9375rem;
   }
 }
-@media (max-width: 768px) and (min-width: 668px) {
-  .productProject__slider_wrapper {
-    margin-top: 6vw;
-  }
-  .productProject__info_slide {
-    padding-top: 35.9375rem;
-  }
-}
-@media (max-width: 768px) and (min-width: 347px) and (max-width: 667px) {
-  .productProject__slider_wrapper {
-    margin-top: 9vw;
-  }
-  .productProject__info_slide {
-    padding-top: 36.5625rem;
-  }
-}
-@media (max-width: 768px) {
-  footer {
-    margin-top: 125vh;
+@media screen and (max-width: 768px) and (max-width: 475px) {
+  .productProject .productProject__info {
+    margin-bottom: 0;
   }
 }
