@@ -5999,9 +5999,6 @@ body#root {
   .fittings__slider_wrapper {
     margin-top: 6vw;
   }
-  .fittings__info_slide {
-    padding-top: 600px;
-  }
 }
 @media (max-width: 768px) and (min-width: 347px) and (max-width: 667px) {
   .fittings__slider_wrapper {
@@ -6016,10 +6013,5 @@ body#root {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-@media (max-width: 768px) {
-  footer {
-    margin-top: 45.5rem;
   }
 }
