@@ -7546,6 +7546,7 @@ body#root {
 }
 .catalog__filters {
   margin-bottom: 3.125rem;
+  display: none;
 }
 .catalog .select {
   width: 24%;
@@ -7557,6 +7558,9 @@ body#root {
   color: var(--gray-mid);
 }
 .filterModal {
+  display: none;
+}
+.configurator__container {
   display: none;
 }
 @media (max-width: 768px) {

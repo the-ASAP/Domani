@@ -61,6 +61,7 @@ body#root {
 
   &__filters {
     margin-bottom: 3.125rem;
+    display: none;
   }
 
   .select {
@@ -75,7 +76,9 @@ body#root {
 .filterModal {
   display: none;
 }
-
+.configurator__container{
+  display: none;
+}
 @media (max-width: 768px) {
   .intro {
     height: 100vh;
