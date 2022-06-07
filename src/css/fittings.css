@@ -7582,6 +7582,9 @@ body#root {
     line-height: 1.29;
     max-width: 50%;
   }
+  .catalog__filters {
+    display: none;
+  }
   .filterModal {
     position: fixed;
     top: 0;

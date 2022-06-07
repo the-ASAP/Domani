@@ -96,6 +96,12 @@ body#root {
       max-width: 50%;
     }
   }
+  .catalog{
+    &__filters {
+      
+      display: none;
+    }
+  }
 
   .filterModal {
     position: fixed;
