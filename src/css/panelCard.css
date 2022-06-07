@@ -5144,7 +5144,7 @@ body#root {
     width: 100%;
   }
   .intro__image {
-    margin-left: -1.25rem;
+    margin-left: 0;
     width: 100%;
     max-width: 98vw;
     max-height: 100%;
@@ -5157,7 +5157,7 @@ body#root {
   .intro__picture {
     -o-object-fit: cover;
        object-fit: cover;
-    margin-left: -1.875rem;
+    margin-left: 0;
   }
   .intro__info {
     margin-left: 0;
