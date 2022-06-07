@@ -3274,7 +3274,7 @@ footer {
     position: fixed;
     margin-left: -1.9rem;
     width: 100%;
-    top: 80vh;
+    bottom: 68px;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
             transform: translateY(100%);
@@ -3285,6 +3285,9 @@ footer {
   }
   .aside__up {
     margin-top: 0;
+  }
+  .menuCatalog__lk {
+    margin-bottom: 100px;
   }
   .map {
     height: 120vw;
@@ -5142,7 +5145,7 @@ body#root {
   }
   .intro__image {
     margin-left: -1.25rem;
-    width: 130%;
+    width: 100%;
     max-width: 98vw;
     max-height: 100%;
     -webkit-box-ordinal-group: 1;

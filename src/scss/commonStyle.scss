@@ -853,7 +853,8 @@ footer {
     position: fixed;
     margin-left: -1.9rem;
     width: 100%;
-    top: 80vh;
+    bottom: 68px;
+    // top: 80vh;
     transform: translateY(100%);
     &__block {
       width: 9.625rem;
@@ -864,7 +865,9 @@ footer {
       margin-top: 0;
     }
   }
-
+  .menuCatalog__lk{
+    margin-bottom: 100px;
+  }
   .map {
     height: 120vw;
     padding-top: 3.125rem;

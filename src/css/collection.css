@@ -3302,7 +3302,7 @@ footer {
     position: fixed;
     margin-left: -1.9rem;
     width: 100%;
-    top: 80vh;
+    bottom: 68px;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
             transform: translateY(100%);
@@ -3313,6 +3313,9 @@ footer {
   }
   .aside__up {
     margin-top: 0;
+  }
+  .menuCatalog__lk {
+    margin-bottom: 100px;
   }
   .map {
     height: 120vw;
