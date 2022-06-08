@@ -77,6 +77,28 @@ body#root {
   display: none;
 }
 
+// .menuCatalog__wrapper{
+//   display: flex;
+// }
+.menuCatalog__cont{
+  display: flex;
+}
+.menuCatalog__doors{
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  align-items: center;
+  width: 33%;
+  padding: 1.25rem 0 0 0;
+}
+.menuCatalog__style{
+  padding: 1.25rem 0 0 0;
+}
+.menuCatalog__Accordion{
+  width: 100%;
+  border-top: 1px solid hsla(0,0%,100%,.12);
+  padding: 1.25rem 0;
+}
 @media (max-width: 768px) {
   .intro {
     &__image {
@@ -262,5 +284,19 @@ body#root {
         }
       }
     }
+  }
+  .menuCatalog__doors{
+    border-bottom: none;
+    padding: 0;
+    border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  }
+  .menuCatalog__cont{
+    flex-direction: column;
+  }
+  .menuCatalog__doors{
+    width: 100%;
+  }
+  .menuCatalog__Accordion{
+    border-top: none;
   }
 }
