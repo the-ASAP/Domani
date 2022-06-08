@@ -4453,6 +4453,7 @@ button {
           animation-name: slide-in;
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
+  overflow-y: scroll;
 }
 .choiceCity__intro {
   display: -webkit-box;
@@ -5559,9 +5560,33 @@ footer {
   .modal__more {
     margin-top: 1rem;
   }
+  .choiceCity__blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    justify-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .choiceCity__block {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 541px) {
+  .choiceCity__block {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 480px) {
   .menuCatalog__profile {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .choiceCity__block {
     width: 100%;
   }
 }

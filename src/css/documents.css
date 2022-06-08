@@ -2441,6 +2441,7 @@ button {
           animation-name: slide-in;
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
+  overflow-y: scroll;
 }
 .choiceCity__intro {
   display: -webkit-box;
@@ -3547,9 +3548,33 @@ footer {
   .modal__more {
     margin-top: 1rem;
   }
+  .choiceCity__blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    justify-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .choiceCity__block {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 541px) {
+  .choiceCity__block {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 480px) {
   .menuCatalog__profile {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .choiceCity__block {
     width: 100%;
   }
 }
@@ -5089,5 +5114,34 @@ body#root {
   }
   .document:nth-child(n) {
     margin: 0 0 1.25rem 0;
+  }
+  .modalDocument__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modalDocument__intro {
+    margin-top: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .modalDocument__document {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  .modalDocument__document img {
+    height: 90%;
+    width: 100%;
   }
 }

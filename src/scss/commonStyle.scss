@@ -27,6 +27,7 @@
     position: relative;
     animation-name: slide-in;
     animation-duration: 0.7s;
+    overflow-y: scroll;
   }
 
   &__intro {
@@ -1152,10 +1153,28 @@ footer {
       margin-top: 1rem;
     }
   }
+  .choiceCity__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+  .choiceCity__block{
+    width: 33%;
+  }
 }
-
+@media screen and (max-width: 541px){
+  .choiceCity__block{
+    width: 50%;
+  }
+}
 @media screen and (max-width: 480px){
   .menuCatalog__profile{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 380px){
+  .choiceCity__block{
     width: 100%;
   }
 }
