@@ -4763,7 +4763,6 @@ body#root {
      object-fit: cover;
 }
 .intro__info {
-  max-height: 55.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

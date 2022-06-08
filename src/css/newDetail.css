@@ -7924,11 +7924,8 @@ body#root {
     margin-bottom: 1.1875rem;
     position: relative;
     z-index: 1;
-    min-height: 350px;
   }
   .gallery__carousel {
-    margin-top: 12vw;
-    position: absolute;
     z-index: 3;
     width: 100%;
   }
@@ -7951,8 +7948,8 @@ body#root {
         -ms-flex-pack: justify;
             justify-content: space-between;
     z-index: 2;
-    position: absolute;
     width: 100%;
+    margin-bottom: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -7961,7 +7958,6 @@ body#root {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 36vw;
     width: 100%;
   }
   .gallery__description {
@@ -7969,62 +7965,32 @@ body#root {
   }
 }
 @media (max-width: 768px) and (min-width: 668px) {
-  .gallery__carousel {
-    margin-top: 6vw;
-  }
-  .gallery__options {
-    padding-top: 38vw;
-  }
   .gallery__description {
     margin-top: 50vw;
   }
   .gallery .gallery {
     min-height: 395px;
   }
-  .gallery .gallery__options {
-    padding-top: 42vw;
-  }
 }
 @media (max-width: 768px) and (min-width: 557px) {
-  .gallery__carousel {
-    margin-top: 6vw;
-  }
-  .gallery__options {
-    padding-top: 38vw;
-  }
   .gallery__description {
     margin-top: 50vw;
   }
   .gallery .gallery {
     min-height: 400px;
   }
-  .gallery .gallery__options {
-    padding-top: 42vw;
-  }
 }
 @media (max-width: 768px) and (min-width: 347px) and (max-width: 430px) {
-  .gallery__options {
-    padding-top: 70vw;
-  }
   .gallery__description {
     margin-top: 92vw;
   }
 }
 @media (max-width: 768px) and (min-width: 431px) and (max-width: 548px) {
-  .gallery__options {
-    padding-top: 60vw;
-  }
   .gallery__description {
     margin-top: 78vw;
   }
 }
 @media (max-width: 768px) and (min-width: 549px) and (max-width: 667px) {
-  .gallery__carousel {
-    margin-top: 6vw;
-  }
-  .gallery__options {
-    padding-top: 48vw;
-  }
   .gallery__description {
     margin-top: 62vw;
   }

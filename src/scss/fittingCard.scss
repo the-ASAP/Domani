@@ -23,7 +23,7 @@ body#root {
   }
 
   &__info {
-    max-height: 55.75rem;
+    // max-height: 55.75rem;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -889,14 +889,15 @@ body#root {
   .colorSolution {
 
     @media (min-width: 621px) {
-      margin-top: 106.8%;
+      // margin-top: 106.8%;
       &__slider{
         padding-top: -4.5rem;
       }
     }
 
     @media (max-width: 620px) {
-      margin-top: 90.6%;
+      margin-top: 7.3125rem;
+      // margin-top: 90.6%;
       &__slider{
         // padding-top: 4.875rem;
       }
@@ -1144,6 +1145,7 @@ body#root {
 
     @media (min-width: 668px) {
       &__slider {
+        margin-bottom: 0;
         &_wrapper {
           margin-top: 10vw;
         }
@@ -1157,6 +1159,7 @@ body#root {
 
     @media (min-width: 347px)  and (max-width: 667px) {
       &__slider {
+        margin-top: 4.5rem;
         &_wrapper {
           margin-top: 10vw;
         }
@@ -1254,6 +1257,11 @@ body#root {
 
   footer {
     // margin-top: 45.5rem;
+  }
+}
+@media screen and(max-width: 475px) {
+  .ideas__slider_item{
+    padding-bottom: 19.5625rem;
   }
 }
 

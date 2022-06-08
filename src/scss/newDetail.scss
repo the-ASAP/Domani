@@ -184,10 +184,10 @@ body#root {
     margin-bottom: 1.1875rem;
     position: relative;
     z-index: 1;
-    min-height: 350px;
+    // min-height: 350px;
     &__carousel {
-      margin-top: 12vw;
-      position: absolute;
+      // margin-top: 12vw;
+      // position: absolute;
       z-index: 3;
       width: 100%;
     }
@@ -206,14 +206,15 @@ body#root {
       flex-direction: column;
       justify-content: space-between;
       z-index: 2;
-      position: absolute;
+      // position: absolute;
       width: 100%;
+      margin-bottom: 0;
       align-items: flex-start;
     }
 
     &__options {
       justify-content: space-between;
-      padding-top: 36vw;
+      // padding-top: 36vw;
       width: 100%;
     }
 
@@ -223,10 +224,10 @@ body#root {
 
     @media (min-width: 668px) {
       &__carousel {
-        margin-top: 6vw;
+        // margin-top: 6vw;
       }
       &__options {
-        padding-top: 38vw;
+        // padding-top: 38vw;
       }
       &__description {
         margin-top: 50vw;
@@ -235,15 +236,15 @@ body#root {
         min-height: 395px;
       }
       .gallery__options{
-        padding-top: 42vw;
+        // padding-top: 42vw;
       }
     }
     @media (min-width: 557px) {
       &__carousel {
-        margin-top: 6vw;
+        // margin-top: 6vw;
       }
       &__options {
-        padding-top: 38vw;
+        // padding-top: 38vw;
       }
       &__description {
         margin-top: 50vw;
@@ -252,12 +253,12 @@ body#root {
         min-height: 400px;
       }
       .gallery__options{
-        padding-top: 42vw;
+        // padding-top: 42vw;
       }
     }
     @media (min-width: 347px) and (max-width: 430px) {
       &__options {
-        padding-top: 70vw;
+        // padding-top: 70vw;
       }
       &__description {
         margin-top: 92vw;
@@ -265,7 +266,7 @@ body#root {
     }
     @media (min-width: 431px) and (max-width: 548px) {
       &__options {
-        padding-top: 60vw;
+        // padding-top: 60vw;
       }
       &__description {
         margin-top: 78vw;
@@ -273,10 +274,10 @@ body#root {
     }
     @media (min-width: 549px) and (max-width: 667px) {
       &__carousel {
-        margin-top: 6vw;
+        // margin-top: 6vw;
       }
       &__options {
-        padding-top: 48vw;
+        // padding-top: 48vw;
       }
       &__description {
         margin-top: 62vw;
