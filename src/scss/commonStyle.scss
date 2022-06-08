@@ -1153,3 +1153,9 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 480px){
+  .menuCatalog__profile{
+    width: 100%;
+  }
+}

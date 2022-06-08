@@ -3576,6 +3576,11 @@ footer {
     margin-top: 1rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .menuCatalog__profile {
+    width: 100%;
+  }
+}
 @media (max-width: 1600px) {
   html {
     font-size: 16px;
@@ -5433,14 +5438,14 @@ body#root {
   .production-block__list {
     display: block;
     margin-top: 3.75rem;
-    z-index: 3;
+    z-index: 1;
   }
   .production-block__list__row {
     margin-bottom: 50px;
   }
   .production-block__list_left {
     margin: 0;
-    z-index: 2;
+    z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

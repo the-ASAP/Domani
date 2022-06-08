@@ -3576,6 +3576,11 @@ footer {
     margin-top: 1rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .menuCatalog__profile {
+    width: 100%;
+  }
+}
 @media (max-width: 1600px) {
   html {
     font-size: 16px;
@@ -5101,7 +5106,6 @@ body#root {
 }
 .projects__slider {
   margin-top: 7.5rem;
-  margin-bottom: 7.5rem;
 }
 .projects__slider_wrapper {
   overflow: hidden;
@@ -5489,7 +5493,7 @@ body#root {
     margin: 0;
   }
   .idea {
-    margin-top: 65%;
+    margin-top: 20%;
   }
   .idea__title {
     font-size: 1.5rem;
@@ -5543,7 +5547,7 @@ body#root {
   }
   .cooperation {
     margin-top: 4.9375rem;
-    margin-bottom: 100%;
+    margin-bottom: 50%;
   }
   .cooperation__title {
     font-size: 1.5rem;
@@ -5567,7 +5571,7 @@ body#root {
     margin-left: 2.375rem;
   }
   .cooperation__info_image {
-    margin-top: 6.25rem;
+    margin-top: 3.25rem;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
   }
@@ -5582,7 +5586,7 @@ body#root {
 }
 @media (max-width: 768px) {
   .function {
-    margin-top: 4.375rem;
+    margin-top: 2.375rem;
     margin-bottom: 0;
   }
   .function__container {
@@ -5613,7 +5617,7 @@ body#root {
 }
 @media (max-width: 768px) {
   .projects {
-    margin-top: 4.375rem;
+    margin-top: 1.375rem;
   }
   .projects__all-project {
     display: none;
@@ -5626,7 +5630,6 @@ body#root {
   }
   .projects__slider_wrapper {
     margin-top: 20vw;
-    position: absolute;
     z-index: 3;
     width: 100%;
     border-bottom: 1px solid #c4c4c4;
@@ -5655,22 +5658,22 @@ body#root {
         -ms-flex-pack: justify;
             justify-content: space-between;
     z-index: 2;
-    position: absolute;
     width: 100%;
+    margin-bottom: 0;
   }
   .projects__info_slide {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 90vw;
+    padding-top: 5vw;
   }
 }
 @media (max-width: 768px) and (min-width: 668px) {
   .projects__slider_wrapper {
-    margin-top: 10vw;
+    margin-top: 5vw;
   }
   .projects__info_slide {
-    padding-top: 31.25rem;
+    padding-top: 1.25rem;
   }
 }
 @media (max-width: 768px) and (min-width: 347px) and (max-width: 667px) {
@@ -5683,8 +5686,7 @@ body#root {
 }
 @media (max-width: 768px) {
   .project-site {
-    margin-top: 110vw;
-    margin-bottom: 75vw;
+    max-height: inherit;
   }
   .project-site__title {
     margin-bottom: 0;
@@ -5701,7 +5703,8 @@ body#root {
             flex-direction: column;
     margin-left: -1.25rem;
     width: 110%;
-    max-height: 35.3125rem;
+    max-height: inherit;
+    margin-bottom: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -5710,47 +5713,11 @@ body#root {
     margin-left: 2.375rem;
   }
   .project-site__info_image {
-    margin-top: 6.25rem;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
   }
   .project-site__button {
     margin-top: 2.5rem;
-  }
-}
-@media (max-width: 768px) and (min-width: 700px) {
-  .project-site {
-    margin-bottom: 60%;
-  }
-}
-@media (max-width: 768px) and (min-width: 300px) and (max-width: 346px) {
-  .project-site {
-    margin-top: 165vw;
-  }
-}
-@media (max-width: 768px) and (min-width: 347px) and (max-width: 400px) {
-  .project-site {
-    margin-top: 150vw;
-  }
-}
-@media (max-width: 768px) and (min-width: 400px) and (max-width: 450px) {
-  .project-site {
-    margin-top: 135vw;
-  }
-}
-@media (max-width: 768px) and (min-width: 450px) and (max-width: 500px) {
-  .project-site {
-    margin-top: 125vw;
-  }
-}
-@media (max-width: 768px) and (min-width: 500px) and (max-width: 600px) {
-  .project-site {
-    margin-top: 120vw;
-  }
-}
-@media (max-width: 768px) and (min-width: 600px) and (max-width: 667px) {
-  .project-site {
-    margin-top: 115vw;
   }
 }
 @media (max-width: 768px) {
