@@ -4934,9 +4934,9 @@ body#root {
     height: 80vh;
   }
   .intro__image {
-    margin-left: -60vw;
-    width: 160vw;
-    height: 21.3125rem;
+    margin-left: 0;
+    width: 100vw;
+    height: 20.3125rem;
   }
   .intro__image > div {
     width: 100vw;
@@ -4944,13 +4944,13 @@ body#root {
   }
   .intro__image .intro__picture {
     display: block;
-    max-width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0 auto;
+    max-width: 100%;
   }
   .intro__picture {
-    -o-object-position: 11.15rem 0;
-       object-position: 11.15rem 0;
+    -o-object-position: inherit;
+       object-position: inherit;
   }
   .intro__info {
     margin-left: 0;

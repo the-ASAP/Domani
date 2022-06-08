@@ -164,9 +164,12 @@ body#root{
    height: 80vh;
 
     &__image {
-      margin-left: -60vw;
-      width: 160vw;
-      height: 21.3125rem;
+      margin-left: 0;
+      // margin-left: -60vw;
+      width: 100vw;
+      // width: 160vw;
+      // height: 21.3125rem;
+      height: 20.3125rem;
     }
 
     &__image > div {
@@ -176,14 +179,14 @@ body#root{
 
     &__image &__picture {
       display: block;
-      max-width: 100%;
-      height: auto;
+      height: 100%;
       margin: 0 auto;
+      max-width: 100%;
     }
 
     &__picture {
-     
-      object-position: 11.15rem 0;
+      object-position: inherit;
+      // object-position: 11.15rem 0;
      
     }
 
