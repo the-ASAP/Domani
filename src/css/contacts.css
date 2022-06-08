@@ -4920,11 +4920,14 @@ body#root {
     width: 100%;
     margin-bottom: 1.25rem;
   }
+  .contact__image {
+    margin-top: 1rem;
+  }
   .contact:nth-child(2) {
     margin: 0 0 1.25rem;
   }
   .contact__position {
-    margin: 5.625rem 0 0.625rem;
+    margin: 1.625rem 0 0.625rem;
     font-size: 0.875rem;
     line-height: 1.43;
   }
@@ -4938,6 +4941,27 @@ body#root {
   }
   .stand__main {
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+}
+@media screen and (max-width: 480px) {
+  .stand__box {
+    text-align: center;
+  }
+  .stand__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .stand__item {
+    margin-right: 0;
   }
 }
 @media (max-width: 414px) {

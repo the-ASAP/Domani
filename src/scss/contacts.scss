@@ -202,17 +202,21 @@ body#root {
     &__other {
       display: block;
     }
+    
   }
 
   .contact {
     width: 100%;
     margin-bottom: 1.25rem;
-
+    &__image{
+      margin-top: 1rem;
+    }
     &:nth-child(2) {
       margin: 0 0 1.25rem;
     }
     &__position {
-      margin: 5.625rem 0 0.625rem;
+      margin: 1.625rem 0 0.625rem;
+      // margin: 5.625rem 0 0.625rem;
       font-size: 0.875rem;
       line-height: 1.43;
     }
@@ -235,6 +239,20 @@ body#root {
   }
 }
 
+@media screen and(max-width: 480px){
+  .stand__box{
+    text-align: center;
+  }
+  .stand__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .stand__item{
+    margin-right: 0;
+  }
+}
 
 @media (max-width: 414px) {
   .stand {
