@@ -83,21 +83,50 @@ body#root {
 .menuCatalog__cont{
   display: flex;
 }
-.menuCatalog__doors{
+// .menuCatalog__doors{
+//   display: flex;
+//   flex-direction: column;
+//   border-top: none;
+//   align-items: center;
+//   width: 33%;
+//   padding: 1.25rem 0 0 0;
+// }
+.menuCatalog__doors, .menuCatalog__style {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  border-bottom: 1px solid hsla(0,0%,100%,.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  border-top: none;
-  align-items: center;
-  width: 33%;
-  padding: 1.25rem 0 0 0;
+  justify-content: space-between;
+  // padding: 1.25rem 0;
+}
+.menuCatalog__doors {
+  border-top: 1px solid hsla(0,0%,100%,.12);
 }
 .menuCatalog__style{
   padding: 1.25rem 0 0 0;
 }
 .menuCatalog__Accordion{
   width: 100%;
+  // border-top: 1px solid hsla(0,0%,100%,.12);
+  // padding: 1.25rem 0;
+}
+.menuMobail .menuCatalog__Accordion:first-child{
   border-top: 1px solid hsla(0,0%,100%,.12);
-  padding: 1.25rem 0;
+}
+.menuMobail .menuCatalog__Accordion:nth-child(3n){
+  border-bottom: 1px solid hsla(0,0%,100%,.12);
+}
+@media (max-width: 2980px) and (min-width: 768px){
+  .menuMobail {
+    display: none;
+  }
+}
+@media (max-width: 768px){
+  .menuDesktop {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .intro {

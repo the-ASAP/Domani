@@ -4119,6 +4119,12 @@ footer {
 .asap__logo svg {
   height: 100%;
 }
+.menuMobail .menuCatalog__Accordion:first-child {
+  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
+}
+.menuMobail .menuCatalog__Accordion:nth-child(3n) {
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
+}
 @media (max-width: 768px) {
   .aside {
     display: -webkit-box;
