@@ -178,9 +178,9 @@ export const getFooterModal = () => {
         .map((id, index) => (index === 0 ? `?id[]=${id}` : `&id[]=${id}`))
         .join('');
 
-      $.ajax({
-        url: `http://domani2.asap-lp.ru/local/ajax/city.php${idsParams}`
-      }).done((data) => {
+        $.ajax({
+          url: `${window.location.origin}/local/ajax/city.php${idsParams}`
+        }).done((data) => {
         $('.modal').prepend(data);
       });
     });
