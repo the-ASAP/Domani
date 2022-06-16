@@ -3072,7 +3072,7 @@ footer {
   -webkit-transition: right 0.3s ease;
   -o-transition: right 0.3s ease;
   transition: right 0.3s ease;
-  z-index: 1;
+  z-index: 6;
   background-color: white;
 }
 .modal__content {
@@ -4883,7 +4883,7 @@ body#root {
   height: 100%;
 }
 .quote {
-  margin-top: 28.5rem;
+  margin-top: 3.5rem;
 }
 .quote__border {
   margin-top: 7.75rem;
@@ -4901,7 +4901,6 @@ body#root {
 .quote__icon {
   width: 3.5rem;
   height: 2.9375rem;
-  position: absolute;
   top: -1.5rem;
   left: 2%;
 }
@@ -5093,7 +5092,7 @@ body#root {
   -webkit-box-shadow: -5.875rem -3.125rem 0px 0px var(--gray-background);
           box-shadow: -5.875rem -3.125rem 0px 0px var(--gray-background);
   max-width: 29rem;
-  max-height: 18.125rem;
+  max-height: 20.125rem;
 }
 .production-block__image_right {
   -webkit-box-shadow: 4.5rem -4.9375rem 0px -1.125rem #e3e3e3;

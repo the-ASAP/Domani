@@ -3044,7 +3044,7 @@ footer {
   -webkit-transition: right 0.3s ease;
   -o-transition: right 0.3s ease;
   transition: right 0.3s ease;
-  z-index: 1;
+  z-index: 6;
   background-color: white;
 }
 .modal__content {

@@ -82,7 +82,7 @@ body#root {
 }
 
 .quote {
-  margin-top: 28.5rem;
+  margin-top: 3.5rem;
   // border-bottom: 1px solid #a8a8a8;
 
   &__border {
@@ -102,7 +102,7 @@ body#root {
   &__icon {
     width: 3.5rem;
     height: 2.9375rem;
-    position: absolute;
+    // position: absolute;
     top: -1.5rem;
     left: 2%;
 
@@ -290,7 +290,7 @@ body#root {
     &_left {
       box-shadow: -5.875rem -3.125rem 0px 0px $grayBack;
       max-width: 29rem;
-      max-height: 18.125rem;
+      max-height: 20.125rem;
     }
     &_right {
       box-shadow: 4.5rem -4.9375rem 0px -1.125rem $grayBack;

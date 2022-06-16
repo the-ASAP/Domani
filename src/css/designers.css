@@ -3072,7 +3072,7 @@ footer {
   -webkit-transition: right 0.3s ease;
   -o-transition: right 0.3s ease;
   transition: right 0.3s ease;
-  z-index: 1;
+  z-index: 6;
   background-color: white;
 }
 .modal__content {
@@ -4870,7 +4870,7 @@ body#root {
   stroke: #000;
 }
 .idea {
-  margin-top: 25.9375rem;
+  margin-top: 5.9375rem;
 }
 .idea h2 {
   text-align: center;
@@ -5473,7 +5473,7 @@ body#root {
   .intro__image .intro__picture {
     display: block;
     max-width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0 auto;
   }
   .intro__picture {
@@ -5524,7 +5524,7 @@ body#root {
     margin: 0;
   }
   .idea {
-    margin-top: 20%;
+    margin-top: 55%;
   }
   .idea__title {
     font-size: 1.5rem;

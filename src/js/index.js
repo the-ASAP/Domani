@@ -45,6 +45,7 @@ const loadNews = (loadBtn, newsBlock) => {
     });
   }
 };
+document.title = 'Torex Premium';
 
 const countNews = () => {
   const count = $('.news__count');
