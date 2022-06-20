@@ -4629,6 +4629,9 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 1.25rem 0;
 }
+.menuCatalog__doors:last-child {
+  display: none;
+}
 .menuCatalog__style {
   display: -webkit-box;
   display: -ms-flexbox;
