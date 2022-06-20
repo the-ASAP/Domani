@@ -670,8 +670,9 @@ footer {
   }
 
   &__phone {
-    font-size: 1.75rem;
-    line-height: 129%;
+    font-size: 1.3125rem;
+    font-weight: 400;
+    line-height: 1.4;
     color: $grayMain;
   }
   &__mail {

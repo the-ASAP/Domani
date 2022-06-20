@@ -3934,8 +3934,9 @@ footer {
   margin-top: 0.625rem;
 }
 .modal__phone {
-  font-size: 1.75rem;
-  line-height: 129%;
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: 1.4;
   color: #212223;
   color: var(--gray-main);
 }
@@ -5753,7 +5754,7 @@ body#root {
   width: 100%;
 }
 .catalog {
-  margin-top: 7.1875rem;
+  margin-top: 3.1875rem;
 }
 .catalog__title {
   text-align: center;
