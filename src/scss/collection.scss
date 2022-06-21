@@ -21,7 +21,7 @@ body#root {
     margin-top: 3.125rem;
     left: 0;
     max-width: 78.4375rem;
-    max-height: 37.5625rem;
+    max-height: 32.5625rem;
     object-fit: cover;
   }
 
@@ -236,7 +236,7 @@ body#root {
   }
 
   .catalog {
-    margin-top: 81%;
+    margin-top: 71%;
 
     .tab {
       display: none;
@@ -277,6 +277,11 @@ body#root {
   }
 }
 
+@media screen and (max-width: 475px){
+  .catalog{
+    margin-top: 81%;
+  }
+}
 @media (max-width: 414px) {
   .product {
     margin: 0;

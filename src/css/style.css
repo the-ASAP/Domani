@@ -5029,7 +5029,7 @@ body#root {
     margin: 0;
   }
   .catalog {
-    margin-top: 81%;
+    margin-top: 71%;
   }
   .catalog .tab {
     display: none;
@@ -5075,5 +5075,10 @@ body#root {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (max-width: 475px) {
+  .catalog {
+    margin-top: 81%;
   }
 }
