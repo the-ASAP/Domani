@@ -4796,7 +4796,6 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 100%;
   position: relative;
   background-color: #212223;
   background-color: var(--main-color);
@@ -4962,9 +4961,6 @@ body#root {
           align-items: center;
 }
 @media (max-width: 768px) {
-  .intro {
-    height: 80vh;
-  }
   .intro__image {
     margin-left: 0;
     width: 100vw;

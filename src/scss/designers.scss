@@ -10,7 +10,7 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   // height: 43.75rem;
   position: relative;
   background-color: $grayMain;
@@ -533,7 +533,7 @@ body#root {
 
 @media (max-width: 768px) {
   .intro {
-    height: 80vh;
+    // height: 80vh;
 
     &__image {
       height: 21.3125rem;
