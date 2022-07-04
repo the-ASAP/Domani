@@ -5523,9 +5523,6 @@ body#root {
   .menu__openCatalog {
     margin: 0;
   }
-  .idea {
-    margin-top: 55%;
-  }
   .idea__title {
     font-size: 1.5rem;
     max-width: 18.75rem;
