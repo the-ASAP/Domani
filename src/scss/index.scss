@@ -794,3 +794,37 @@ body#root {
     }
   }
 }
+
+.modal{
+  &__more{
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 0 2.25rem 2rem;
+    gap: 20px;
+  }
+  &__buttons{
+    display: flex;
+  }
+  &__date{
+    color: #212223;
+  }
+  .owl-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    gap: 5px;
+  }
+  .owl-dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: transparent !important;
+    border: 1px solid #FFFFFF !important;
+  }
+  .owl-dot.active{
+    background: #fff !important;
+  }
+}

@@ -10,7 +10,11 @@ import {
   fillCatalogContent,
   getFooterModal,
   scrollToMap,
-  closeBitrixForm
+  closeBitrixForm,
+  owlGallery,
+  numberSlide,
+  plusSlide,
+  minusSlide
 } from '../vendors/js/general';
 //import "../scss/style.scss";
 import '../scss/index.scss';
@@ -89,4 +93,70 @@ $().ready(() => {
   pageUp();
 
   getFooterModal();
+  owlGallery('.city-slider__items', {
+    nav: true,
+    navContainer: '.modal__buttons',
+    loop: false,
+    rewind: true,
+    dots: false,
+    mouseDrag: false,
+    touchDrag: false,
+
+    // margin: 11,
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1,
+        nav: true
+      },
+      700: {
+        items: 1,
+        nav: true
+      },
+      800: {
+        items: 1,
+        nav: true
+      },
+      1000: {
+        items: 1,
+        nav: true
+      }
+    }
+  });
+  numberSlide('right', '.city-slider', '.modal__date');
+  plusSlide('.city-slider', '.modal__date');
+  minusSlide('.city-slider', '.modal__date');
+
+  owlGallery('.city-image__slider', {
+    nav: false,
+    navContainer: '.city-image__nav',
+    loop: false,
+    rewind: false,
+    dots: true,
+
+    // margin: 11,
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 1,
+        nav: true
+      },
+      700: {
+        items: 1,
+        nav: true
+      },
+      800: {
+        items: 1,
+        nav: true
+      },
+      1000: {
+        items: 1,
+        nav: true
+      }
+    }
+  });
 });
