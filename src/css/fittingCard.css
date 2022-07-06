@@ -3080,7 +3080,6 @@ footer {
 }
 .modal__content {
   width: 23.3125rem;
-  height: 57rem;
   background-color: #fff;
   background-color: var(--main-back);
 }
@@ -3116,7 +3115,10 @@ footer {
   display: block;
 }
 .modal__subtitle {
-  margin-top: 0.625rem;
+  display: block;
+  font-family: "HeliosExt", sans-serif;
+  font-weight: 400;
+  color: #212223;
 }
 .modal__phone {
   font-size: 1.3125rem;

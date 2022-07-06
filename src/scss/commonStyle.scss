@@ -632,7 +632,7 @@ footer {
 
   &__content {
     width: 23.3125rem;
-    height: 57rem;
+    // height: 57rem;
     background-color: $mainBack;
   }
 
@@ -669,7 +669,11 @@ footer {
   }
 
   &__subtitle {
-    margin-top: 0.625rem;
+    display: block;
+    // margin-top: 0.625rem;
+    font-family: 'HeliosExt', sans-serif;
+    font-weight: 400;
+    color: #212223;
   }
 
   &__phone {
