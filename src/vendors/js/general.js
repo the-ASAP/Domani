@@ -170,7 +170,8 @@ export const fixedHeader = () => {
 export const getFooterModal = () => {
   $('.map__point').each((index, point) => {
     $(point).on('click', () => {
-      $('.modal').children('.modal__content').remove();
+      $('.modal').children('.city-slider__items').remove();
+      // $('.modal').children('.modal__content').remove();
 
       const ids = JSON.parse($(point).attr('data-cities'));
 
