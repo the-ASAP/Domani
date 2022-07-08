@@ -167,10 +167,115 @@ export const fixedHeader = () => {
   });
 };
 
+
+export const plusSlide = (classSlider, classNumber) => {
+  $('.owl-next').on('click', function () {
+    numberSlide('right', classSlider, classNumber);
+  });
+};
+
+export const minusSlide = (classSlider, classNumber) => {
+  $('.owl-prev').on('click', function () {
+    numberSlide('left', classSlider, classNumber);
+  });
+};
+export function numberSlide(direction, classSlider, classNumber) {
+  const items = document.querySelectorAll(`${classSlider} .owl-item`);  
+  const number = document.querySelector(classNumber);
+  let num;
+  if (items) {
+    num = items.length;
+  }
+
+  let numActive = 1;
+  for (var key in Object.keys(items)) {
+    if (items[key].className === 'owl-item active' && direction === 'right') {
+      numActive = Number(key) + 1;
+      break;
+    }
+    if (items[key].className === 'owl-item active' && direction === 'left') {
+      numActive = Number(key) + 1;
+      break;
+    }
+  }
+  let formattedNumActive = numActive.toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  });
+  let formattedNum = num.toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  });
+  if (number) {
+    number.innerHTML = `${formattedNumActive}/${formattedNum}`;
+  }
+}
+
+
+function addClassSlider(){
+  const slider = document.querySelector('.city-slider');
+  const container = slider.querySelector('.city-slider__wrapper');
+  let itemsAddClass = container.firstElementChild.firstElementChild.firstChild.children;
+  console.log(itemsAddClass);
+  for(let i = 0; i < itemsAddClass.length; i++){
+    console.log(itemsAddClass[i]);
+    itemsAddClass[i].classList.add('ct-slider__item');
+  }
+}
+export function numberSlideIndex(direction, classSlider, classNumber) {
+  const slider = document.querySelector(`${classSlider}`);
+  const items = document.querySelectorAll('.ct-slider__item');
+  // items = slider.querySelectorAll(`${classSlider} .owl-item`);
+  const number = document.querySelector(classNumber);
+  let num;
+  if (items) {
+    num = items.length;
+  }
+
+  let numActive = 1;
+  for (var key in Object.keys(items)) {
+    if (items[key].className === 'owl-item ct-slider__item active' && direction === 'right') {
+      numActive = Number(key) + 1;
+      break;
+    }
+    if (items[key].className === 'owl-item ct-slider__item active' && direction === 'left') {
+      numActive = Number(key) + 1;
+      break;
+    }
+  }
+  let formattedNumActive = numActive.toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  });
+  let formattedNum = num.toLocaleString('en-US', {
+    minimumIntegerDigits: 2,
+    useGrouping: false
+  });
+  console.log(formattedNum);
+  if (number) {
+    number.innerHTML = `${formattedNumActive}/${formattedNum}`;
+  }
+}
+export const plusSlideIndex = (classSlider, classNumber) => {
+  $('.owl-next').on('click', function () {
+    numberSlideIndex('right', classSlider, classNumber);
+  });
+};
+
+export const minusSlideIndex = (classSlider, classNumber) => {
+  $('.owl-prev').on('click', function () {
+    numberSlideIndex('left', classSlider, classNumber);
+  });
+};
+
+
+
+
 export const getFooterModal = () => {
   $('.map__point').each((index, point) => {
     $(point).on('click', () => {
-      $('.modal').children('.city-slider__items').remove();
+      $('.modal').children('.modal__content').remove();
+      $('.modal').children('.modal__more').remove();
       // $('.modal').children('.modal__content').remove();
 
       const ids = JSON.parse($(point).attr('data-cities'));
@@ -183,8 +288,76 @@ export const getFooterModal = () => {
           url: `${window.location.origin}/local/ajax/city.php${idsParams}`
         }).done((data) => {
         $('.modal').prepend(data);
+
+        owlGallery('.city-slider__items', {
+          nav: true,
+          navContainer: '.modal__buttons',
+          loop: false,
+          rewind: true,
+          dots: false,
+          mouseDrag: false,
+          touchDrag: false,
+      
+          // margin: 11,
+          responsive: {
+            0: {
+              items: 1
+            },
+            500: {
+              items: 1,
+              nav: true
+            },
+            700: {
+              items: 1,
+              nav: true
+            },
+            800: {
+              items: 1,
+              nav: true
+            },
+            1000: {
+              items: 1,
+              nav: true
+            }
+          }
+        });
+        addClassSlider();
+        numberSlideIndex('right', '.city-slider', '.modal__date');
+        plusSlideIndex('.city-slider', '.modal__date');
+        minusSlideIndex('.city-slider', '.modal__date');
+        owlGallery('.city-image__slider', {
+          nav: false,
+          navContainer: '.city-image__nav',
+          loop: false,
+          rewind: false,
+          dots: true,
+      
+          // margin: 11,
+          responsive: {
+            0: {
+              items: 1
+            },
+            500: {
+              items: 1,
+              nav: true
+            },
+            700: {
+              items: 1,
+              nav: true
+            },
+            800: {
+              items: 1,
+              nav: true
+            },
+            1000: {
+              items: 1,
+              nav: true
+            }
+          }
+        });
       });
     });
+
   });
 };
 
@@ -380,46 +553,3 @@ export const createYouTubeEmbedLink = (btn, container) => {
   });
 };
 
-export const plusSlide = (classSlider, classNumber) => {
-  $('.owl-next').on('click', function () {
-    numberSlide('right', classSlider, classNumber);
-  });
-};
-
-export const minusSlide = (classSlider, classNumber) => {
-  $('.owl-prev').on('click', function () {
-    numberSlide('left', classSlider, classNumber);
-  });
-};
-
-export function numberSlide(direction, classSlider, classNumber) {
-  const items = document.querySelectorAll(`${classSlider} .owl-item`);
-  const number = document.querySelector(classNumber);
-  let num;
-  if (items) {
-    num = items.length;
-  }
-
-  let numActive = 1;
-  for (var key in Object.keys(items)) {
-    if (items[key].className === 'owl-item active' && direction === 'right') {
-      numActive = Number(key) + 1;
-      break;
-    }
-    if (items[key].className === 'owl-item active' && direction === 'left') {
-      numActive = Number(key) + 1;
-      break;
-    }
-  }
-  let formattedNumActive = numActive.toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false
-  });
-  let formattedNum = num.toLocaleString('en-US', {
-    minimumIntegerDigits: 2,
-    useGrouping: false
-  });
-  if (number) {
-    number.innerHTML = `${formattedNumActive}/${formattedNum}`;
-  }
-}

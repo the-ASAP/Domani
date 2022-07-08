@@ -638,12 +638,13 @@ footer {
 
   &__image {
     height: 16.875rem;
+    overflow: hidden;
     object-fit: cover;
   }
 
   &__picture {
     width: 100%;
-    height: 100%;
+    height: 16.875rem;
     object-fit: cover;
   }
 
