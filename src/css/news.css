@@ -4161,6 +4161,16 @@ footer {
 .menuMobail .menuCatalog__Accordion:nth-child(3n) {
   border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
 }
+.products-card__container {
+  display: inline;
+  position: relative;
+}
+.product__icon {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  margin-top: 20px;
+}
 @media (max-width: 2980px) and (min-width: 768px) {
   .menuMobail {
     display: none;
