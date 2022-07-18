@@ -52,9 +52,36 @@ const texttoolkit = () => {
       });
     }, 2000);
   });
+
 };
+const stopPropog = ()=>{
+  $('.intro__text_date').on('click', (e)=>{
+    e.stopPropagation();
+    var imgSRC;
+    if(e.target.classList.contains('intro__text_color')){
+      const container = document.querySelector('.modal-color');
+      container.classList.toggle('active-block');
+      imgSRC = e.target.getAttribute('src');
+      const imgBlock = container.querySelector('.color-picture');
+      imgBlock.setAttribute('src', imgSRC);
+      document.querySelector('#root').style.overflow = "hidden";
+    }
+    
+    $('#root').on('click', (e)=>{
+      if(e.target.classList.contains('modal-color')){
+        e.target.classList.remove('active-block')
+        document.querySelector('#root').style.overflow = "auto";
+      }
+    })
+  });
+  
+  
+  
+  
+}
 
 $().ready(() => {
+  stopPropog();
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
   toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
