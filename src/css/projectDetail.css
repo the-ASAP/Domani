@@ -1328,10 +1328,28 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .color-picture {
   max-width: 620px;
   max-height: 390px;
+}
+.texture-text__block {
+  width: 100% !important;
+  background: #fff;
+  padding: 29px 0 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 22px;
+  gap: 22px;
 }
 :root {
   --main-color: #212223;
@@ -2467,10 +2485,28 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .color-picture {
   max-width: 620px;
   max-height: 390px;
+}
+.texture-text__block {
+  width: 100% !important;
+  background: #fff;
+  padding: 29px 0 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 22px;
+  gap: 22px;
 }
 :root {
   --main-color: #212223;
@@ -4879,10 +4915,28 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .color-picture {
   max-width: 620px;
   max-height: 390px;
+}
+.texture-text__block {
+  width: 100% !important;
+  background: #fff;
+  padding: 29px 0 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 22px;
+  gap: 22px;
 }
 .menu__box {
   border-bottom: 1px solid #e3e3e3;

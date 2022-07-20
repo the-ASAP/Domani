@@ -866,9 +866,18 @@ button {
       -ms-flex-pack: center;
       justify-content: center;
       width: auto;
+      flex-direction: column;
     }
 }
 .color-picture{
   max-width: 620px;
   max-height: 390px;
+}
+.texture-text__block{
+  width: 100% !important;
+  background: #fff;
+  padding: 29px 0 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
