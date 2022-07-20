@@ -4339,6 +4339,27 @@ footer {
     border-top: none;
   }
 }
+.arrow-circle {
+  display: none;
+}
+.intro__text_date-content {
+  position: relative;
+}
+.intro__text_date-content:hover .arrow-circle {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.intro__text_color {
+  width: 140px;
+  height: 50px;
+  border: 1px solid #656565;
+  border-radius: 0;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (max-width: 768px) {
   .aside {
     display: -webkit-box;
