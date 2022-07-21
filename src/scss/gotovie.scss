@@ -7,3 +7,11 @@
         cursor: pointer;
     }
 }
+.product {
+    margin-bottom: 10px;
+    &__back {
+      &_white {
+        height: 0;
+      }
+    }
+}

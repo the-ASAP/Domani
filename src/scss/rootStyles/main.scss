@@ -647,6 +647,7 @@ button {
   position: relative;
   padding: 0 1.25rem;
   margin-right: 5px;
+  // margin-bottom: 10px;
 
   &__back {
     position: absolute;
@@ -661,8 +662,8 @@ button {
       top: 0;
       left: 0;
       width: 100%;
-      // height: 12.0625rem;
-      // background-color: #f2f2f2;
+      height: 12.0625rem;
+      background-color: #f2f2f2;
     }
   }
 
