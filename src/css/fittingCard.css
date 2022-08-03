@@ -5538,6 +5538,8 @@ body#root {
   max-height: inherit;
   -o-object-position: left bottom;
      object-position: left bottom;
+  width: 172px;
+  height: 368px;
 }
 .details__image_dimensions {
   margin: 0;

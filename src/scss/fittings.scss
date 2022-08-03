@@ -84,7 +84,8 @@ body#root {
     height: 100vh;
 
     &__image {
-      object-position: -19.125rem 0px;
+      object-position: right;
+      // object-position: -19.125rem 0px;
     }
     &__info {
       margin-left: 0;

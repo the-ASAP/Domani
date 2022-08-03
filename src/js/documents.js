@@ -19,8 +19,32 @@ const zoomPictureModal = (triggerClass, modalPictureClass) => {
   $(triggerClass).on('click', function () {
     const srcPicture = $(this).attr('data-content');
     $(modalPictureClass).attr('src', srcPicture);
+    $(modalPictureClass)
   });
 };
+
+const pictureModalImgWidth = () => {
+  // const container = document.querySelector('.modalDocument__picture');
+  // const containerImg = container.getElementsByTagName('img');
+  // console.log(container);
+  // console.log(container.children)
+  // containerImg.style.width = '100%';
+  // containerImg.style.height = '100%';
+
+  // iframeContent.body.innerHTML = iframeContent.body.innerHTML + "<style>img{width: 100%; height: 100%}</style>";
+
+  $(".modalDocument__picture").on("load", () => {
+    let iframeHead = $(".modalDocument__picture").contents().find("head");
+    let iframeCSS = "<style>img{width: 100%; height: 100%;}</style>";
+    $(iframeHead).append(iframeCSS);
+
+  });
+
+  let iframeName = document.querySelector(".modalDocument__picture");
+  let iframeContent = iframeName.contentDocument;
+
+  console.log(iframeContent.head)
+}
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
@@ -56,6 +80,7 @@ $().ready(() => {
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');
 
+  pictureModalImgWidth();
   pageUp();
 
   getFooterModal();

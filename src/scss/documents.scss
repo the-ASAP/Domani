@@ -237,6 +237,7 @@ body#root{
     align-items: center;
     padding: 0 4.0625rem;
     margin-top: -1.5625rem;
+
   }
   &__text{
     max-width: 21.5625rem;
@@ -272,6 +273,16 @@ body#root{
     width: 100%;
     height: 100%;
     padding: 0;
+  }
+
+  &__picture{
+    height: 46rem;
+    position: relative;
+    width: 30.8125rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
