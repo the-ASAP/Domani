@@ -10,7 +10,8 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 43.75rem;
+  height: 100%;
+  // height: 43.75rem;
   position: relative;
   background-color: $mainColor;
   padding: 0 1.875rem;
@@ -20,12 +21,12 @@ body#root {
     margin-top: 3.125rem;
     left: 0;
     max-width: 78.4375rem;
-    max-height: 37.5625rem;
+    max-height: 32.5625rem;
     object-fit: cover;
   }
 
   &__info {
-    max-height: 55.75rem;
+    // max-height: 55.75rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -68,7 +69,7 @@ body#root {
 }
 
 .catalog {
-  margin-top: 20.875rem;
+ 
 
   &__selects {
     display: none;
@@ -235,7 +236,7 @@ body#root {
   }
 
   .catalog {
-    margin-top: 81%;
+    margin-top: 71%;
 
     .tab {
       display: none;
@@ -276,6 +277,11 @@ body#root {
   }
 }
 
+@media screen and (max-width: 475px){
+  .catalog{
+    margin-top: 81%;
+  }
+}
 @media (max-width: 414px) {
   .product {
     margin: 0;

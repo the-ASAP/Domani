@@ -1,0 +1,20 @@
+@import './catalog.scss';
+
+.product {
+  &__order {
+    position: absolute;
+  }
+  &__icon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+.product {
+  margin-bottom: 10px;
+  &__back {
+    &_white {
+      height: 0;
+    }
+  }
+}

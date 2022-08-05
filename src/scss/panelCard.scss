@@ -10,7 +10,8 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 43.75rem;
+  height: 100%;
+  // height: 43.75rem;
   position: relative;
   padding: 0 1.875rem;
 
@@ -22,7 +23,7 @@ body#root {
   }
 
   &__info {
-    max-height: 55.75rem;
+    // max-height: 55.75rem;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -77,6 +78,7 @@ body#root {
 }
 
 .configurator {
+  display: none;
   margin-top: 17.3125rem;
 
   &__list {
@@ -294,6 +296,9 @@ body#root {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2.6875rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 
     &_slide {
       display: flex;
@@ -395,8 +400,8 @@ body#root {
     }
 
     &__image {
-      margin-left: -1.25rem;
-      width: 130%;
+      margin-left: 0;
+      width: 100%;
       max-width: 98vw;
       max-height: 100%;
       order: 0;
@@ -405,7 +410,7 @@ body#root {
 
     &__picture {
       object-fit: cover;
-      margin-left: -1.875rem;
+      margin-left: 0;
     }
 
     &__info {
@@ -493,8 +498,8 @@ body#root {
       z-index: 1;
 
       &_wrapper {
-        margin-top: 22vw;
-        position: absolute;
+        // margin-top: 22vw;
+        // position: absolute;
         z-index: 3;
         width: 100%;
         padding-bottom: 1.25rem;
@@ -520,12 +525,12 @@ body#root {
       flex-direction: column;
       justify-content: space-between;
       z-index: 2;
-      position: absolute;
+      // position: absolute;
       width: 100%;
 
       &_slide {
         justify-content: space-between;
-        padding-top: 57vw;
+        // padding-top: 57vw;
       }
     }
     @media (min-width: 691px) {
@@ -536,7 +541,7 @@ body#root {
       }
       &__info {
         &_slide {
-          padding-top: 25rem;
+          // padding-top: 25rem;
         }
       }
     }
@@ -549,7 +554,7 @@ body#root {
       }
       &__info {
         &_slide {
-          padding-top: 60vw;
+          // padding-top: 60vw;
         }
       }
     }
@@ -635,8 +640,8 @@ body#root {
       z-index: 1;
 
       &_wrapper {
-        margin-top: 20vw;
-        position: absolute;
+        // margin-top: 20vw;
+        // position: absolute;
         z-index: 3;
         width: 100%;
         border-bottom: 1px solid $grayBorder;
@@ -663,24 +668,24 @@ body#root {
       flex-direction: column;
       justify-content: space-between;
       z-index: 2;
-      position: absolute;
+      // position: absolute;
       width: 100%;
 
       &_slide {
         justify-content: space-between;
-        padding-top: 90vw;
+        // padding-top: 90vw;
       }
     }
 
     @media (min-width: 668px) {
       &__slider {
         &_wrapper {
-          margin-top: 10vw;
+          // margin-top: 10vw;
         }
       }
       &__info {
         &_slide {
-          padding-top: 31.25rem;
+          // padding-top: 31.25rem;
         }
       }
     }
@@ -688,12 +693,12 @@ body#root {
     @media (min-width: 347px) and (max-width: 667px) {
       &__slider {
         &_wrapper {
-          margin-top: 10vw;
+          // margin-top: 10vw;
         }
       }
       &__info {
         &_slide {
-          padding-top: 77vw;
+          // padding-top: 77vw;
         }
       }
     }
@@ -713,8 +718,8 @@ body#root {
       z-index: 1;
 
       &_wrapper {
-        margin-top: 12vw;
-        position: absolute;
+        // margin-top: 12vw;
+        // position: absolute;
         z-index: 3;
         width: 100%;
 
@@ -736,25 +741,25 @@ body#root {
       flex-direction: column;
       justify-content: space-between;
       z-index: 2;
-      position: absolute;
+      // position: absolute;
       width: 100%;
 
       &_slide {
         justify-content: space-between;
         align-items: center;
-        padding-top: 36.25rem;
+        // padding-top: 36.25rem;
       }
     }
 
     @media (min-width: 668px) {
       &__slider {
         &_wrapper {
-          margin-top: 6vw;
+          // margin-top: 6vw;
         }
       }
       &__info {
         &_slide {
-          padding-top: 600px;
+          // padding-top: 600px;
         }
       }
     }
@@ -762,12 +767,12 @@ body#root {
     @media (min-width: 347px) and (max-width: 667px) {
       &__slider {
         &_wrapper {
-          margin-top: 9vw;
+          // margin-top: 9vw;
         }
       }
       &__info {
         &_slide {
-          padding-top: 37.1875rem;
+          // padding-top: 37.1875rem;
         }
       }
     }
@@ -779,7 +784,7 @@ body#root {
     }
   }
 
-  footer {
-    margin-top: 45.5rem;
-  }
+  // footer {
+  //   margin-top: 45.5rem;
+  // }
 }

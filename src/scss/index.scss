@@ -154,7 +154,7 @@ body#root {
 }
 
 .catalog {
-  margin-top: 7.1875rem;
+  margin-top: 3.1875rem;
 
   &__title {
     text-align: center;
@@ -478,6 +478,7 @@ body#root {
     height: 7.5rem;
     width: 7.5rem;
     position: relative;
+    margin-top: 1rem;
   }
 }
 
@@ -649,7 +650,7 @@ body#root {
 
   .news {
     &__button {
-      display: none;
+      // display: none;
     }
   }
   .posts {
@@ -684,7 +685,8 @@ body#root {
       display: none;
 
       &_mobile {
-        display: block;
+        display: none;
+        // display: block;
         font-size: 0.875rem;
         line-height: 1.5;
         letter-spacing: 0.035em;
@@ -710,6 +712,7 @@ body#root {
     &__more {
       margin-top: 2.5rem;
       position: relative;
+      display: block;
     }
   }
   .production {
@@ -779,7 +782,7 @@ body#root {
       margin: 0 0 1.25rem;
     }
     &__position {
-      margin: 5.625rem 0 0.625rem;
+      margin: 0.625rem 0 0.625rem;
       font-size: 0.875rem;
       line-height: 1.43;
     }
@@ -789,5 +792,39 @@ body#root {
       line-height: 1.43;
       text-decoration: none;
     }
+  }
+}
+
+.modal{
+  &__more{
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 0 2.25rem 2rem;
+    gap: 20px;
+  }
+  &__buttons{
+    display: flex;
+  }
+  &__date{
+    color: #212223;
+  }
+  .owl-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    gap: 5px;
+  }
+  .owl-dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: transparent !important;
+    border: 1px solid #FFFFFF !important;
+  }
+  .owl-dot.active{
+    background: #fff !important;
   }
 }

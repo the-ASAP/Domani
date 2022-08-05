@@ -10,7 +10,8 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 43.75rem;
+  // height: 100%;
+  // height: 43.75rem;
   position: relative;
   background-color: $grayMain;
   padding: 0 1.875rem;
@@ -25,7 +26,7 @@ body#root {
   }
 
   &__info {
-    max-height: 55.75rem;
+    // max-height: 55.75rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -78,7 +79,7 @@ body#root {
 }
 
 .idea {
-  margin-top: 25.9375rem;
+  margin-top: 5.9375rem;
 
   h2 {
     text-align: center;
@@ -310,7 +311,7 @@ body#root {
 
   &__slider {
     margin-top: 7.5rem;
-    margin-bottom: 7.5rem;
+    // margin-bottom: 7.5rem;
 
     &_wrapper {
       overflow: hidden;
@@ -532,7 +533,7 @@ body#root {
 
 @media (max-width: 768px) {
   .intro {
-    height: 80vh;
+    // height: 80vh;
 
     &__image {
       height: 21.3125rem;
@@ -547,7 +548,7 @@ body#root {
     &__image &__picture {
       display: block;
       max-width: 100%;
-      height: auto;
+      height: 100%;
       margin: 0 auto;
     }
 
@@ -608,7 +609,8 @@ body#root {
   }
 
   .idea {
-    margin-top: 65%;
+    // margin-top: 55%;
+    // margin-top: 65%;
 
     &__title {
       font-size: 1.5rem;
@@ -660,7 +662,8 @@ body#root {
 
   .cooperation {
     margin-top: 4.9375rem;
-    margin-bottom: 100%;
+    // margin-bottom: 100%;
+    margin-bottom: 50%;
 
     &__title {
       font-size: 1.5rem;
@@ -684,7 +687,8 @@ body#root {
       }
 
       &_image {
-        margin-top: 6.25rem;
+        margin-top: 3.25rem;
+        // margin-top: 6.25rem;
         margin-left: 1.25rem;
         margin-right: 1.25rem;
       }
@@ -695,12 +699,13 @@ body#root {
     }
 
     @media (min-width: 500px) {
-      margin-bottom: 32.125rem;
+      // margin-bottom: 32.125rem;
     }
   }
 
   .function {
-    margin-top: 4.375rem;
+    margin-top: 2.375rem;
+    // margin-top: 4.375rem;
     margin-bottom: 0;
 
     &__container {
@@ -732,7 +737,8 @@ body#root {
   }
 
   .projects {
-    margin-top: 4.375rem;
+    margin-top: 1.375rem;
+    // margin-top: 4.375rem;
 
     &__all-project {
       display: none;
@@ -746,7 +752,8 @@ body#root {
 
       &_wrapper {
         margin-top: 20vw;
-        position: absolute;
+        // margin-top: 20vw;
+        // position: absolute;
         z-index: 3;
         width: 100%;
         border-bottom: 1px solid $grayBorder;
@@ -773,23 +780,27 @@ body#root {
       flex-direction: column;
       justify-content: space-between;
       z-index: 2;
-      position: absolute;
+      // position: absolute;
       width: 100%;
+      margin-bottom: 0;
 
       &_slide {
         justify-content: space-between;
-        padding-top: 90vw;
+        padding-top: 5vw;
+        // padding-top: 90vw;
       }
     }
     @media (min-width: 668px) {
       &__slider {
         &_wrapper {
-          margin-top: 10vw;
+          margin-top: 5vw;
+          // margin-top: 10vw;
         }
       }
       &__info {
         &_slide {
-          padding-top: 31.25rem;
+          padding-top: 1.25rem;
+          // padding-top: 31.25rem;
         }
       }
     }
@@ -802,16 +813,16 @@ body#root {
       }
       &__info {
         &_slide {
-          padding-top: 77vw;
+          // padding-top: 77vw;
         }
       }
     }
   }
 
   .project-site {
-    margin-top: 110vw;
-    margin-bottom: 75vw;
-
+    // margin-top: 110vw;
+    // margin-bottom: 75vw;
+    max-height: inherit;
     &__title {
       margin-bottom: 0;
       max-width: 90%;
@@ -826,7 +837,9 @@ body#root {
       flex-direction: column;
       margin-left: -1.25rem;
       width: 110%;
-      max-height: 35.3125rem;
+      max-height: inherit;
+      // max-height: 35.3125rem;
+      margin-bottom: 0;
       justify-content: space-between;
 
       &_text {
@@ -834,7 +847,7 @@ body#root {
       }
 
       &_image {
-        margin-top: 6.25rem;
+        // margin-top: 6.25rem;
         margin-left: 1.25rem;
         margin-right: 1.25rem;
       }
@@ -845,25 +858,25 @@ body#root {
     }
 
     @media (min-width: 700px) {
-      margin-bottom: 60%;
+      // margin-bottom: 60%;
     }
     @media (min-width: 300px) and (max-width: 346px) {
-      margin-top: 165vw;
+      // margin-top: 165vw;
     }
     @media (min-width: 347px) and (max-width: 400px) {
-      margin-top: 150vw;
+      // margin-top: 150vw;
     }
     @media (min-width: 400px) and (max-width: 450px) {
-      margin-top: 135vw;
+      // margin-top: 135vw;
     }
     @media (min-width: 450px) and (max-width: 500px) {
-      margin-top: 125vw;
+      // margin-top: 125vw;
     }
     @media (min-width: 500px) and (max-width: 600px) {
-      margin-top: 120vw;
+      // margin-top: 120vw;
     }
     @media (min-width: 600px) and (max-width: 667px) {
-      margin-top: 115vw;
+      // margin-top: 115vw;
     }
   }
 

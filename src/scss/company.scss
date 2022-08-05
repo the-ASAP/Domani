@@ -10,7 +10,8 @@ body#root {
 .intro {
   margin: 0;
   width: 100%;
-  height: 43.75rem;
+  // height: 100%;
+  // height: 43.75rem;
   position: relative;
   background-color: $mainColor;
   padding: 0 1.875rem;
@@ -25,7 +26,7 @@ body#root {
   }
 
   &__info {
-    max-height: 55.75rem;
+    // max-height: 55.75rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -81,7 +82,7 @@ body#root {
 }
 
 .quote {
-  margin-top: 28.5rem;
+  margin-top: 3.5rem;
   // border-bottom: 1px solid #a8a8a8;
 
   &__border {
@@ -101,7 +102,7 @@ body#root {
   &__icon {
     width: 3.5rem;
     height: 2.9375rem;
-    position: absolute;
+    // position: absolute;
     top: -1.5rem;
     left: 2%;
 
@@ -171,7 +172,7 @@ body#root {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 7rem;
+    // margin-left: 7rem;
   }
 
   &__image {
@@ -289,7 +290,7 @@ body#root {
     &_left {
       box-shadow: -5.875rem -3.125rem 0px 0px $grayBack;
       max-width: 29rem;
-      max-height: 18.125rem;
+      max-height: 20.125rem;
     }
     &_right {
       box-shadow: 4.5rem -4.9375rem 0px -1.125rem $grayBack;
@@ -432,6 +433,7 @@ body#root {
     height: 7.5rem;
     width: 7.5rem;
     position: relative;
+    margin-top: 1rem;
   }
 }
 
@@ -586,11 +588,13 @@ body#root {
       box-shadow: 2.575rem 2.9375rem 0px -1.25rem $grayBack;
       max-width: 39.125rem;
       max-height: 22.075rem;
+      display: flex;
     }
   }
 
   .production {
-    margin-top: 9.6875rem;
+    margin-top: 3.6875rem;
+    // margin-top: 9.6875rem;
 
     &__video {
       margin-top: 1.875rem;
@@ -609,7 +613,8 @@ body#root {
   }
 
   .image {
-    margin-top: 7.5rem;
+    margin-top: 2.5rem;
+    // margin-top: 7.5rem;
 
     &__svg {
       &_1 {
@@ -643,7 +648,8 @@ body#root {
   }
 
   .production-block {
-    margin-top: 5.9375rem;
+    margin-top: 1.9375rem;
+    // margin-top: 5.9375rem;
 
     &__title {
       font-size: 1.5rem;
@@ -674,7 +680,8 @@ body#root {
     &__list {
       display: block;
       margin-top: 3.75rem;
-      z-index: 3;
+      z-index: 1;
+      // z-index: 3;
 
       &__row {
         margin-bottom: 50px;
@@ -682,7 +689,8 @@ body#root {
 
       &_left {
         margin: 0;
-        z-index: 2;
+        z-index: 1;
+        // z-index: 2;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -693,6 +701,7 @@ body#root {
         //margin-top: 27.0625rem;
         position: relative;
         z-index: 1;
+        max-width: 34.8125rem;
       }
     }
 
@@ -702,12 +711,25 @@ body#root {
       }
       &_right {
         box-shadow: 2.9375rem -3.8125rem 0px -1.875rem $grayBack;
+        max-width: 29rem;
+        max-height: 18.125rem;
       }
     }
   }
+  .production-block__list_row:first-child{
+    margin-bottom: 6.0625rem;
+  }
+  .production-block__list_row{
+    margin-bottom: 6.0625rem;
+  }
+  .production-block__text_right{
+    max-width: 28.5rem;
+  }
 
   .cooperation {
-    margin-bottom: 15.3125rem;
+    margin-bottom: 5.3125rem;
+    // margin-bottom: 15.3125rem;
+    margin-top: 0;
     max-height: none;
 
     &__title {
@@ -725,7 +747,8 @@ body#root {
       flex-direction: column;
       margin-left: -1.25rem;
       width: 110%;
-      max-height: 31.5625rem;
+      max-height: inherit;
+      // max-height: 31.5625rem;
       display: flex;
       justify-content: flex-start;
 
@@ -773,7 +796,8 @@ body#root {
       margin: 0 0 1.25rem;
     }
     &__position {
-      margin: 5.625rem 0 0.625rem;
+      margin: 1.325rem 0 0.625rem;
+      // margin: 5.625rem 0 0.625rem;
       font-size: 0.875rem;
       line-height: 1.43;
     }

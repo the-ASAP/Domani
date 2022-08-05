@@ -7,7 +7,8 @@ import {
   pageUp,
   fillCatalogContent,
   getFooterModal,
-  scrollToMap
+  scrollToMap,
+  closeBitrixForm
 } from '../vendors/js/general';
 import '../scss/contacts.scss';
 

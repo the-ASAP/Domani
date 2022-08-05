@@ -61,6 +61,7 @@ body#root {
 
   &__filters {
     margin-bottom: 3.125rem;
+    display: none;
   }
 
   .select {
@@ -75,13 +76,16 @@ body#root {
 .filterModal {
   display: none;
 }
-
+.configurator__container{
+  display: none;
+}
 @media (max-width: 768px) {
   .intro {
     height: 100vh;
 
     &__image {
-      object-position: -19.125rem 0px;
+      object-position: right;
+      // object-position: -19.125rem 0px;
     }
     &__info {
       margin-left: 0;
@@ -91,6 +95,12 @@ body#root {
       font-size: 1.75rem;
       line-height: 1.29;
       max-width: 50%;
+    }
+  }
+  .catalog{
+    &__filters {
+      
+      display: none;
     }
   }
 
