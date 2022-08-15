@@ -399,6 +399,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@font-face {
+  font-family: "Helios-Ext";
+  src: url(../../build/fonts/heliosextbold.otf);
+  font-weight: bold;
+}
+.intro__title {
+  font-family: "Helios-Ext", sans-serif;
+}
 .feedbackModal {
   position: fixed;
   top: 0;
@@ -1544,6 +1552,14 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@font-face {
+  font-family: "Helios-Ext";
+  src: url(../../build/fonts/heliosextbold.otf);
+  font-weight: bold;
+}
+.intro__title {
+  font-family: "Helios-Ext", sans-serif;
+}
 .feedbackModal {
   position: fixed;
   top: 0;
@@ -2688,6 +2704,14 @@ button {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@font-face {
+  font-family: "Helios-Ext";
+  src: url(../../build/fonts/heliosextbold.otf);
+  font-weight: bold;
+}
+.intro__title {
+  font-family: "Helios-Ext", sans-serif;
 }
 .feedbackModal {
   position: fixed;
@@ -4567,10 +4591,10 @@ footer {
   height: 100%;
 }
 .menuMobail .menuCatalog__Accordion:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
 }
 .menuMobail .menuCatalog__Accordion:nth-child(3n) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
 }
 .menuCatalog__cont {
   display: -webkit-box;
@@ -4581,14 +4605,14 @@ footer {
 .menuCatalog__style {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
 .menuCatalog__doors {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
 }
 .menuCatalog__style {
   padding: 1.25rem 0 0 0;
@@ -4597,10 +4621,10 @@ footer {
   width: 100%;
 }
 .menuMobail .menuCatalog__Accordion:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
 }
 .menuMobail .menuCatalog__Accordion:nth-child(3n) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
 }
 .products-card__container {
   display: inline;
@@ -4624,24 +4648,20 @@ footer {
   .menuDesktop {
     display: none;
   }
-
   .menuCatalog__doors {
     border-bottom: none;
     padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
   }
-
   .menuCatalog__cont {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-
   .menuCatalog__doors {
     width: 100%;
   }
-
   .menuCatalog__Accordion {
     border-top: none;
   }
@@ -4687,11 +4707,9 @@ footer {
   .aside__up {
     margin-top: 0;
   }
-
   .menuCatalog__lk {
     margin-bottom: 100px;
   }
-
   .map {
     height: 120vw;
     padding-top: 3.125rem;
@@ -4708,152 +4726,122 @@ footer {
     left: 53%;
     top: 41%;
   }
-
   #ulyanovsk_point {
     top: 41%;
     left: 58%;
   }
-
   #tambov_point {
     left: 52%;
     top: 43%;
   }
-
   #pyatigorsk_point {
     top: 45%;
     left: 59%;
   }
-
   #bryansk_point {
     top: 43%;
     left: 51%;
   }
-
   #hurth_point {
     top: 42%;
     left: 48%;
   }
-
   #makhachkala_point {
     top: 45%;
     left: 60%;
   }
-
   #belgrad_point {
     top: 45%;
     left: 52%;
   }
-
   #grodno_point {
     top: 41%;
     left: 53%;
   }
-
   #minsk_point {
     top: 41%;
     left: 52%;
   }
-
   #oman_point {
     top: 52%;
     left: 64%;
   }
-
   #riga_point {
     top: 39%;
     left: 53%;
   }
-
   #tyumen_point {
     top: 40%;
     left: 63%;
   }
-
   #irkutsk_point {
     top: 40%;
     left: 76%;
   }
-
   #taganrog_point {
     top: 43%;
     left: 58%;
   }
-
   #vladimir_point {
     top: 39%;
     left: 56%;
   }
-
   #cherepovets_point {
     top: 38%;
     left: 56%;
   }
-
   #moscow_point {
     top: 40%;
     left: 56%;
   }
-
   #domodedovo_point {
     top: 40.5%;
     left: 56%;
   }
-
   #сhelyabinsk_point {
     top: 42%;
     left: 66%;
   }
-
   #estonia_point {
     top: 39%;
     left: 52%;
   }
-
   #novosibirsk_point {
     top: 43%;
     left: 72%;
   }
-
   #velikiyNovgorod_point {
     top: 40%;
     left: 55%;
   }
-
   #ufa_point {
     top: 42%;
     left: 62%;
   }
-
   #yekaterinburg_point {
     top: 42%;
     left: 63%;
   }
-
   #belgorod_point {
     top: 44%;
     left: 56%;
   }
-
   #izhevsk_point {
     top: 42%;
     left: 61%;
   }
-
   #kazan_point {
     top: 43%;
     left: 60%;
   }
-
   #solikamsk_point {
     top: 39%;
     left: 63%;
   }
-
   #sharjah_point {
     top: 51%;
     left: 64%;
   }
-
   .outro {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4913,7 +4901,6 @@ footer {
     color: #fff;
     color: var(--main-back);
   }
-
   .asap {
     padding: 1.75rem 0;
     display: -webkit-box;
@@ -4931,7 +4918,6 @@ footer {
   .asap__logo {
     display: block;
   }
-
   .menuCatalog__wrapper {
     display: grid;
   }
@@ -4960,7 +4946,6 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-
   .modal {
     overflow: scroll;
   }
@@ -4977,7 +4962,6 @@ footer {
   .modal__more {
     margin-top: 1rem;
   }
-
   .choiceCity__blocks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4989,7 +4973,6 @@ footer {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-
   .choiceCity__block {
     width: 33%;
   }
@@ -5158,6 +5141,14 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@font-face {
+  font-family: "Helios-Ext";
+  src: url(../../build/fonts/heliosextbold.otf);
+  font-weight: bold;
+}
+.intro__title {
+  font-family: "Helios-Ext", sans-serif;
 }
 .feedbackModal {
   position: fixed;
@@ -6753,7 +6744,6 @@ body#root {
     margin-top: 2.5rem;
     margin-bottom: 10.875rem;
   }
-
   .socials__box {
     padding: 30px 15px;
     padding-bottom: 0;
@@ -6789,7 +6779,6 @@ body#root {
     position: relative;
     right: 0;
   }
-
   .menu {
     height: 5.0625rem;
   }
@@ -6818,7 +6807,6 @@ body#root {
   .menu__openCatalog {
     margin: 0;
   }
-
   .quote {
     padding: 3.125rem 0 0;
     margin-bottom: 0;
@@ -6854,11 +6842,9 @@ body#root {
     border-bottom: 1px solid #f2f2f2;
     border-bottom: 1px solid var(--gray-small);
   }
-
   section {
     margin-top: 3.75rem;
   }
-
   .catalog {
     margin-top: 2.8125rem;
   }
@@ -6866,7 +6852,6 @@ body#root {
     display: block;
     margin-top: 2.5rem;
   }
-
   .product {
     width: 100%;
     display: block;
@@ -6878,7 +6863,6 @@ body#root {
   .product:last-child {
     margin: 0;
   }
-
   .ideas__list {
     margin-top: 2.5rem;
     display: block;
@@ -6887,19 +6871,15 @@ body#root {
     width: 100%;
     height: 70vw;
   }
-
   .posts {
     margin-top: 1.875rem;
   }
-
   .post:nth-child(2) {
     display: none;
   }
-
   .post:nth-child(3) {
     display: none;
   }
-
   .post {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6954,7 +6934,6 @@ body#root {
     position: relative;
     display: block;
   }
-
   .production__video {
     margin-top: 1.875rem;
     height: 70vw;
@@ -6967,12 +6946,10 @@ body#root {
   .production__button svg {
     height: 1rem;
   }
-
   .instagram__list {
     display: block;
     margin-top: 1.875rem;
   }
-
   .postInst {
     display: block;
     width: 100%;
@@ -6990,7 +6967,6 @@ body#root {
   .postInst__text {
     max-width: 100%;
   }
-
   .contacts__title {
     margin-bottom: 1.875rem;
   }
@@ -7007,7 +6983,6 @@ body#root {
   .contacts__other {
     display: block;
   }
-
   .contact {
     width: 100%;
     margin-bottom: 1.25rem;
@@ -7244,6 +7219,14 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@font-face {
+  font-family: "Helios-Ext";
+  src: url(../../build/fonts/heliosextbold.otf);
+  font-weight: bold;
+}
+.intro__title {
+  font-family: "Helios-Ext", sans-serif;
 }
 .feedbackModal {
   position: fixed;
