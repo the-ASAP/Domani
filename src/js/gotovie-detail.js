@@ -8,7 +8,7 @@ import {
   toggleModal,
   pageUp,
   OutsideClick,
-  openModalCatalog,
+  toggleModalCatalog,
   accordion,
   fillCatalogContent,
   getFooterModal,
@@ -57,12 +57,16 @@ const stopPropog = () => {
   $('.intro__text_date').on('click', (e) => {
     e.stopPropagation();
     var imgSRC;
+    var imgAlt;
     if (e.target.classList.contains('intro__text_color')) {
       const container = document.querySelector('.modal-color');
       container.classList.toggle('active-block');
       imgSRC = e.target.getAttribute('src');
+      imgAlt = e.target.getAttribute('alt');
       const imgBlock = container.querySelector('.color-picture');
       imgBlock.setAttribute('src', imgSRC);
+      const imgText = container.querySelector('.texture-text__text');
+      imgText.textContent = imgAlt;
       document.querySelector('#root').style.overflow = 'hidden';
     }
 
@@ -87,7 +91,7 @@ let rexExpForPrice = (price) => {
 $().ready(() => {
   stopPropog();
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  // toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   rexExpForPrice('.text-price__new');
   rexExpForPrice('.text-price__old');
@@ -100,7 +104,7 @@ $().ready(() => {
 
   texttoolkit();
 
-  scrollToMap();
+  scrollToMap('.menu__buy');scrollToMap('.aside__city');
 
   initTabs();
   initTabs('.tab__links', '.tab__content');
@@ -108,8 +112,8 @@ $().ready(() => {
 
   fillCatalogContent();
 
-  openModalCatalog('.menu__openCatalog');
-  openModalCatalog('.aside__menu');
+  toggleModalCatalog('.menu__openCatalog');
+  toggleModalCatalog('.aside__menu');
 
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
 

@@ -8,7 +8,7 @@ import {
   toggleModal,
   pageUp,
   OutsideClick,
-  openModalCatalog,
+  toggleModalCatalog,
   accordion,
   fillCatalogContent,
   getFooterModal,
@@ -56,7 +56,7 @@ const texttoolkit = () => {
 
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  // toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   OutsideClick('.modal', 'modal__active');
   OutsideClick('.select', '', 'data-state');
@@ -66,7 +66,7 @@ $().ready(() => {
 
   texttoolkit();
 
-  scrollToMap();
+  scrollToMap('.menu__buy');scrollToMap('.aside__city');
 
   initTabs();
   initTabs('.tab__links', '.tab__content');
@@ -74,8 +74,8 @@ $().ready(() => {
 
   fillCatalogContent();
 
-  openModalCatalog('.menu__openCatalog');
-  openModalCatalog('.aside__menu');
+  toggleModalCatalog('.menu__openCatalog');
+  toggleModalCatalog('.aside__menu');
 
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
 

@@ -8,7 +8,7 @@ import {
   pageUp,
   toggleModal,
   OutsideClick,
-  openModalCatalog,
+  toggleModalCatalog,
   accordion,
   fillCatalogContent,
   getFooterModal,
@@ -28,9 +28,9 @@ $().ready(() => {
   //   'findPrice__active',
   //   '.findPrice__close'
   // );
-  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  // toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
-  scrollToMap();
+  scrollToMap('.menu__buy');scrollToMap('.aside__city');
 
   closeBitrixForm();
 
@@ -48,8 +48,8 @@ $().ready(() => {
 
   fillCatalogContent();
 
-  openModalCatalog('.menu__openCatalog');
-  openModalCatalog('.aside__menu');
+  toggleModalCatalog('.menu__openCatalog');
+  toggleModalCatalog('.aside__menu');
 
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
 

@@ -8,7 +8,7 @@ import {
   initTabs,
   toggleModal,
   OutsideClick,
-  openModalCatalog,
+  toggleModalCatalog,
   accordion,
   fillCatalogContent,
   getFooterModal,
@@ -35,9 +35,9 @@ $().ready(() => {
   //   'cooperationModal__active',
   //   '.cooperationModal__close'
   // );
-  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  // toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
-  scrollToMap();
+  scrollToMap('.menu__buy');scrollToMap('.aside__city');
 
   validateForm('.modal_submit');
 
@@ -53,8 +53,8 @@ $().ready(() => {
 
   fillCatalogContent();
 
-  openModalCatalog('.menu__openCatalog');
-  openModalCatalog('.aside__menu');
+  toggleModalCatalog('.menu__openCatalog');
+  toggleModalCatalog('.aside__menu');
 
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');

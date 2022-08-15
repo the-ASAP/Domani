@@ -114,21 +114,37 @@ export const closeBitrixForm = () => {
   });
 };
 
-export const openModalCatalog = (openMenuBtn) => {
-  const closeText = $('.menu__openCatalog').attr('data-closeText');
+const closeModalCatalog = () => {
   const openText = $('.menu__openCatalog').attr('data-openText');
 
-  $(openMenuBtn).on('click', function () {
-    $('.aside__menu').toggleClass('active');
-    $('.menu__openCatalog').toggleClass('active');
+  $('.menuCatalog').slideUp();
 
+  $('.menu__catalog').text(openText);
+  $('.menu').addClass('menu_active');
+
+  $('.menu__icon').replaceWith(menuSvgMain);
+
+  $('body').css({ overflow: 'auto' });
+
+  $('.menu').removeClass('fixed');
+  $('.aside__menu').removeClass('active');
+  $('.menu__openCatalog').removeClass('active');
+};
+
+export const toggleModalCatalog = (openMenuBtn) => {
+  const closeText = $('.menu__openCatalog').attr('data-closeText');
+
+  $(openMenuBtn).on('click', function () {
     if (!$('header').hasClass('menu_white')) {
       $('header').toggleClass('menu_black');
     }
-
-    $('.menuCatalog').slideToggle();
-
     if ($('.aside__menu').hasClass('active') || $('.menu__openCatalog').hasClass('active')) {
+      closeModalCatalog();
+    } else {
+      $('.menuCatalog').slideDown();
+
+      $('.aside__menu').addClass('active');
+      $('.menu__openCatalog').addClass('active');
       $('.menu__catalog').text(closeText);
       $('.menu').addClass('menu_active');
 
@@ -137,15 +153,6 @@ export const openModalCatalog = (openMenuBtn) => {
       $('.menu').addClass('fixed');
 
       $('body').css({ overflow: 'hidden' });
-    } else {
-      $('.menu__catalog').text(openText);
-      $('.menu').removeClass('menu_active');
-
-      $('.menu__icon').replaceWith(menuSvgMain);
-
-      $('body').css({ overflow: 'auto' });
-
-      $('.menu').removeClass('fixed');
     }
   });
 };
@@ -269,10 +276,11 @@ export const minusSlideIndex = (classSlider, classNumber) => {
 export const getFooterModal = () => {
   $('.map__point').each((index, point) => {
     $(point).on('click', () => {
-      $('.modal').children('.modal__content').remove();
-      $('.modal').children('.modal__more').remove();
-      $('.modal').children('.bx_incl_area_1').remove();
       // $('.modal').children('.modal__content').remove();
+      // $('.modal').children('.modal__more').remove();
+      // $('.modal').children('.bx_incl_area_1').remove();
+      // $('.modal').children('script').remove();
+      $('.modal').empty();
 
       const ids = JSON.parse($(point).attr('data-cities'));
 
@@ -293,6 +301,7 @@ export const getFooterModal = () => {
           dots: false,
           mouseDrag: false,
           touchDrag: false,
+          // autoHeight: true,
 
           // margin: 11,
           responsive: {
@@ -488,16 +497,19 @@ export const cutColorsCount = () => {
   });
 };
 
-export const scrollToMap = () => {
-  $('.menu__buy').on('click', () => {
+export const scrollToMap = (button) => {
+  $(button).on('click', () => {
     $('html, body').animate(
       {
         scrollTop: $('footer').offset().top
       },
       1000
     );
+
+    if ($('.menu').hasClass('menu_active')) {
+      closeModalCatalog();
+    }
   });
-  openModalCatalog('.menu__buy');
 };
 
 export const validateForm = (button) => {

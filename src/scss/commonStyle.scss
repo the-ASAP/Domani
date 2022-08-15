@@ -713,6 +713,10 @@ footer {
     color: $grayMain;
   }
 
+  &__buttons{
+    display: flex;
+  }
+
   &__button {
     margin-left: 0.5rem;
     width: 2.5rem;

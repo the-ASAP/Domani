@@ -3,7 +3,7 @@ import {
   openSelect,
   toggleModal,
   OutsideClick,
-  openModalCatalog,
+  toggleModalCatalog,
   accordion,
   pageUp,
   fillCatalogContent,
@@ -16,7 +16,7 @@ import '../scss/projects.scss';
 $().ready(() => {
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
 
-  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  // toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   toggleModal(
     '.intro__button',
@@ -40,14 +40,14 @@ $().ready(() => {
 
   openSelect();
 
-  scrollToMap();
+  scrollToMap('.menu__buy');scrollToMap('.aside__city');
 
   //initTabs(".horTab", ".variants__item");
 
   fillCatalogContent();
 
-  openModalCatalog('.menu__openCatalog');
-  openModalCatalog('.aside__menu');
+  toggleModalCatalog('.menu__openCatalog');
+  toggleModalCatalog('.aside__menu');
 
   accordion('.menuCatalog__Accordion', '.menuCatalog__information', 'activeAccordion');
   accordion('.menuCatalog__mainAccordion', '.menuCatalog__information', 'activeAccordion');

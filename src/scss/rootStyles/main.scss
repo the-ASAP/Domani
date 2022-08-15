@@ -9,6 +9,16 @@
   box-sizing: border-box;
 }
 
+// @font-face {
+//   font-family: 'Helios-Ext';
+//   src: url('src/fonts/heliosextbold.otf');
+//   font-weight: bold;
+// }
+
+.intro__title {
+  font-family: 'Helios-Ext', sans-serif;
+}
+
 .feedbackModal {
   position: fixed;
   top: 0;
@@ -474,7 +484,6 @@ button {
     }
   }
 
-  
   @media (max-width: 768px) {
     position: relative;
     min-width: 14.375rem;
@@ -823,58 +832,58 @@ button {
   width: auto;
 }
 
-.hide-block{
+.hide-block {
   display: none !important;
 }
-.active-block{
+.active-block {
   display: flex !important;
 }
 
-.intro__text_color{
-  img{
+.intro__text_color {
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
   }
 }
-.modal-color{
+.modal-color {
   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+
+  div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 100;
-
-    div{
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      width: auto;
-      flex-direction: column;
-    }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: auto;
+    flex-direction: column;
+  }
 }
-.color-picture{
+.color-picture {
   max-width: 620px;
   max-height: 390px;
 }
-.texture-text__block{
+.texture-text__block {
   width: 100% !important;
   background: #fff;
   padding: 29px 0 35px;

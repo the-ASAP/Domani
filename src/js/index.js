@@ -5,7 +5,7 @@ import {
   toggleModal,
   OutsideClick,
   pageUp,
-  openModalCatalog,
+  toggleModalCatalog,
   accordion,
   fillCatalogContent,
   getFooterModal,
@@ -123,7 +123,7 @@ $().ready(() => {
   createYouTubeEmbedLink($('.production__button'), $('.production__video'));
 
   toggleModal('.map__point', '.modal', 'modal__active', '.modal__close');
-  toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
+  // toggleModal('.aside__city', '.choiceCity', 'choiceCity__active', '.choiceCity__close');
 
   OutsideClick('.modal', 'modal__active');
   //OutsideClick(".select", "", "data-state");
@@ -131,7 +131,7 @@ $().ready(() => {
 
   closeBitrixForm();
 
-  scrollToMap();
+  scrollToMap('.menu__buy');scrollToMap('.aside__city');
 
   loadNews('.news__button', '.posts');
 
@@ -140,8 +140,8 @@ $().ready(() => {
 
   fillCatalogContent();
 
-  openModalCatalog('.menu__openCatalog');
-  openModalCatalog('.aside__menu');
+  toggleModalCatalog('.menu__openCatalog');
+  toggleModalCatalog('.aside__menu');
 
   countNews();
 
