@@ -170,7 +170,7 @@
 @font-face {
   font-family: "Helios-Ext";
   src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: bold;
+  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -1323,7 +1323,7 @@ button {
 @font-face {
   font-family: "Helios-Ext";
   src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: bold;
+  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -2476,7 +2476,7 @@ button {
 @font-face {
   font-family: "Helios-Ext";
   src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: bold;
+  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -4913,7 +4913,7 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
 @font-face {
   font-family: "Helios-Ext";
   src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: bold;
+  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -6039,9 +6039,9 @@ body#root {
 .intro__title {
   color: #fff;
   color: var(--main-back);
-  max-width: 37rem;
-  font-size: 3.875rem;
-  line-height: 1.25;
+  font-size: 2.882rem;
+  line-height: 1.5;
+  max-width: 39rem;
 }
 .intro__button {
   background-color: #212223;
@@ -6991,7 +6991,7 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
 @font-face {
   font-family: "Helios-Ext";
   src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: bold;
+  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
