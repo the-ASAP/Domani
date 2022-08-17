@@ -167,11 +167,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
-}
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
 }
@@ -1319,11 +1314,6 @@ button {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -2561,11 +2551,6 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
-}
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
 }
@@ -3713,11 +3698,6 @@ button {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -6151,11 +6131,6 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
-}
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
 }
@@ -7280,9 +7255,9 @@ body#root {
 .intro__title {
   color: #fff;
   color: var(--main-back);
-  font-size: 2.882rem;
-  line-height: 1.5;
-  max-width: 39rem;
+  max-width: 37rem;
+  font-size: 3.875rem;
+  line-height: 1.25;
 }
 .intro__button {
   background-color: #212223;
@@ -8116,9 +8091,9 @@ body#root {
 .intro__title {
   color: #fff;
   color: var(--main-back);
-  font-size: 2.882rem;
-  line-height: 1.5;
-  max-width: 39rem;
+  max-width: 37rem;
+  font-size: 3.875rem;
+  line-height: 1.25;
 }
 .catalog {
   margin-top: 3.125rem;

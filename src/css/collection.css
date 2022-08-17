@@ -406,11 +406,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
-}
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
 }
@@ -1572,11 +1567,6 @@ button {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;
@@ -4023,11 +4013,6 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-@font-face {
-  font-family: "Helios-Ext";
-  src: url(../../build/fonts/heliosextbold.otf);
-  font-weight: normal;
 }
 .intro__title {
   font-family: "Helios-Ext", sans-serif;

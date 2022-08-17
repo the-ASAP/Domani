@@ -35,12 +35,12 @@ body#root {
   &__title {
     color: $mainBack;
 
-    font-size: 2.882rem;
-    line-height: 1.5;
-    max-width: 39rem;
-    // max-width: 37rem;
-    // font-size: 3.875rem;
-    // line-height: 1.25;
+    // font-size: 2.882rem;
+    // line-height: 1.5;
+    // max-width: 39rem;
+    max-width: 37rem;
+    font-size: 3.875rem;
+    line-height: 1.25;
   }
 
   &__button {
