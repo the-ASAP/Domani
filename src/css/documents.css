@@ -5367,6 +5367,7 @@ body#root {
   height: 46rem;
   position: relative;
   width: 30.8125rem;
+  border: none;
 }
 .modalDocument__picture img {
   width: 100%;
@@ -5469,5 +5470,26 @@ body#root {
   .modalDocument__document img {
     height: 90%;
     width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .modalDocument {
+    height: 100vh;
+  }
+  .modalDocument__content {
+    height: inherit;
+  }
+  .modalDocument__intro {
+    width: 90%;
+    height: 76vh;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .modalDocument__picture {
+    width: 99% !important;
+    height: 99% !important;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }

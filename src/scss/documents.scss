@@ -280,6 +280,7 @@ body#root{
     height: 46rem;
     position: relative;
     width: 30.8125rem;
+    border: none;
     img{
       width: 100%;
       height: 100%;
@@ -388,4 +389,26 @@ body#root{
       width: 100%;
     }
   }
+}
+
+@media (max-width: 560px) {
+  .modalDocument{
+    height: 100vh;
+    &__content{
+      height: inherit;
+    }
+    &__intro{
+      width: 90%;
+      height: 76vh;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+    &__picture{
+      width: 99% !important;
+      height: 99% !important;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+  }
+
 }
