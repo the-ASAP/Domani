@@ -5289,7 +5289,7 @@ body#root {
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   }
 }
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .stand__box {
     text-align: center;
   }

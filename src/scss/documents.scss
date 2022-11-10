@@ -79,6 +79,7 @@ body#root{
     
     &__content.active {
       display: flex;
+      gap: 0.75rem;
       //flex-wrap: wrap;
     }
     
@@ -105,12 +106,12 @@ body#root{
   border: 1px solid hsla(210,2.9%,13.3%, .2);
   
 
-  &:nth-child(2) {
-    margin: 0 0.75rem;
-  }
-  &:nth-child(4) {
-    margin-left: 0.75rem;
-  }
+  // &:nth-child(2) {
+  //   margin: 0 0.75rem;
+  // }
+  // &:nth-child(4) {
+  //   margin-left: 0.75rem;
+  // }
 
   &__back {
     position: absolute;

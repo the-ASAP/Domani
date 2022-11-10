@@ -1261,14 +1261,8 @@ body#root {
     // margin-top: 45.5rem;
   }
 }
-@media screen and(max-width: 475px) {
+@media (max-width: 475px) {
   .ideas__slider_item{
     padding-bottom: 19.5625rem;
   }
 }
-
-// @media screen and(max-width: 768px) {
-//   .fittings__slider_wrapper{
-//     margin-top: -2vw;
-//   }
-// }
