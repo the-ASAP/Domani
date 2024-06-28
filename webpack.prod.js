@@ -14,18 +14,6 @@ const cssFiles = [
 
 module.exports = merge(common, {
   mode: 'production',
-  optimization: {
-    minimize: true,
-    minimizer: [
-      // Минимизация js
-      new TerserPlugin(),
-
-      // Минимизация css
-      new CssMinimizerPlugin({
-        include: cssFiles
-      })
-    ]
-  },
   plugins: [
     //Очистка билда при запуске команд
     new CleanWebpackPlugin(),

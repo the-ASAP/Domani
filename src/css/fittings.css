@@ -372,7 +372,6 @@
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .feedbackModal__send:hover {
@@ -605,7 +604,6 @@ button {
   width: 7px;
   height: 1px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: #333333;
   -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -639,7 +637,6 @@ button {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 8;
@@ -666,7 +663,6 @@ button {
   max-height: 0;
   padding: 0 1rem;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
@@ -733,7 +729,6 @@ button {
     width: 7px;
     height: 1px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background-color: #333333;
     -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -767,7 +762,6 @@ button {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 8;
@@ -794,7 +788,6 @@ button {
     max-height: 0;
     padding: 0 1rem;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
@@ -819,7 +812,6 @@ button {
   cursor: pointer;
   padding: 0.875rem 1rem;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   font-size: 1.0625rem;
   border-bottom: 1px solid #a8a8a8;
@@ -1520,7 +1512,6 @@ button {
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .feedbackModal__send:hover {
@@ -1753,7 +1744,6 @@ button {
   width: 7px;
   height: 1px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: #333333;
   -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -1787,7 +1777,6 @@ button {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 8;
@@ -1814,7 +1803,6 @@ button {
   max-height: 0;
   padding: 0 1rem;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
@@ -1881,7 +1869,6 @@ button {
     width: 7px;
     height: 1px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background-color: #333333;
     -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -1915,7 +1902,6 @@ button {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 8;
@@ -1942,7 +1928,6 @@ button {
     max-height: 0;
     padding: 0 1rem;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
@@ -1967,7 +1952,6 @@ button {
   cursor: pointer;
   padding: 0.875rem 1rem;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   font-size: 1.0625rem;
   border-bottom: 1px solid #a8a8a8;
@@ -2281,7 +2265,6 @@ button {
   height: 6.25rem;
   z-index: 3;
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
   color: white;
 }
@@ -2756,7 +2739,6 @@ button {
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .feedbackModal__send:hover {
@@ -2989,7 +2971,6 @@ button {
   width: 7px;
   height: 1px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: #333333;
   -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -3023,7 +3004,6 @@ button {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 8;
@@ -3050,7 +3030,6 @@ button {
   max-height: 0;
   padding: 0 1rem;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
@@ -3117,7 +3096,6 @@ button {
     width: 7px;
     height: 1px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background-color: #333333;
     -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -3151,7 +3129,6 @@ button {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 8;
@@ -3178,7 +3155,6 @@ button {
     max-height: 0;
     padding: 0 1rem;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
@@ -3203,7 +3179,6 @@ button {
   cursor: pointer;
   padding: 0.875rem 1rem;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   font-size: 1.0625rem;
   border-bottom: 1px solid #a8a8a8;
@@ -3904,7 +3879,6 @@ button {
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .feedbackModal__send:hover {
@@ -4137,7 +4111,6 @@ button {
   width: 7px;
   height: 1px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: #333333;
   -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -4171,7 +4144,6 @@ button {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 8;
@@ -4198,7 +4170,6 @@ button {
   max-height: 0;
   padding: 0 1rem;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
@@ -4265,7 +4236,6 @@ button {
     width: 7px;
     height: 1px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background-color: #333333;
     -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -4299,7 +4269,6 @@ button {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 8;
@@ -4326,7 +4295,6 @@ button {
     max-height: 0;
     padding: 0 1rem;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
@@ -4351,7 +4319,6 @@ button {
   cursor: pointer;
   padding: 0.875rem 1rem;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   font-size: 1.0625rem;
   border-bottom: 1px solid #a8a8a8;
@@ -4848,7 +4815,6 @@ button {
   padding-top: 9.375rem;
   overflow-y: scroll;
   -webkit-transition: top 0.3s ease-in;
-  -o-transition: top 0.3s ease-in;
   transition: top 0.3s ease-in;
   display: none;
 }
@@ -5047,7 +5013,6 @@ button {
   position: absolute;
   -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
-  -o-transition: transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
@@ -5076,7 +5041,6 @@ button {
   height: 4.375rem;
   display: block;
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 .aside__block:hover {
@@ -5110,10 +5074,8 @@ button {
 footer {
   margin-top: 6.25rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#393a3a), to(#212223));
-  background: -o-linear-gradient(top, #393a3a 0%, #212223 100%);
   background: linear-gradient(180deg, #393a3a 0%, #212223 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#393a3a), to(var(--gray-main)));
-  background: -o-linear-gradient(top, #393a3a 0%, var(--gray-main) 100%);
   background: linear-gradient(180deg, #393a3a 0%, var(--gray-main) 100%);
 }
 .map {
@@ -5337,7 +5299,6 @@ footer {
   bottom: 0;
   right: -25.8125rem;
   -webkit-transition: right 0.3s ease;
-  -o-transition: right 0.3s ease;
   transition: right 0.3s ease;
   z-index: 6;
   background-color: white;
@@ -5580,10 +5541,10 @@ footer {
   height: 100%;
 }
 .menuMobail .menuCatalog__Accordion:first-child {
-  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.12);
 }
 .menuMobail .menuCatalog__Accordion:nth-child(3n) {
-  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.12);
 }
 .menuCatalog__cont {
   display: -webkit-box;
@@ -5594,14 +5555,14 @@ footer {
 .menuCatalog__style {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.12);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
 .menuCatalog__doors {
-  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.12);
 }
 .menuCatalog__style {
   padding: 1.25rem 0 0 0;
@@ -5610,10 +5571,10 @@ footer {
   width: 100%;
 }
 .menuMobail .menuCatalog__Accordion:first-child {
-  border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.12);
 }
 .menuMobail .menuCatalog__Accordion:nth-child(3n) {
-  border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.12);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.12);
 }
 .products-card__container {
   display: inline;
@@ -5640,7 +5601,7 @@ footer {
   .menuCatalog__doors {
     border-bottom: none;
     padding: 0;
-    border-top: 1px solid hsla(0deg, 0%, 100%, 0.12);
+    border-top: 1px solid hsla(0, 0%, 100%, 0.12);
   }
   .menuCatalog__cont {
     -webkit-box-orient: vertical;
@@ -6336,7 +6297,6 @@ body::-webkit-scrollbar-thumb, .menuCatalog::-webkit-scrollbar-thumb {
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .feedbackModal__send:hover {
@@ -6569,7 +6529,6 @@ button {
   width: 7px;
   height: 1px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background-color: #333333;
   -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -6603,7 +6562,6 @@ button {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   opacity: 0;
   z-index: 8;
@@ -6630,7 +6588,6 @@ button {
   max-height: 0;
   padding: 0 1rem;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
   overflow: hidden;
@@ -6697,7 +6654,6 @@ button {
     width: 7px;
     height: 1px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background-color: #333333;
     -webkit-transform: translate(-3px, -50%) rotate(45deg);
@@ -6731,7 +6687,6 @@ button {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 8;
@@ -6758,7 +6713,6 @@ button {
     max-height: 0;
     padding: 0 1rem;
     -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
@@ -6783,7 +6737,6 @@ button {
   cursor: pointer;
   padding: 0.875rem 1rem;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   font-size: 1.0625rem;
   border-bottom: 1px solid #a8a8a8;
@@ -7097,7 +7050,6 @@ button {
   height: 6.25rem;
   z-index: 3;
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
   color: white;
 }
@@ -7270,7 +7222,6 @@ body#root {
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .intro__button:hover {
@@ -7322,7 +7273,6 @@ body#root {
   color: #fff;
   color: var(--main-back);
   -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .socials__button:hover {
@@ -7429,7 +7379,6 @@ body#root {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -7480,7 +7429,6 @@ body#root {
   padding: 1.125rem 3rem;
   display: block;
   -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in, color 0.3s ease-in;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .news__button:hover {
@@ -8329,7 +8277,6 @@ body#root {
     color: #fff;
     color: var(--main-back);
     -webkit-transition: background-color 0.3s ease-in;
-    -o-transition: background-color 0.3s ease-in;
     transition: background-color 0.3s ease-in;
   }
   .filterModal__apply:hover {
@@ -8360,7 +8307,7 @@ body#root {
   }
   .catalog .selects__image {
     border-radius: 0.9375rem;
-    background-color: hsla(0deg, 0%, 76.9%, 0.2);
+    background-color: hsla(0, 0%, 76.9%, 0.2);
     width: 1.75rem;
     height: 1.75rem;
   }
@@ -8544,7 +8491,6 @@ body#root {
  */
 .owl-height {
   -webkit-transition: height 500ms ease-in-out;
-  -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out;
 }
 /*
@@ -8559,7 +8505,6 @@ body#root {
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
   -webkit-transition: opacity 400ms ease;
-  -o-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
 }
 .owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
@@ -8591,7 +8536,6 @@ body#root {
   -webkit-backface-visibility: hidden;
   -webkit-transition: -webkit-transform 100ms ease;
   transition: -webkit-transform 100ms ease;
-  -o-transition: transform 100ms ease;
   transition: transform 100ms ease;
   transition: transform 100ms ease, -webkit-transform 100ms ease;
 }
@@ -8611,7 +8555,6 @@ body#root {
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transition: opacity 400ms ease;
-  -o-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
 }
 .owl-carousel .owl-video-frame {

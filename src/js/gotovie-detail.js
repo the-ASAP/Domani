@@ -22,6 +22,7 @@ import 'owl.carousel';
 
 const texttoolkit = () => {
   $('.details__tooltip').mouseenter(function () {
+    console.log($(this))
     const indexTooltip = $(this).attr('data-tooltip');
     let activeButtonPosition = null;
 
@@ -35,10 +36,20 @@ const texttoolkit = () => {
       $(tooltiptext).removeClass('active');
 
       if ($(tooltiptext).attr('data-tooltiptext') === indexTooltip) {
-        $(tooltiptext).offset({
-          top: activeButtonPosition?.top - $(tooltiptext).innerHeight() - 10,
-          left: activeButtonPosition?.left - $(tooltiptext).innerWidth() / 2 + 15
-        });
+        if($(window).width() <= 768){
+          $(tooltiptext).offset({
+            top: activeButtonPosition?.top - $(tooltiptext).innerHeight() - 10,
+            left: activeButtonPosition?.left - $(tooltiptext).innerWidth() / 2 + 15
+          });
+          $(tooltiptext).css('left', '0px')
+        }
+        else{
+          $(tooltiptext).offset({
+            top: activeButtonPosition?.top - $(tooltiptext).innerHeight() - 10,
+            left: activeButtonPosition?.left - $(tooltiptext).innerWidth() / 2 + 15
+          });
+        }
+        
 
         $(tooltiptext).addClass('active');
       }
@@ -46,11 +57,10 @@ const texttoolkit = () => {
   });
 
   $('.details__tooltip').mouseleave(function () {
-    setTimeout(() => {
-      $('.details__tooltiptext').each(function (index, tooltiptext) {
-        $(tooltiptext).removeClass('active');
-      });
-    }, 2000);
+    $('.details__tooltiptext').each(function (index, tooltiptext) {
+      $(tooltiptext).removeClass('active');
+    });
+    
   });
 };
 const stopPropog = () => {

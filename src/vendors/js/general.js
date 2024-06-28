@@ -120,7 +120,7 @@ const closeModalCatalog = () => {
   $('.menuCatalog').slideUp();
 
   $('.menu__catalog').text(openText);
-  $('.menu').addClass('menu_active');
+  $('.menu').removeClass('menu_active');
 
   $('.menu__icon').replaceWith(menuSvgMain);
 
@@ -188,22 +188,30 @@ export const minusSlide = (classSlider, classNumber) => {
 export function numberSlide(direction, classSlider, classNumber) {
   const items = document.querySelectorAll(`${classSlider} .owl-item`);
   const number = document.querySelector(classNumber);
-  let num;
-  if (items) {
-    num = items.length;
+  let num = items.length;
+
+  // Проверка ширины окна
+  if (window.innerWidth > 768) {
+    num = Math.max(1, num - 1);
   }
 
   let numActive = 1;
+  let activeCount = 0;
+
   for (var key in Object.keys(items)) {
-    if (items[key].className === 'owl-item active' && direction === 'right') {
-      numActive = Number(key) + 1;
-      break;
-    }
-    if (items[key].className === 'owl-item active' && direction === 'left') {
-      numActive = Number(key) + 1;
-      break;
+    if (items[key].classList.contains('active')) {
+      activeCount++;
+      if (direction === 'right' && items[Number(key) + activeCount - 1].classList.contains('active')) {
+        numActive = Number(key) + activeCount;
+        break;
+      }
+      if (direction === 'left' && items[Number(key) + activeCount - 1].classList.contains('active')) {
+        numActive = Number(key) + activeCount;
+        break;
+      }
     }
   }
+
   let formattedNumActive = numActive.toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
